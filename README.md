@@ -48,7 +48,7 @@
    nb run
    ```
 
-6. 使用cq-http连接机器人，该部分参考cq-http官方文档。需要注意的是配置中反向websocket设置参考文档https://adapter-onebot.netlify.app/docs/guide/setup
+6. 使用go-cqhttp连接机器人，该部分参考go-cqhttp官方文档。需要注意的是配置中反向websocket设置参考文档https://adapter-onebot.netlify.app/docs/guide/setup
 
 ## 备注
 
@@ -56,6 +56,6 @@ NoneBot2官方文档：https://v2.nonebot.dev/
 
 NoneBot2 github：https://github.com/nonebot/nonebot2
 
-cq-http连接配置：https://adapter-onebot.netlify.app/docs/guide/setup
+go-cqhttp连接配置：https://adapter-onebot.netlify.app/docs/guide/setup
 
-cq-http github：https://github.com/Mrs4s/go-cqhttp
+go-cqhttp github：https://github.com/Mrs4s/go-cqhttp
