@@ -25,6 +25,8 @@ item = on_command(this_command, priority=5)
 async def item_help():
     return this_command + "物品名：查询物品信息"
 
+# 防止request的连接断不了
+headers = {"Connection": "close"}
 
 GARLAND = "https://ffxiv.cyanclay.xyz"
 FF14WIKI_BASE_URL = "https://ff14.huijiwiki.com"
@@ -84,11 +86,11 @@ def gt_core(key: str, lang: str):
     global GT_CORE_DATA_CN, GT_CORE_DATA_GLOBAL
     if lang == "chs":
         if GT_CORE_DATA_CN is None:
-            GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=3).json()
+            GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=3, headers=headers).json()
         GT_CORE_DATA = GT_CORE_DATA_CN
     else:
         if GT_CORE_DATA_GLOBAL is None:
-            GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=3).json()
+            GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=3, headers=headers).json()
         GT_CORE_DATA = GT_CORE_DATA_GLOBAL
     req = GT_CORE_DATA
     for par in key.split('.'):
@@ -100,7 +102,7 @@ def parse_item_garland(item_id, name_lang):
     if name_lang == "cn":
         name_lang = "chs"
 
-    j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=3).json()
+    j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=3, headers=headers).json()
 
     result = []
     # index partials
@@ -112,7 +114,7 @@ def parse_item_garland(item_id, name_lang):
     # start processing
     if "icon" in item.keys():
         image_url = f"{GARLAND}/files/icons/item/{item['icon'] if str(item['icon']).startswith('t/') else 't/' + str(item['icon'])}.png"
-        image = requests.get(image_url)
+        image = requests.get(image_url, headers=headers)
         base64_str = base64.b64encode(image.content).decode("utf-8")
         # result.append(f"[CQ:image,file=base64://{base64_str}]")
         result.append(f"base64://{base64_str}")
@@ -390,7 +392,7 @@ def get_xivapi_item(item_name, name_lang=""):
     url = api_base + "/search?indexes=Item&string=" + item_name
     if name_lang:
         url = url + "&language=" + name_lang
-    r = requests.get(url, timeout=3)
+    r = requests.get(url, timeout=3, headers=headers)
     j = r.json()
     return j, url
 

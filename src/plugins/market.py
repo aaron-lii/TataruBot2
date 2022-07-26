@@ -15,7 +15,8 @@ import time
 
 this_command = "价格 "
 market = on_command(this_command, priority=5)
-
+# 防止request的连接断不了
+headers = {"Connection": "close"}
 
 async def market_help():
     return this_command + "大区 物品名：查询板子物价，大区不写默认豆豆柴"
@@ -66,7 +67,7 @@ def get_item_id(item_name, name_lang=""):
         url = (
             "https://cafemaker.wakingsands.com/search?indexes=Item&string=" + item_name
         )
-    r = requests.get(url, timeout=5)
+    r = requests.get(url, timeout=5, headers=headers)
     j = r.json()
     if len(j["Results"]) > 0:
         result = max(j["Results"], key=lambda x: SequenceMatcher(None, x["Name"], item_name).ratio())
@@ -90,7 +91,7 @@ def get_market_data(server_name, item_name, hq=False):
             return msg
     url = "https://universalis.app/api/{}/{}".format(server_name, item_id)
     print("market url:{}".format(url))
-    r = requests.get(url, timeout=5)
+    r = requests.get(url, timeout=5, headers=headers)
     if r.status_code != 200:
         if r.status_code == 404:
             msg = "请确认所查询物品可交易且不可在NPC处购买\n"
