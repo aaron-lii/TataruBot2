@@ -86,11 +86,11 @@ def gt_core(key: str, lang: str):
     global GT_CORE_DATA_CN, GT_CORE_DATA_GLOBAL
     if lang == "chs":
         if GT_CORE_DATA_CN is None:
-            GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=3, headers=headers).json()
+            GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=5, headers=headers).json()
         GT_CORE_DATA = GT_CORE_DATA_CN
     else:
         if GT_CORE_DATA_GLOBAL is None:
-            GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=3, headers=headers).json()
+            GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=5, headers=headers).json()
         GT_CORE_DATA = GT_CORE_DATA_GLOBAL
     req = GT_CORE_DATA
     for par in key.split('.'):
@@ -102,7 +102,7 @@ def parse_item_garland(item_id, name_lang):
     if name_lang == "cn":
         name_lang = "chs"
 
-    j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=3, headers=headers).json()
+    j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=5, headers=headers).json()
 
     result = []
     # index partials
@@ -392,7 +392,7 @@ def get_xivapi_item(item_name, name_lang=""):
     url = api_base + "/search?indexes=Item&string=" + item_name
     if name_lang:
         url = url + "&language=" + name_lang
-    r = requests.get(url, timeout=3, headers=headers)
+    r = requests.get(url, timeout=5, headers=headers)
     j = r.json()
     return j, url
 
