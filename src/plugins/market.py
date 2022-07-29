@@ -190,10 +190,15 @@ async def handle_item(bot: Bot, event: Event, state: T_State):
         item_name = item_name.replace("HQ", "", 1)
     item_name = handle_item_name_abbr(item_name)
 
-    try:
-        msg = get_market_data(server_name, item_name, hq)
-    except Exception as e:
-        await market.finish(str(e))
+    msg = "发生甚么事了？"
+    for _ in range(10):
+        try:
+            msg = get_market_data(server_name, item_name, hq)
+            break
+        except Exception as e:
+            # await market.finish(str(e))
+            msg = str(e)
+            time.sleep(0.5)
 
     await market.finish(msg)
 

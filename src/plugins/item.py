@@ -16,6 +16,7 @@ import requests
 import urllib
 import logging
 import traceback
+import time
 
 
 this_command = "物品 "
@@ -425,24 +426,29 @@ def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True):
 
 
 async def run(name):
-    try:
-        res_data = search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL)
+    msg = "发生甚么事了？"
+    for _ in range(10):
+        try:
+            res_data = search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL)
 
-        if isinstance(res_data, dict):
-            msg = Message([MessageSegment(type="share", data=res_data)])
+            if isinstance(res_data, dict):
+                msg = Message([MessageSegment(type="share", data=res_data)])
 
-            # msg = str(res_data)
-        elif isinstance(res_data, list):
-            msg = Message([MessageSegment(type="image", data={"file": res_data[0]}),
-                           MessageSegment(type="text", data={"text": "\n".join(res_data[1:])})])
-        elif isinstance(res_data, str):
-            msg = res_data
-        else:
-            msg = '在最终幻想XIV中没有找到"{}"'.format(name)
-    except Exception as e:
-        msg = "Error: {}".format(type(e))
-        traceback.print_exc()
-        logging.error(e)
+                # msg = str(res_data)
+            elif isinstance(res_data, list):
+                msg = Message([MessageSegment(type="image", data={"file": res_data[0]}),
+                               MessageSegment(type="text", data={"text": "\n".join(res_data[1:])})])
+            elif isinstance(res_data, str):
+                msg = res_data
+            else:
+                msg = '在最终幻想XIV中没有找到"{}"'.format(name)
+
+            break
+        except Exception as e:
+            msg = "Error: {}".format(type(e))
+            traceback.print_exc()
+            logging.error(e)
+            time.sleep(0.5)
 
     await item.finish(msg)
 
