@@ -12,11 +12,24 @@ import requests
 from difflib import SequenceMatcher
 import re
 import time
+import random
 
 this_command = "价格 "
 market = on_command(this_command, priority=5)
-# 防止request的连接断不了
-headers = {"Connection": "close"}
+
+
+# 减少requests错误
+def get_headers():
+    agent = ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 '
+             'Safari/537.36 QIHU 360SE',
+             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+             'Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063',
+             'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 '
+             'Safari/537.36']
+
+    headers = {'Connection': 'close', 'User-Agent': agent[random.randint(0, len(agent) - 1)]}
+    return headers
+
 
 async def market_help():
     return this_command + "大区 物品名：查询板子物价，大区不写默认豆豆柴"
@@ -67,7 +80,7 @@ def get_item_id(item_name, name_lang=""):
         url = (
             "https://cafemaker.wakingsands.com/search?indexes=Item&string=" + item_name
         )
-    r = requests.get(url, timeout=5, headers=headers)
+    r = requests.get(url, timeout=5, headers=get_headers())
     j = r.json()
     if len(j["Results"]) > 0:
         result = max(j["Results"], key=lambda x: SequenceMatcher(None, x["Name"], item_name).ratio())
@@ -91,7 +104,7 @@ def get_market_data(server_name, item_name, hq=False):
             return msg
     url = "https://universalis.app/api/{}/{}".format(server_name, item_id)
     print("market url:{}".format(url))
-    r = requests.get(url, timeout=5, headers=headers)
+    r = requests.get(url, timeout=5, headers=get_headers())
     if r.status_code != 200:
         if r.status_code == 404:
             msg = "请确认所查询物品可交易且不可在NPC处购买\n"

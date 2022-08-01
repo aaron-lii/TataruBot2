@@ -17,6 +17,7 @@ import urllib
 import logging
 import traceback
 import time
+import random
 
 
 this_command = "物品 "
@@ -26,8 +27,19 @@ item = on_command(this_command, priority=5)
 async def item_help():
     return this_command + "物品名：查询物品信息"
 
-# 防止request的连接断不了
-headers = {"Connection": "close"}
+
+# 减少requests错误
+def get_headers():
+    agent = ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 '
+             'Safari/537.36 QIHU 360SE',
+             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+             'Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063',
+             'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 '
+             'Safari/537.36']
+
+    headers = {'Connection': 'close', 'User-Agent': agent[random.randint(0, len(agent) - 1)]}
+    return headers
+
 
 GARLAND = "https://ffxiv.cyanclay.xyz"
 FF14WIKI_BASE_URL = "https://ff14.huijiwiki.com"
@@ -87,11 +99,11 @@ def gt_core(key: str, lang: str):
     global GT_CORE_DATA_CN, GT_CORE_DATA_GLOBAL
     if lang == "chs":
         if GT_CORE_DATA_CN is None:
-            GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=5, headers=headers).json()
+            GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=5, headers=get_headers()).json()
         GT_CORE_DATA = GT_CORE_DATA_CN
     else:
         if GT_CORE_DATA_GLOBAL is None:
-            GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=5, headers=headers).json()
+            GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=5, headers=get_headers()).json()
         GT_CORE_DATA = GT_CORE_DATA_GLOBAL
     req = GT_CORE_DATA
     for par in key.split('.'):
@@ -103,7 +115,7 @@ def parse_item_garland(item_id, name_lang):
     if name_lang == "cn":
         name_lang = "chs"
 
-    j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=5, headers=headers).json()
+    j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=5, headers=get_headers()).json()
 
     result = []
     # index partials
@@ -115,7 +127,7 @@ def parse_item_garland(item_id, name_lang):
     # start processing
     if "icon" in item.keys():
         image_url = f"{GARLAND}/files/icons/item/{item['icon'] if str(item['icon']).startswith('t/') else 't/' + str(item['icon'])}.png"
-        image = requests.get(image_url, headers=headers)
+        image = requests.get(image_url, headers=get_headers())
         base64_str = base64.b64encode(image.content).decode("utf-8")
         # result.append(f"[CQ:image,file=base64://{base64_str}]")
         result.append(f"base64://{base64_str}")
@@ -393,7 +405,7 @@ def get_xivapi_item(item_name, name_lang=""):
     url = api_base + "/search?indexes=Item&string=" + item_name
     if name_lang:
         url = url + "&language=" + name_lang
-    r = requests.get(url, timeout=5, headers=headers)
+    r = requests.get(url, timeout=5, headers=get_headers())
     j = r.json()
     return j, url
 
