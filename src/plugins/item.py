@@ -26,7 +26,7 @@ item = on_command(this_command, priority=5)
 # 超时时间
 time_out = 60
 # 重试次数
-retry_num = 10
+retry_num = 20
 
 
 async def item_help():
