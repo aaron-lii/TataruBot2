@@ -23,6 +23,11 @@ import random
 this_command = "物品 "
 item = on_command(this_command, priority=5)
 
+# 超时时间
+time_out = 60
+# 重试次数
+retry_num = 10
+
 
 async def item_help():
     return this_command + "物品名：查询物品信息"
@@ -99,11 +104,11 @@ def gt_core(key: str, lang: str):
     global GT_CORE_DATA_CN, GT_CORE_DATA_GLOBAL
     if lang == "chs":
         if GT_CORE_DATA_CN is None:
-            GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=5, headers=get_headers()).json()
+            GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=time_out, headers=get_headers()).json()
         GT_CORE_DATA = GT_CORE_DATA_CN
     else:
         if GT_CORE_DATA_GLOBAL is None:
-            GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=5, headers=get_headers()).json()
+            GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=time_out, headers=get_headers()).json()
         GT_CORE_DATA = GT_CORE_DATA_GLOBAL
     req = GT_CORE_DATA
     for par in key.split('.'):
@@ -115,7 +120,7 @@ def parse_item_garland(item_id, name_lang):
     if name_lang == "cn":
         name_lang = "chs"
 
-    j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=5, headers=get_headers()).json()
+    j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=time_out, headers=get_headers()).json()
 
     result = []
     # index partials
@@ -405,7 +410,7 @@ def get_xivapi_item(item_name, name_lang=""):
     url = api_base + "/search?indexes=Item&string=" + item_name
     if name_lang:
         url = url + "&language=" + name_lang
-    r = requests.get(url, timeout=5, headers=get_headers())
+    r = requests.get(url, timeout=time_out, headers=get_headers())
     j = r.json()
     return j, url
 
@@ -439,7 +444,7 @@ def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True):
 
 async def run(name):
     msg = "发生甚么事了？"
-    for _ in range(10):
+    for _ in range(retry_num):
         try:
             res_data = search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL)
 
