@@ -10,6 +10,7 @@ from src.plugins.lottery import lottery_help
 from src.plugins.market import market_help
 from src.plugins.nuannuan import nuannuan_help
 from src.plugins.precious import precious_help
+from src.plugins.ff_weibo import ff_weibo_help
 
 
 this_command = "帮帮忙"
@@ -21,9 +22,10 @@ async def create_help():
     return_list.append(await nuannuan_help())
     return_list.append(await precious_help())
     return_list.append(await lottery_help())
+    return_list.append(await ff_weibo_help())
     return_list.append(await item_help())
     return_list.append(await market_help())
-    return "塔塔露现有的功能\n" + "\n".join(return_list)
+    return "【塔塔露现有的功能】\n" + "\n".join(return_list)
 
 
 @bot_help.handle()
