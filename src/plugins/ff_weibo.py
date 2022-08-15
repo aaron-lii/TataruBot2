@@ -30,9 +30,38 @@ async def run():
         weibo_time = r["data"]["cards"][i]["mblog"]["created_at"]
         weibo_url = "https://m.weibo.cn/status/" + r["data"]["cards"][i]["mblog"]["bid"]
 
+        split1 = 0
+        split2 = 0
+        return_text = ""
+
         try:
-            weibo_title = weibo_text.split(r"#FF14#</span></a>")[1].split(r"<br />")[0]
-        except:
+            for word in weibo_text:
+                if split1 > 0:
+                    if word == ">":
+                        split1 = 0
+                    continue
+                if split2 > 0:
+                    if word =="#":
+                        split2 = 0
+                    continue
+                if word == "<":
+                    if return_text != "":
+                        break
+                    split1 = 1
+                    continue
+                elif word == "#":
+                    if return_text != "":
+                        break
+                    split2 = 1
+                    continue
+                elif word == " ":
+                    continue
+                else:
+                    return_text += word
+
+            weibo_title = return_text
+            # weibo_title = weibo_text.split(r"#FF14#</span></a>")[1].split(r"<br />")[0]
+        except Exception as e:
             weibo_title = "这条格式好像不对呢？"
 
         weibo_time = " ".join(weibo_time.split(" ")[:4])
