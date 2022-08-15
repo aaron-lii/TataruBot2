@@ -9,8 +9,6 @@ from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
 import requests
-import re
-import traceback
 
 this_command = "看看微博"
 ff_weibo = on_command(this_command, priority=5)
