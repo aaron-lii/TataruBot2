@@ -54,7 +54,7 @@ async def run():
                         break
                     split2 = 1
                     continue
-                elif word == " ":
+                elif word.strip() == "":
                     continue
                 else:
                     return_text += word
