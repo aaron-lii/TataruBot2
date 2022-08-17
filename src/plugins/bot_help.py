@@ -13,6 +13,7 @@ from src.plugins.precious import precious_help
 from src.plugins.ff_weibo import ff_weibo_help
 from src.plugins.item_new import item_new_help
 from src.plugins.market_new import market_new_help
+from src.plugins.house import house_help
 
 
 this_command = "帮帮忙"
@@ -29,6 +30,7 @@ async def create_help():
     return_list.append(await item_new_help())
     return_list.append(await market_help())
     return_list.append(await market_new_help())
+    return_list.append(await house_help())
     return "【塔塔露现有的功能】\n" + "\n".join(return_list)
 
 
