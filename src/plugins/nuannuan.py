@@ -57,6 +57,22 @@ def extract_nn(bvid):
     return None
 
 
+async def get_qq_doc():
+    try:
+        url = f"https://www.youwanc.com/"
+        r = requests.get(url, timeout=5).text
+        qq_doc = re.search(r"https://docs.qq.com/[^\"]*", r)
+        if qq_doc:
+            msg = "暖暖看qq文档： " + qq_doc.group()
+        else:
+            msg = "查看qq文档出了点问题？"
+    except Exception as e:
+        msg = "Error: {}".format(type(e))
+        traceback.print_exc()
+
+    await nuannuan.finish(msg)
+
+
 async def run():
     try:
         # 获取视频av号(aid)
@@ -87,5 +103,5 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     if args != this_command:
         return
 
-    await run()
-
+    # await run()
+    await get_qq_doc()
