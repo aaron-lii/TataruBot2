@@ -3,14 +3,14 @@
 自定义回复
 """
 
-from nonebot import on_command
+from nonebot import on_regex
 from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
 
-this_command = ("闭嘴。", "烦。")
-auto_response = on_command(this_command, priority=5)
+this_command = "闭嘴。|烦。"
+auto_response = on_regex(this_command, priority=5)
 
 
 # async def precious_help():
