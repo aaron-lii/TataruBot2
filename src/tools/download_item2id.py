@@ -58,7 +58,7 @@ def run2():
             else:
                 item_dict[line[0]] = line[1]
 
-    with open("item_dict.json", "w") as f_w:
+    with open("../data/item_dict.json", "w") as f_w:
         f_w.write(str(item_dict))
 
 
