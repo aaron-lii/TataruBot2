@@ -21,7 +21,7 @@ def run():
                 i += 1
                 continue
             # item2id_dict[r.json()["Name_chs"]] = i
-            with open("data.json", "a") as f_w:
+            with open("data.json", "a", encoding="utf-8") as f_w:
                 f_w.write(r.json()["item"]["name"] + "!!!" + str(i) + "\n")
             f_w.flush()
         except Exception as e:
@@ -37,7 +37,7 @@ def run():
             try:
                 r = requests.get(url + str(i) + ".json", timeout=60)
                 # item2id_dict[r.json()["Name_chs"]] = i
-                with open("data.json", "a") as f_w:
+                with open("data.json", "a", encoding="utf-8") as f_w:
                     f_w.write(r.json()["item"]["name"] + "!!!" + str(i) + "\n")
                 f_w.flush()
             except Exception as e:
@@ -49,7 +49,7 @@ def run():
 def run2():
     item_dict = {}
     i = 0
-    with open("data.json", "r") as f_r:
+    with open("data.json", "r", encoding="utf-8") as f_r:
         for line in f_r.readlines():
             i += 1
             line = line.strip().split("!!!")
@@ -58,7 +58,7 @@ def run2():
             else:
                 item_dict[line[0]] = line[1]
 
-    with open("../data/item_dict.json", "w") as f_w:
+    with open("../data/item_dict.json", "w", encoding="utf-8") as f_w:
         f_w.write(str(item_dict))
 
 

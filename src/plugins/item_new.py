@@ -81,7 +81,7 @@ FISH_SHADOW_SPEED = {
 
 # 加载字典
 item_dict = {}
-with open("src/data/item_dict.json", "r") as f_r:
+with open("src/data/item_dict.json", "r", encoding="utf-8") as f_r:
     for line in f_r.readlines():
         item_dict = eval(line)
 # print(item_dict)
