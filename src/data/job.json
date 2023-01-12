@@ -1,0 +1,170 @@
+[
+  {
+    "pk": 1,
+    "name": "Astrologian",
+    "cn_name": "占星术士",
+    "nickname": [
+      "占星"
+    ]
+  },
+  {
+    "pk": 2,
+    "name": "Bard",
+    "cn_name": "吟游诗人",
+    "nickname": [
+      "诗人"
+    ]
+  },
+  {
+    "pk": 3,
+    "name": "BlackMage",
+    "cn_name": "黑魔法师",
+    "nickname": [
+      "黑魔",
+      "黑膜",
+      "blm",
+      "BLM"
+    ]
+  },
+  {
+    "pk": 4,
+    "name": "DarkKnight",
+    "cn_name": "暗黑骑士",
+    "nickname": [
+      "暗骑",
+      "黑骑",
+      "dk",
+      "DK"
+    ]
+  },
+  {
+    "pk": 5,
+    "name": "Dragoon",
+    "cn_name": "龙骑士",
+    "nickname": [
+      "龙骑",
+      "躺尸龙"
+    ]
+  },
+  {
+    "pk": 6,
+    "name": "Machinist",
+    "cn_name": "机工士",
+    "nickname": [
+      "机工"
+    ]
+  },
+  {
+    "pk": 7,
+    "name": "Monk",
+    "cn_name": "武僧",
+    "nickname": []
+  },
+  {
+    "pk": 8,
+    "name": "Ninja",
+    "cn_name": "忍者",
+    "nickname": [
+      "兔子",
+      "兔忍"
+    ]
+  },
+  {
+    "pk": 9,
+    "name": "Paladin",
+    "cn_name": "骑士",
+    "nickname": [
+      "彩骑",
+      "大翅膀",
+      "pld",
+      "PLD"
+    ]
+  },
+  {
+    "pk": 10,
+    "name": "Scholar",
+    "cn_name": "学者",
+    "nickname": [
+      "小仙女",
+      "小仙女的召唤兽"
+    ]
+  },
+  {
+    "pk": 11,
+    "name": "Summoner",
+    "cn_name": "召唤师",
+    "nickname": [
+      "召唤"
+    ]
+  },
+  {
+    "pk": 12,
+    "name": "Warrior",
+    "cn_name": "战士",
+    "nickname": [
+      "战爹",
+      "锯爆",
+      "WAR",
+      "war",
+      "War"
+    ]
+  },
+  {
+    "pk": 13,
+    "name": "WhiteMage",
+    "cn_name": "白魔法师",
+    "nickname": [
+      "白魔",
+      "白膜"
+    ]
+  },
+  {
+    "pk": 14,
+    "name": "RedMage",
+    "cn_name": "赤魔法师",
+    "nickname": [
+      "赤魔",
+      "吃馍"
+    ]
+  },
+  {
+    "pk": 15,
+    "name": "Samurai",
+    "cn_name": "武士",
+    "nickname": [
+      "侍",
+      "Sam",
+      "sam"
+    ]
+  },
+  {
+    "pk": 16,
+    "name": "Dancer",
+    "cn_name": "舞者",
+    "nickname": []
+  },
+  {
+    "pk": 17,
+    "name": "Gunbreaker",
+    "cn_name": "绝枪战士",
+    "nickname": [
+      "枪刃",
+      "GNB"
+    ]
+  },
+  {
+    "pk": 18,
+    "name": "Reaper",
+    "cn_name": "钐镰客",
+    "nickname": [
+      "镰刀哥",
+      "三连客"
+    ]
+  },
+  {
+    "pk": 19,
+    "name": "Sage",
+    "cn_name": "贤者",
+    "nickname": []
+  }
+]

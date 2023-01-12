@@ -1,0 +1,3911 @@
+[
+  {
+    "pk": 4500,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Neverreap",
+    "cn_name": "空中神域不获岛",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4501,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Fractal Continuum",
+    "cn_name": "博物战舰无限回廊",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4502,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Saint Mocianne's Arboretum",
+    "cn_name": "圣茉莱娜的植物园",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4503,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Pharos Sirius (Hard)",
+    "cn_name": "天狼星之塔（困难难度）",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4504,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Antitower",
+    "cn_name": "倒吊之塔",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4505,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Lost City of Amdapor (Hard)",
+    "cn_name": "神圣遗迹无限城市街古迹",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4506,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Sohr Kai",
+    "cn_name": "天龙宫殿忆罪宫",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4507,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Hullbreaker Isle (Hard)",
+    "cn_name": "黑涡传说破舰岛",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4508,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Xelphatol",
+    "cn_name": "险峻峡谷塞尔法特尔溪谷",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4509,
+    "quest": 2,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Great Gubal Library (Hard)",
+    "cn_name": "秘本宝库迦巴勒幻想图书馆",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1027,
+    "quest": 4,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Bismarck",
+    "cn_name": "俾斯麦",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1028,
+    "quest": 4,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Ravana",
+    "cn_name": "罗波那",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1029,
+    "quest": 4,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Thordan",
+    "cn_name": "骑神托尔丹",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1031,
+    "quest": 4,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Sephirot",
+    "cn_name": "萨菲洛特",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1033,
+    "quest": 4,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Nidhogg",
+    "cn_name": "尼德霍格",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1034,
+    "quest": 4,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Sophia",
+    "cn_name": "索菲娅",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1035,
+    "quest": 4,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Zurvan",
+    "cn_name": "祖尔宛",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2000,
+    "quest": 5,
+    "zone_name": "Void Ark",
+    "cn_zone_name": "魔航船虚无方舟",
+    "name": "Cetus",
+    "cn_name": "刻托",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2001,
+    "quest": 5,
+    "zone_name": "Void Ark",
+    "cn_zone_name": "魔航船虚无方舟",
+    "name": "Irminsul",
+    "cn_name": "天柱树",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2002,
+    "quest": 5,
+    "zone_name": "Void Ark",
+    "cn_zone_name": "魔航船虚无方舟",
+    "name": "Cuchulainn",
+    "cn_name": "丘库雷因",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2003,
+    "quest": 5,
+    "zone_name": "Void Ark",
+    "cn_zone_name": "魔航船虚无方舟",
+    "name": "Echidna",
+    "cn_name": "艾奇德娜",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 14,
+    "quest": 6,
+    "zone_name": "Alexander: Gordias (Story)",
+    "cn_zone_name": "亚历山大机神城：启动之章",
+    "name": "Oppressor",
+    "cn_name": "压迫者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 15,
+    "quest": 6,
+    "zone_name": "Alexander: Gordias (Story)",
+    "cn_zone_name": "亚历山大机神城：启动之章",
+    "name": "The Cuff of the Father",
+    "cn_name": "戈耳狄俄斯之袖",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 16,
+    "quest": 6,
+    "zone_name": "Alexander: Gordias (Story)",
+    "cn_zone_name": "亚历山大机神城：启动之章",
+    "name": "Living Liquid",
+    "cn_name": "有生命活水",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 17,
+    "quest": 6,
+    "zone_name": "Alexander: Gordias (Story)",
+    "cn_zone_name": "亚历山大机神城：启动之章",
+    "name": "The Manipulator",
+    "cn_name": "操纵者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 5000,
+    "quest": 6,
+    "zone_name": "Alexander: Gordias (Story)",
+    "cn_zone_name": "亚历山大机神城：启动之章",
+    "name": "Faust",
+    "cn_name": "浮士德",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 18,
+    "quest": 7,
+    "zone_name": "Alexander: Gordias (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：启动之章",
+    "name": "Oppressor",
+    "cn_name": "压迫者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 19,
+    "quest": 7,
+    "zone_name": "Alexander: Gordias (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：启动之章",
+    "name": "The Cuff of the Father",
+    "cn_name": "戈耳狄俄斯之袖",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 20,
+    "quest": 7,
+    "zone_name": "Alexander: Gordias (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：启动之章",
+    "name": "Living Liquid",
+    "cn_name": "有生命活水",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 21,
+    "quest": 7,
+    "zone_name": "Alexander: Gordias (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：启动之章",
+    "name": "The Manipulator",
+    "cn_name": "操纵者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 5001,
+    "quest": 7,
+    "zone_name": "Alexander: Gordias (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：启动之章",
+    "name": "Faust",
+    "cn_name": "浮士德",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2004,
+    "quest": 8,
+    "zone_name": "The Weeping City of Mach",
+    "cn_zone_name": "禁忌城邦玛哈",
+    "name": "Arachne Eve",
+    "cn_name": "阿剌克涅",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2005,
+    "quest": 8,
+    "zone_name": "The Weeping City of Mach",
+    "cn_zone_name": "禁忌城邦玛哈",
+    "name": "Forgall",
+    "cn_name": "弗加尔",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2006,
+    "quest": 8,
+    "zone_name": "The Weeping City of Mach",
+    "cn_zone_name": "禁忌城邦玛哈",
+    "name": "Ozma",
+    "cn_name": "奥兹玛",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2007,
+    "quest": 8,
+    "zone_name": "The Weeping City of Mach",
+    "cn_zone_name": "禁忌城邦玛哈",
+    "name": "Calofisteri",
+    "cn_name": "卡洛菲斯提莉",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 22,
+    "quest": 9,
+    "zone_name": "Alexander: Midas (Story)",
+    "cn_zone_name": "亚历山大机神城：律动之章",
+    "name": "Ratfinx Twinkledinks",
+    "cn_name": "奇才 拉特芬克斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 23,
+    "quest": 9,
+    "zone_name": "Alexander: Midas (Story)",
+    "cn_zone_name": "亚历山大机神城：律动之章",
+    "name": "Vortexer",
+    "cn_name": "环旋者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 24,
+    "quest": 9,
+    "zone_name": "Alexander: Midas (Story)",
+    "cn_zone_name": "亚历山大机神城：律动之章",
+    "name": "Quickthinx Allthoughts",
+    "cn_name": "万事通 奎克辛克斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 25,
+    "quest": 9,
+    "zone_name": "Alexander: Midas (Story)",
+    "cn_zone_name": "亚历山大机神城：律动之章",
+    "name": "Brute Justice",
+    "cn_name": "残暴正义号",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 5002,
+    "quest": 9,
+    "zone_name": "Alexander: Midas (Story)",
+    "cn_zone_name": "亚历山大机神城：律动之章",
+    "name": "Hummelfaust",
+    "cn_name": "新型浮士德",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 5003,
+    "quest": 9,
+    "zone_name": "Alexander: Midas (Story)",
+    "cn_zone_name": "亚历山大机神城：律动之章",
+    "name": "Blaster",
+    "cn_name": "爆破者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 5004,
+    "quest": 9,
+    "zone_name": "Alexander: Midas (Story)",
+    "cn_zone_name": "亚历山大机神城：律动之章",
+    "name": "Brawler",
+    "cn_name": "争斗者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 5005,
+    "quest": 9,
+    "zone_name": "Alexander: Midas (Story)",
+    "cn_zone_name": "亚历山大机神城：律动之章",
+    "name": "Swindler",
+    "cn_name": "欺诈者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 26,
+    "quest": 10,
+    "zone_name": "Alexander: Midas (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：律动之章",
+    "name": "Ratfinx Twinkledinks",
+    "cn_name": "奇才 拉特芬克斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 27,
+    "quest": 10,
+    "zone_name": "Alexander: Midas (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：律动之章",
+    "name": "The Cuff of the Son",
+    "cn_name": "弥达斯之袖",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 28,
+    "quest": 10,
+    "zone_name": "Alexander: Midas (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：律动之章",
+    "name": "Quickthinx Allthoughts",
+    "cn_name": "万事通 奎克辛克斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 29,
+    "quest": 10,
+    "zone_name": "Alexander: Midas (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：律动之章",
+    "name": "Brute Justice",
+    "cn_name": "残暴正义号",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 5006,
+    "quest": 10,
+    "zone_name": "Alexander: Midas (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：律动之章",
+    "name": "Hummelfaust",
+    "cn_name": "霍摩福斯特",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 30,
+    "quest": 12,
+    "zone_name": "Alexander: The Creator (Story)",
+    "cn_zone_name": "亚历山大机神城：天动之章",
+    "name": "Refurbisher 0",
+    "cn_name": "废品翻新装置",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 31,
+    "quest": 12,
+    "zone_name": "Alexander: The Creator (Story)",
+    "cn_zone_name": "亚历山大机神城：天动之章",
+    "name": "Lamebrix Strikebocks",
+    "cn_name": "佣兵雷姆普里克斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 32,
+    "quest": 12,
+    "zone_name": "Alexander: The Creator (Story)",
+    "cn_zone_name": "亚历山大机神城：天动之章",
+    "name": "Cruise Chaser",
+    "cn_name": "巡航驱逐者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 33,
+    "quest": 12,
+    "zone_name": "Alexander: The Creator (Story)",
+    "cn_zone_name": "亚历山大机神城：天动之章",
+    "name": "Alexander Prime",
+    "cn_name": "至尊亚历山大",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 5007,
+    "quest": 12,
+    "zone_name": "Alexander: The Creator (Story)",
+    "cn_zone_name": "亚历山大机神城：天动之章",
+    "name": "Faust Z",
+    "cn_name": "终极浮士德",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 34,
+    "quest": 13,
+    "zone_name": "Alexander: The Creator (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：天动之章",
+    "name": "Refurbisher 0",
+    "cn_name": "废品翻新装置",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 35,
+    "quest": 13,
+    "zone_name": "Alexander: The Creator (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：天动之章",
+    "name": "Lamebrix Strikebocks",
+    "cn_name": "佣兵雷姆普里克斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 36,
+    "quest": 13,
+    "zone_name": "Alexander: The Creator (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：天动之章",
+    "name": "Cruise Chaser",
+    "cn_name": "巡航驱逐者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 37,
+    "quest": 13,
+    "zone_name": "Alexander: The Creator (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：天动之章",
+    "name": "Alexander Prime",
+    "cn_name": "至尊亚历山大",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 5008,
+    "quest": 13,
+    "zone_name": "Alexander: The Creator (Savage)",
+    "cn_zone_name": "亚历山大零式机神城：天动之章",
+    "name": "Faust Z",
+    "cn_name": "终极浮士德",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (3.55b+)###3",
+      "Standard Comps (Echo)###5"
+    ],
+    "cn_region": [
+      "标准阵容构成 (3.55b+)###3",
+      "标准阵容构成 (超越之力)###5"
+    ]
+  },
+  {
+    "pk": 4510,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Ala Mhigo",
+    "cn_name": "鏖战红莲阿拉米格",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4511,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Kugane Castle",
+    "cn_name": "恶党孤城黄金阁",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4512,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Temple of the Fist",
+    "cn_name": "修行古刹星导寺",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4513,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Drowned City of Skalla",
+    "cn_name": "沉没神殿斯卡拉遗迹",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4514,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Hells' Lid",
+    "cn_name": "红玉火山狱之盖",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4515,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Fractal Continuum (Hard)",
+    "cn_name": "疯狂战舰无限回廊",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4516,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Swallow's Compass",
+    "cn_name": "风水灵庙岩燕庙",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4517,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Burn",
+    "cn_name": "死亡大地终末焦土",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4518,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Saint Mocianne's Arboretum (Hard)",
+    "cn_name": "污染庭园圣茉夏娜植物园",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4519,
+    "quest": 14,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Ghimlyt Dark",
+    "cn_name": "国境战线基姆利特暗区",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1036,
+    "quest": 15,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Susano",
+    "cn_name": "须佐之男",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 1037,
+    "quest": 15,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Lakshmi",
+    "cn_name": "吉祥天女",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 1038,
+    "quest": 15,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Shinryu",
+    "cn_name": "神龙",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 1040,
+    "quest": 15,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Byakko",
+    "cn_name": "白虎",
+    "nickname": [
+      "鸡掰虎",
+      "鸡掰猫",
+      "白虎",
+      "白猫",
+      "极白猫",
+      "大长腿"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 1041,
+    "quest": 15,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Tsukuyomi",
+    "cn_name": "月读",
+    "nickname": [
+      "极月神",
+      "极夜神",
+      "极夜露",
+      "极月",
+      "极夜",
+      "夜露",
+      "月读"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 1043,
+    "quest": 15,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Suzaku",
+    "cn_name": "朱雀",
+    "nickname": [
+      "南条爱乃",
+      "征婚战",
+      "朱雀"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 1044,
+    "quest": 15,
+    "zone_name": "Trials (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度",
+    "name": "Seiryu",
+    "cn_name": "青龙",
+    "nickname": [
+      "青龙"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 38,
+    "quest": 16,
+    "zone_name": "Omega: Deltascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 德尔塔幻境",
+    "name": "Alte Roite",
+    "cn_name": "老者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 39,
+    "quest": 16,
+    "zone_name": "Omega: Deltascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 德尔塔幻境",
+    "name": "Catastrophe",
+    "cn_name": "灾变者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 40,
+    "quest": 16,
+    "zone_name": "Omega: Deltascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 德尔塔幻境",
+    "name": "Halicarnassus",
+    "cn_name": "哈利卡纳苏斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 41,
+    "quest": 16,
+    "zone_name": "Omega: Deltascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 德尔塔幻境",
+    "name": "Exdeath",
+    "cn_name": "艾克斯迪司",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 42,
+    "quest": 17,
+    "zone_name": "Omega: Deltascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 德尔塔幻境",
+    "name": "Alte Roite",
+    "cn_name": "老者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 43,
+    "quest": 17,
+    "zone_name": "Omega: Deltascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 德尔塔幻境",
+    "name": "Catastrophe",
+    "cn_name": "灾变者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 44,
+    "quest": 17,
+    "zone_name": "Omega: Deltascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 德尔塔幻境",
+    "name": "Halicarnassus",
+    "cn_name": "哈利卡纳苏斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 45,
+    "quest": 17,
+    "zone_name": "Omega: Deltascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 德尔塔幻境",
+    "name": "Exdeath",
+    "cn_name": "艾克斯迪司",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 46,
+    "quest": 17,
+    "zone_name": "Omega: Deltascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 德尔塔幻境",
+    "name": "Neo Exdeath",
+    "cn_name": "新生艾克斯迪司",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2008,
+    "quest": 18,
+    "zone_name": "The Royal City of Rabanastre",
+    "cn_zone_name": "失落之都拉巴纳斯塔",
+    "name": "Mateus, the Corrupt",
+    "cn_name": "背德皇帝马提乌斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2009,
+    "quest": 18,
+    "zone_name": "The Royal City of Rabanastre",
+    "cn_zone_name": "失落之都拉巴纳斯塔",
+    "name": "Hashmal, Bringer of Order",
+    "cn_name": "统治者哈修马利姆",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2010,
+    "quest": 18,
+    "zone_name": "The Royal City of Rabanastre",
+    "cn_zone_name": "失落之都拉巴纳斯塔",
+    "name": "Rofocale",
+    "cn_name": "人马王洛弗卡勒",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2011,
+    "quest": 18,
+    "zone_name": "The Royal City of Rabanastre",
+    "cn_zone_name": "失落之都拉巴纳斯塔",
+    "name": "Argath Thadalfus",
+    "cn_name": "冷血剑阿加斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1039,
+    "quest": 19,
+    "zone_name": "The Unending Coil of Bahamut",
+    "cn_zone_name": "巴哈姆特绝境战",
+    "name": "Bahamut Prime",
+    "cn_name": "至尊巴哈姆特",
+    "nickname": [
+      "绝巴哈",
+      "jio巴哈",
+      "巴哈",
+      "Jio巴哈"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 47,
+    "quest": 20,
+    "zone_name": "Omega: Sigmascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 西格玛幻境",
+    "name": "Phantom Train",
+    "cn_name": "魔列车",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 48,
+    "quest": 20,
+    "zone_name": "Omega: Sigmascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 西格玛幻境",
+    "name": "Demon Chadarnook",
+    "cn_name": "恶魔查达奴克",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 49,
+    "quest": 20,
+    "zone_name": "Omega: Sigmascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 西格玛幻境",
+    "name": "Guardian",
+    "cn_name": "守护者",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 50,
+    "quest": 20,
+    "zone_name": "Omega: Sigmascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 西格玛幻境",
+    "name": "Kefka",
+    "cn_name": "凯夫卡",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 51,
+    "quest": 21,
+    "zone_name": "Omega: Sigmascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 西格玛幻境",
+    "name": "Phantom Train",
+    "cn_name": "魔列车",
+    "nickname": [
+      "5s",
+      "5S",
+      "O5S",
+      "o5s"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 52,
+    "quest": 21,
+    "zone_name": "Omega: Sigmascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 西格玛幻境",
+    "name": "Demon Chadarnook",
+    "cn_name": "恶魔查达奴克",
+    "nickname": [
+      "6s",
+      "6S",
+      "O6S",
+      "o6s",
+      "画魔",
+      "查达奴克",
+      "查达努克",
+      "恶魔查达努克"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 53,
+    "quest": 21,
+    "zone_name": "Omega: Sigmascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 西格玛幻境",
+    "name": "Guardian",
+    "cn_name": "守护者",
+    "nickname": [
+      "7s",
+      "7S",
+      "O7S",
+      "o7s"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 54,
+    "quest": 21,
+    "zone_name": "Omega: Sigmascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 西格玛幻境",
+    "name": "Kefka",
+    "cn_name": "凯夫卡",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 55,
+    "quest": 21,
+    "zone_name": "Omega: Sigmascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 西格玛幻境",
+    "name": "God Kefka",
+    "cn_name": "神圣凯夫卡",
+    "nickname": [
+      "卡夫卡",
+      "凯夫卡",
+      "小丑",
+      "8s",
+      "o8s",
+      "8S",
+      "O8S"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2012,
+    "quest": 22,
+    "zone_name": "The Ridorana Lighthouse",
+    "cn_zone_name": "封闭圣塔黎铎拉纳大灯塔",
+    "name": "Famfrit, the Darkening Cloud",
+    "cn_name": "暗黑之云法姆弗里特",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2013,
+    "quest": 22,
+    "zone_name": "The Ridorana Lighthouse",
+    "cn_zone_name": "封闭圣塔黎铎拉纳大灯塔",
+    "name": "Belias, the Gigas",
+    "cn_name": "魔人贝利亚斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2014,
+    "quest": 22,
+    "zone_name": "The Ridorana Lighthouse",
+    "cn_zone_name": "封闭圣塔黎铎拉纳大灯塔",
+    "name": "Construct 7",
+    "cn_name": "劳动七号",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2015,
+    "quest": 22,
+    "zone_name": "The Ridorana Lighthouse",
+    "cn_zone_name": "封闭圣塔黎铎拉纳大灯塔",
+    "name": "Yiazmat",
+    "cn_name": "鬼龙雅兹玛特",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1042,
+    "quest": 23,
+    "zone_name": "The Weapon&#039;s Refrain",
+    "cn_zone_name": "究极神兵绝境战",
+    "name": "The Ultima Weapon",
+    "cn_name": "究极神兵",
+    "nickname": [
+      "绝神兵",
+      "jio神兵",
+      "神兵",
+      "Jio神兵"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 56,
+    "quest": 24,
+    "zone_name": "Omega: Alphascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 阿尔法幻境",
+    "name": "Chaos",
+    "cn_name": "卡奥斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 57,
+    "quest": 24,
+    "zone_name": "Omega: Alphascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 阿尔法幻境",
+    "name": "Midgardsormr",
+    "cn_name": "尘世幻龙",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 58,
+    "quest": 24,
+    "zone_name": "Omega: Alphascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 阿尔法幻境",
+    "name": "Omega",
+    "cn_name": "欧米茄",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 59,
+    "quest": 24,
+    "zone_name": "Omega: Alphascape (Story)",
+    "cn_zone_name": "欧米茄时空狭缝 阿尔法幻境",
+    "name": "Omega-M and Omega-F",
+    "cn_name": "双生欧米茄",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 60,
+    "quest": 25,
+    "zone_name": "Omega: Alphascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 阿尔法幻境",
+    "name": "Chaos",
+    "cn_name": "卡奥斯",
+    "nickname": [
+      "卡卡",
+      "o9s",
+      "9s",
+      "O9S",
+      "9S"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (Echo)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (超越之力)###9"
+    ]
+  },
+  {
+    "pk": 61,
+    "quest": 25,
+    "zone_name": "Omega: Alphascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 阿尔法幻境",
+    "name": "Midgardsormr",
+    "cn_name": "尘世幻龙",
+    "nickname": [
+      "o10s",
+      "10s",
+      "O10S",
+      "10S",
+      "尘世幻龙"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (Echo)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (超越之力)###9"
+    ]
+  },
+  {
+    "pk": 62,
+    "quest": 25,
+    "zone_name": "Omega: Alphascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 阿尔法幻境",
+    "name": "Omega",
+    "cn_name": "欧米茄",
+    "nickname": [
+      "o11s",
+      "11s",
+      "O11S",
+      "11S"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (Echo)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (超越之力)###9"
+    ]
+  },
+  {
+    "pk": 63,
+    "quest": 25,
+    "zone_name": "Omega: Alphascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 阿尔法幻境",
+    "name": "Omega-M and Omega-F",
+    "cn_name": "双生欧米茄",
+    "nickname": [
+      "o12s门神",
+      "O12S门神",
+      "12S门神",
+      "12s门神",
+      "男女",
+      "狗男女"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (Echo)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (超越之力)###9"
+    ]
+  },
+  {
+    "pk": 64,
+    "quest": 25,
+    "zone_name": "Omega: Alphascape (Savage)",
+    "cn_zone_name": "欧米茄零式时空狭缝 阿尔法幻境",
+    "name": "The Final Omega",
+    "cn_name": "至尊欧米茄",
+    "nickname": [
+      "o12s",
+      "12s",
+      "O12S",
+      "12S",
+      "o12s本体",
+      "12s本体",
+      "O12S本体",
+      "12S本体"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (Echo)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (超越之力)###9"
+    ]
+  },
+  {
+    "pk": 2016,
+    "quest": 26,
+    "zone_name": "The Orbonne Monastery",
+    "cn_zone_name": "乐欲之所瓯博讷修道院",
+    "name": "Mustadio",
+    "cn_name": "机工士姆斯塔迪奥",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2017,
+    "quest": 26,
+    "zone_name": "The Orbonne Monastery",
+    "cn_zone_name": "乐欲之所瓯博讷修道院",
+    "name": "Agrias",
+    "cn_name": "圣骑士阿格莉亚丝",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2018,
+    "quest": 26,
+    "zone_name": "The Orbonne Monastery",
+    "cn_zone_name": "乐欲之所瓯博讷修道院",
+    "name": "The Thunder God",
+    "cn_name": "雷神西德",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2019,
+    "quest": 26,
+    "zone_name": "The Orbonne Monastery",
+    "cn_zone_name": "乐欲之所瓯博讷修道院",
+    "name": "Ultima, The High Seraph",
+    "cn_name": "圣天使阿尔蒂玛",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4520,
+    "quest": 27,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Amaurot",
+    "cn_name": "末日暗影亚马乌罗提",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4521,
+    "quest": 27,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Twinning",
+    "cn_name": "异界遗构希尔科斯孪晶塔",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4522,
+    "quest": 27,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Akadaemia Anyder",
+    "cn_name": "创造机构阿尼德罗学院",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4523,
+    "quest": 27,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Grand Cosmos",
+    "cn_name": "魔法宫殿宇宙宫",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4524,
+    "quest": 27,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Anamnesis Anyder",
+    "cn_name": "黑风海底 阿尼德罗追忆馆",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4525,
+    "quest": 27,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "The Heroes' Gauntlet",
+    "cn_name": "漆黑决战",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4526,
+    "quest": 27,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Matoya's Relict",
+    "cn_name": "魔术工房玛托雅工作室",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4527,
+    "quest": 27,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战(80级)",
+    "name": "Paglth'an",
+    "cn_name": "黄金平原帕戈尔赞草原",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1045,
+    "quest": 28,
+    "zone_name": "Trials I (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 I：高难度",
+    "name": "Titania",
+    "cn_name": "缇坦妮雅",
+    "nickname": [
+      "妖精",
+      "妖精王",
+      "妖灵王",
+      "极妖精",
+      "极妖精王"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3",
+      "Standard Comps (5.3)###9",
+      "Standard Comps (5.4)###15",
+      "Standard Comps (5.5)###21"
+    ],
+    "cn_region": [
+      "标准阵容构成###5",
+      "标准阵容构成 (5.3)###11",
+      "标准阵容构成 (5.4)###17",
+      "标准阵容构成 (5.5)###23"
+    ]
+  },
+  {
+    "pk": 1046,
+    "quest": 28,
+    "zone_name": "Trials I (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 I：高难度",
+    "name": "Innocence",
+    "cn_name": "无瑕灵君",
+    "nickname": [
+      "肥宅",
+      "极肥宅",
+      "无暇灵君",
+      "肥宅王",
+      "极肥宅王",
+      "无罪者",
+      "完美神",
+      "极无罪",
+      "极无罪者",
+      "全能者"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3",
+      "Standard Comps (5.3)###9",
+      "Standard Comps (5.4)###15",
+      "Standard Comps (5.5)###21"
+    ],
+    "cn_region": [
+      "标准阵容构成###5",
+      "标准阵容构成 (5.3)###11",
+      "标准阵容构成 (5.4)###17",
+      "标准阵容构成 (5.5)###23"
+    ]
+  },
+  {
+    "pk": 1049,
+    "quest": 28,
+    "zone_name": "Trials I (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 I：高难度",
+    "name": "Hades",
+    "cn_name": "哈迪斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3",
+      "Standard Comps (5.3)###9",
+      "Standard Comps (5.4)###15",
+      "Standard Comps (5.5)###21"
+    ],
+    "cn_region": [
+      "标准阵容构成###5",
+      "标准阵容构成 (5.3)###11",
+      "标准阵容构成 (5.4)###17",
+      "标准阵容构成 (5.5)###23"
+    ]
+  },
+  {
+    "pk": 65,
+    "quest": 29,
+    "zone_name": "Eden&#039;s Gate",
+    "cn_zone_name": "伊甸希望乐园：觉醒之章",
+    "name": "Eden Prime",
+    "cn_name": "至尊伊甸",
+    "nickname": [
+      "E1S",
+      "e1s"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3"
+    ],
+    "cn_region": [
+      "标准阵容构成###5"
+    ]
+  },
+  {
+    "pk": 66,
+    "quest": 29,
+    "zone_name": "Eden&#039;s Gate",
+    "cn_zone_name": "伊甸希望乐园：觉醒之章",
+    "name": "Voidwalker",
+    "cn_name": "虚空行者",
+    "nickname": [
+      "E2S",
+      "e2s"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3"
+    ],
+    "cn_region": [
+      "标准阵容构成###5"
+    ]
+  },
+  {
+    "pk": 67,
+    "quest": 29,
+    "zone_name": "Eden&#039;s Gate",
+    "cn_zone_name": "伊甸希望乐园：觉醒之章",
+    "name": "Leviathan",
+    "cn_name": "利维亚桑",
+    "nickname": [
+      "E3S",
+      "e3s"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3"
+    ],
+    "cn_region": [
+      "标准阵容构成###5"
+    ]
+  },
+  {
+    "pk": 68,
+    "quest": 29,
+    "zone_name": "Eden&#039;s Gate",
+    "cn_zone_name": "伊甸希望乐园：觉醒之章",
+    "name": "Titan",
+    "cn_name": "泰坦",
+    "nickname": [
+      "E4S",
+      "e4s"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3"
+    ],
+    "cn_region": [
+      "标准阵容构成###5"
+    ]
+  },
+  {
+    "pk": 1047,
+    "quest": 30,
+    "zone_name": "Ultimates (Stormblood)",
+    "cn_zone_name": "绝境战 (红莲之狂潮)",
+    "name": "The Unending Coil of Bahamut",
+    "cn_name": "巴哈姆特绝境战",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 1048,
+    "quest": 30,
+    "zone_name": "Ultimates (Stormblood)",
+    "cn_zone_name": "绝境战 (红莲之狂潮)",
+    "name": "The Weapon's Refrain",
+    "cn_name": "究极神兵绝境战",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 2020,
+    "quest": 31,
+    "zone_name": "The Copied Factory",
+    "cn_zone_name": "复制工厂废墟",
+    "name": "Serial-Jointed Command Model",
+    "cn_name": "多关节型：司令机",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2021,
+    "quest": 31,
+    "zone_name": "The Copied Factory",
+    "cn_zone_name": "复制工厂废墟",
+    "name": "Hobbes",
+    "cn_name": "霍布斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2022,
+    "quest": 31,
+    "zone_name": "The Copied Factory",
+    "cn_zone_name": "复制工厂废墟",
+    "name": "Engels",
+    "cn_name": "昂格士",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2023,
+    "quest": 31,
+    "zone_name": "The Copied Factory",
+    "cn_zone_name": "复制工厂废墟",
+    "name": "9S-Operated Walking Fortress",
+    "cn_name": "9S：接入多脚战车",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1050,
+    "quest": 32,
+    "zone_name": "Ultimates",
+    "cn_zone_name": "绝境战（暗影之逆焰）",
+    "name": "The Epic of Alexander",
+    "cn_name": "亚历山大绝境战",
+    "nickname": [
+      "绝亚",
+      "绝亚历山大"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (5.3)###7",
+      "Standard Comps (5.4)###13",
+      "Standard Comps (5.5)###19"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (5.3)###9",
+      "标准阵容构成 (5.4)###15",
+      "标准阵容构成 (5.5)###21"
+    ]
+  },
+  {
+    "pk": 69,
+    "quest": 33,
+    "zone_name": "Eden&#039;s Verse",
+    "cn_zone_name": "伊甸希望乐园：共鸣之章",
+    "name": "Ramuh",
+    "cn_name": "拉姆",
+    "nickname": [
+      "e5s",
+      "E5S"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (5.3)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (5.3)###9"
+    ]
+  },
+  {
+    "pk": 70,
+    "quest": 33,
+    "zone_name": "Eden&#039;s Verse",
+    "cn_zone_name": "伊甸希望乐园：共鸣之章",
+    "name": "Ifrit and Garuda",
+    "cn_name": "伊弗利特与迦楼罗",
+    "nickname": [
+      "e6s",
+      "E6S"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (5.3)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (5.3)###9"
+    ]
+  },
+  {
+    "pk": 71,
+    "quest": 33,
+    "zone_name": "Eden&#039;s Verse",
+    "cn_zone_name": "伊甸希望乐园：共鸣之章",
+    "name": "The Idol of Darkness",
+    "cn_name": "暗黑心象",
+    "nickname": [
+      "e7s",
+      "E7S"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (5.3)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (5.3)###9"
+    ]
+  },
+  {
+    "pk": 72,
+    "quest": 33,
+    "zone_name": "Eden&#039;s Verse",
+    "cn_zone_name": "伊甸希望乐园：共鸣之章",
+    "name": "Shiva",
+    "cn_name": "希瓦",
+    "nickname": [
+      "e8s",
+      "E8S"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps###1",
+      "Standard Comps (5.3)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成###3",
+      "标准阵容构成 (5.3)###9"
+    ]
+  },
+  {
+    "pk": 1051,
+    "quest": 34,
+    "zone_name": "Trials II (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 II：高难度",
+    "name": "The Ruby Weapon I",
+    "cn_name": "红宝石神兵1",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3",
+      "Standard Comps (5.3)###9",
+      "Standard Comps (5.4)###15",
+      "Standard Comps (5.5)###21"
+    ],
+    "cn_region": [
+      "标准阵容构成###5",
+      "标准阵容构成 (5.3)###11",
+      "标准阵容构成 (5.4)###17",
+      "标准阵容构成 (5.5)###23"
+    ]
+  },
+  {
+    "pk": 1052,
+    "quest": 34,
+    "zone_name": "Trials II (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 II：高难度",
+    "name": "The Ruby Weapon II",
+    "cn_name": "红宝石神兵2",
+    "nickname": [
+      "红玉神兵"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3",
+      "Standard Comps (5.3)###9",
+      "Standard Comps (5.4)###15",
+      "Standard Comps (5.5)###21"
+    ],
+    "cn_region": [
+      "标准阵容构成###5",
+      "标准阵容构成 (5.3)###11",
+      "标准阵容构成 (5.4)###17",
+      "标准阵容构成 (5.5)###23"
+    ]
+  },
+  {
+    "pk": 1053,
+    "quest": 34,
+    "zone_name": "Trials II (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 II：高难度",
+    "name": "Varis Yae Galvus",
+    "cn_name": "瓦厉斯·耶·加尔乌斯",
+    "nickname": [
+      "瓦厉斯"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3",
+      "Standard Comps (5.3)###9",
+      "Standard Comps (5.4)###15",
+      "Standard Comps (5.5)###21"
+    ],
+    "cn_region": [
+      "标准阵容构成###5",
+      "标准阵容构成 (5.3)###11",
+      "标准阵容构成 (5.4)###17",
+      "标准阵容构成 (5.5)###23"
+    ]
+  },
+  {
+    "pk": 1054,
+    "quest": 34,
+    "zone_name": "Trials II (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 II：高难度",
+    "name": "Warrior of Light",
+    "cn_name": "光之战士",
+    "nickname": [
+      "光战",
+      "极光战"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.0)###1",
+      "Standard Comps###3",
+      "Standard Comps (5.3)###9",
+      "Standard Comps (5.4)###15",
+      "Standard Comps (5.5)###21"
+    ],
+    "cn_region": [
+      "标准阵容构成###5",
+      "标准阵容构成 (5.3)###11",
+      "标准阵容构成 (5.4)###17",
+      "标准阵容构成 (5.5)###23"
+    ]
+  },
+  {
+    "pk": 2024,
+    "quest": 35,
+    "zone_name": "The Puppets&#039; Bunker",
+    "cn_zone_name": "人偶军事基地",
+    "name": "813P-Operated Aegis Unit",
+    "cn_name": "813P：装备据点防卫装置",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2025,
+    "quest": 35,
+    "zone_name": "The Puppets&#039; Bunker",
+    "cn_zone_name": "人偶军事基地",
+    "name": "Superior Flight Units",
+    "cn_name": "强化型飞行单位",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2026,
+    "quest": 35,
+    "zone_name": "The Puppets&#039; Bunker",
+    "cn_zone_name": "人偶军事基地",
+    "name": "905P-Operated Heavy Artillery Unit",
+    "cn_name": "905P：重战单位",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2027,
+    "quest": 35,
+    "zone_name": "The Puppets&#039; Bunker",
+    "cn_zone_name": "人偶军事基地",
+    "name": "Compound 2P",
+    "cn_name": "2P：融合体",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 3001,
+    "quest": 36,
+    "zone_name": "Trials (Unreal)",
+    "cn_zone_name": "幻巧战",
+    "name": "Shiva",
+    "cn_name": "希瓦",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 3002,
+    "quest": 36,
+    "zone_name": "Trials (Unreal)",
+    "cn_zone_name": "幻巧战",
+    "name": "Titan",
+    "cn_name": "泰坦",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 3003,
+    "quest": 36,
+    "zone_name": "Trials (Unreal)",
+    "cn_zone_name": "幻巧战",
+    "name": "Leviathan",
+    "cn_name": "利维亚桑",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 1055,
+    "quest": 37,
+    "zone_name": "Trials III (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 III：高难度",
+    "name": "The Emerald Weapon II",
+    "cn_name": "绿宝石神兵 II",
+    "nickname": [
+      "绿宝石神兵"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.4)###1",
+      "Standard Comps (5.5)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成 (5.4)###3",
+      "标准阵容构成 (5.5)###9"
+    ]
+  },
+  {
+    "pk": 1056,
+    "quest": 37,
+    "zone_name": "Trials III (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 III：高难度",
+    "name": "The Emerald Weapon I",
+    "cn_name": "绿宝石神兵 I",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.4)###1",
+      "Standard Comps (5.5)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成 (5.4)###3",
+      "标准阵容构成 (5.5)###9"
+    ]
+  },
+  {
+    "pk": 1057,
+    "quest": 37,
+    "zone_name": "Trials III (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 III：高难度",
+    "name": "The Diamond Weapon",
+    "cn_name": "钻石神兵",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (5.4)###1",
+      "Standard Comps (5.5)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成 (5.4)###3",
+      "标准阵容构成 (5.5)###9"
+    ]
+  },
+  {
+    "pk": 73,
+    "quest": 38,
+    "zone_name": "Eden&#039;s Promise",
+    "cn_zone_name": "伊甸希望乐园：再生之章",
+    "name": "Cloud of Darkness",
+    "cn_name": "暗黑之云",
+    "nickname": [
+      "e9s",
+      "E9S"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (5.4)###1",
+      "Standard Comps (5.5)###7",
+      "Standard Comps (Echo)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (5.4)###3",
+      "标准阵容构成 (5.5)###9",
+      "标准阵容构成 (Echo)###15"
+    ]
+  },
+  {
+    "pk": 74,
+    "quest": 38,
+    "zone_name": "Eden&#039;s Promise",
+    "cn_zone_name": "伊甸希望乐园：再生之章",
+    "name": "Shadowkeeper",
+    "cn_name": "影之王",
+    "nickname": [
+      "e10s",
+      "E10S"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (5.4)###1",
+      "Standard Comps (5.5)###7",
+      "Standard Comps (Echo)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (5.4)###3",
+      "标准阵容构成 (5.5)###9",
+      "标准阵容构成 (Echo)###15"
+    ]
+  },
+  {
+    "pk": 75,
+    "quest": 38,
+    "zone_name": "Eden&#039;s Promise",
+    "cn_zone_name": "伊甸希望乐园：再生之章",
+    "name": "Fatebreaker",
+    "cn_name": "绝命战士",
+    "nickname": [
+      "e11s",
+      "E11S",
+      "老父亲"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (5.4)###1",
+      "Standard Comps (5.5)###7",
+      "Standard Comps (Echo)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (5.4)###3",
+      "标准阵容构成 (5.5)###9",
+      "标准阵容构成 (Echo)###15"
+    ]
+  },
+  {
+    "pk": 76,
+    "quest": 38,
+    "zone_name": "Eden&#039;s Promise",
+    "cn_zone_name": "伊甸希望乐园：再生之章",
+    "name": "Eden's Promise",
+    "cn_name": "伊甸之约",
+    "nickname": [
+      "e12s门神",
+      "E12S门神"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (5.4)###1",
+      "Standard Comps (5.5)###7",
+      "Standard Comps (Echo)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (5.4)###3",
+      "标准阵容构成 (5.5)###9",
+      "标准阵容构成 (Echo)###15"
+    ]
+  },
+  {
+    "pk": 77,
+    "quest": 38,
+    "zone_name": "Eden&#039;s Promise",
+    "cn_zone_name": "伊甸希望乐园：再生之章",
+    "name": "Oracle of Darkness",
+    "cn_name": "暗之巫女",
+    "nickname": [
+      "e12s",
+      "E12S",
+      "e12s本体",
+      "E12S本体"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (5.4)###1",
+      "Standard Comps (5.5)###7",
+      "Standard Comps (Echo)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (5.4)###3",
+      "标准阵容构成 (5.5)###9",
+      "标准阵容构成 (Echo)###15"
+    ]
+  },
+  {
+    "pk": 2028,
+    "quest": 39,
+    "zone_name": "Delubrum Reginae",
+    "cn_zone_name": "女王古殿贡希尔德神庙",
+    "name": "Trinity Seeker",
+    "cn_name": "求道之三位一体",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2029,
+    "quest": 39,
+    "zone_name": "Delubrum Reginae",
+    "cn_zone_name": "女王古殿贡希尔德神庙",
+    "name": "The Queen's Guard",
+    "cn_name": "女王护卫",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2030,
+    "quest": 39,
+    "zone_name": "Delubrum Reginae",
+    "cn_zone_name": "女王古殿贡希尔德神庙",
+    "name": "Trinity Avowed",
+    "cn_name": "誓约之三位一体",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2031,
+    "quest": 39,
+    "zone_name": "Delubrum Reginae",
+    "cn_zone_name": "女王古殿贡希尔德神庙",
+    "name": "The Queen",
+    "cn_name": "天佑女王",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2032,
+    "quest": 40,
+    "zone_name": "The Tower at Paradigm&#039;s Breach",
+    "cn_zone_name": "希望之炮台：“塔”",
+    "name": "Knave of Hearts",
+    "cn_name": "杰克",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2033,
+    "quest": 40,
+    "zone_name": "The Tower at Paradigm&#039;s Breach",
+    "cn_zone_name": "希望之炮台：“塔”",
+    "name": "Hansel and Gretel",
+    "cn_name": "韩塞尔与格雷特",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2034,
+    "quest": 40,
+    "zone_name": "The Tower at Paradigm&#039;s Breach",
+    "cn_zone_name": "希望之炮台：“塔”",
+    "name": "Red Girl",
+    "cn_name": "红衣少女",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2035,
+    "quest": 40,
+    "zone_name": "The Tower at Paradigm&#039;s Breach",
+    "cn_zone_name": "希望之炮台：“塔”",
+    "name": "False Idol",
+    "cn_name": "伪造的神明",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2036,
+    "quest": 40,
+    "zone_name": "The Tower at Paradigm&#039;s Breach",
+    "cn_zone_name": "希望之炮台：“塔”",
+    "name": "Her Inflorescence",
+    "cn_name": "开花的神明",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4528,
+    "quest": 41,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战 (90级)",
+    "name": "The Dead Ends",
+    "cn_name": "最终幻想末世终迹",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4529,
+    "quest": 41,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战 (90级)",
+    "name": "Smileton",
+    "cn_name": "乐园都市笑笑镇",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4530,
+    "quest": 41,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战 (90级)",
+    "name": "The Stigma Dreamscape",
+    "cn_name": "电脑梦境斯提格玛四",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4531,
+    "quest": 41,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战 (90级)",
+    "name": "Alzadaal's Legacy",
+    "cn_name": "近东秘宝阿尔扎达尔海底遗迹群",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4532,
+    "quest": 41,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战 (90级)",
+    "name": "The Fell Court of Troia",
+    "cn_name": "异界孤城特罗亚宫廷",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4534,
+    "quest": 41,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战 (90级)",
+    "name": "Lapis Manalis",
+    "cn_name": "Lapis Manalis",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1058,
+    "quest": 42,
+    "zone_name": "Trials I (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度 I",
+    "name": "Zodiark",
+    "cn_name": "佐迪亚克",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7",
+      "Standard Comps (6.2)###13",
+      "Standard Comps (6.28)###19",
+      "Standard Comps (6.3)###25"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9",
+      "标准阵容构成 (6.2)###15",
+      "标准阵容构成 (6.28)###21",
+      "标准阵容构成 (6.3)###27"
+    ]
+  },
+  {
+    "pk": 1059,
+    "quest": 42,
+    "zone_name": "Trials I (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度 I",
+    "name": "Hydaelyn",
+    "cn_name": "海德林",
+    "nickname": [
+      "妈水晶"
+    ],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7",
+      "Standard Comps (6.2)###13",
+      "Standard Comps (6.28)###19",
+      "Standard Comps (6.3)###25"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9",
+      "标准阵容构成 (6.2)###15",
+      "标准阵容构成 (6.28)###21",
+      "标准阵容构成 (6.3)###27"
+    ]
+  },
+  {
+    "pk": 1063,
+    "quest": 42,
+    "zone_name": "Trials I (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度 I",
+    "name": "Endsinger",
+    "cn_name": "讴歌终结之物",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7",
+      "Standard Comps (6.2)###13",
+      "Standard Comps (6.28)###19",
+      "Standard Comps (6.3)###25"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9",
+      "标准阵容构成 (6.2)###15",
+      "标准阵容构成 (6.28)###21",
+      "标准阵容构成 (6.3)###27"
+    ]
+  },
+  {
+    "pk": 1060,
+    "quest": 43,
+    "zone_name": "Ultimates (Legacy)",
+    "cn_zone_name": "绝境战（旧版本）",
+    "name": "The Unending Coil of Bahamut",
+    "cn_name": "巴哈姆特绝境战",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7",
+      "Standard Comps (6.2)###13",
+      "Standard Comps (6.28)###19",
+      "Standard Comps (6.3)###25"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9",
+      "标准阵容构成 (6.2)###15",
+      "标准阵容构成 (6.28)###21",
+      "标准阵容构成 (6.3)###27"
+    ]
+  },
+  {
+    "pk": 1061,
+    "quest": 43,
+    "zone_name": "Ultimates (Legacy)",
+    "cn_zone_name": "绝境战（旧版本）",
+    "name": "The Weapon's Refrain",
+    "cn_name": "究极神兵绝境战",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7",
+      "Standard Comps (6.2)###13",
+      "Standard Comps (6.28)###19",
+      "Standard Comps (6.3)###25"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9",
+      "标准阵容构成 (6.2)###15",
+      "标准阵容构成 (6.28)###21",
+      "标准阵容构成 (6.3)###27"
+    ]
+  },
+  {
+    "pk": 1062,
+    "quest": 43,
+    "zone_name": "Ultimates (Legacy)",
+    "cn_zone_name": "绝境战（旧版本）",
+    "name": "The Epic of Alexander",
+    "cn_name": "亚历山大绝境战",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7",
+      "Standard Comps (6.2)###13",
+      "Standard Comps (6.28)###19",
+      "Standard Comps (6.3)###25"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9",
+      "标准阵容构成 (6.2)###15",
+      "标准阵容构成 (6.28)###21",
+      "标准阵容构成 (6.3)###27"
+    ]
+  },
+  {
+    "pk": 78,
+    "quest": 44,
+    "zone_name": "Asphodelos",
+    "cn_zone_name": "万魔殿 边境之狱",
+    "name": "Erichthonios",
+    "cn_name": "埃里克特翁尼亚斯",
+    "nickname": [
+      "P1S",
+      "p1s"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9"
+    ]
+  },
+  {
+    "pk": 79,
+    "quest": 44,
+    "zone_name": "Asphodelos",
+    "cn_zone_name": "万魔殿 边境之狱",
+    "name": "Hippokampos",
+    "cn_name": "鱼尾海马怪",
+    "nickname": [
+      "P2S",
+      "p2s"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9"
+    ]
+  },
+  {
+    "pk": 80,
+    "quest": 44,
+    "zone_name": "Asphodelos",
+    "cn_zone_name": "万魔殿 边境之狱",
+    "name": "Phoinix",
+    "cn_name": "菲尼克司",
+    "nickname": [
+      "P3S",
+      "p3s",
+      "凤凰"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9"
+    ]
+  },
+  {
+    "pk": 81,
+    "quest": 44,
+    "zone_name": "Asphodelos",
+    "cn_zone_name": "万魔殿 边境之狱",
+    "name": "Hesperos",
+    "cn_name": "赫斯珀洛斯",
+    "nickname": [
+      "P4S门神",
+      "门神"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9"
+    ]
+  },
+  {
+    "pk": 82,
+    "quest": 44,
+    "zone_name": "Asphodelos",
+    "cn_zone_name": "万魔殿 边境之狱",
+    "name": "Hesperos II",
+    "cn_name": "赫斯珀洛斯II",
+    "nickname": [
+      "P4S本体",
+      "本体",
+      "P4S",
+      "p4s"
+    ],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.0)###1",
+      "Standard Comps (6.1)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.0)###3",
+      "标准阵容构成 (6.1)###9"
+    ]
+  },
+  {
+    "pk": 1065,
+    "quest": 45,
+    "zone_name": "Dragonsong&#039;s Reprise",
+    "cn_zone_name": "幻想龙诗绝境战",
+    "name": "Dragonsong's Reprise",
+    "cn_name": "幻想龙诗绝境战",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.1)###1",
+      "Standard Comps (6.2)###7",
+      "Standard Comps (6.28)###13",
+      "Standard Comps (6.3)###19"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.1)###3",
+      "标准阵容构成 (6.2)###9",
+      "标准阵容构成 (6.28)###15",
+      "标准阵容构成 (6.3)###21"
+    ]
+  },
+  {
+    "pk": 3004,
+    "quest": 46,
+    "zone_name": "Trials (Unreal)",
+    "cn_zone_name": "幻巧战",
+    "name": "Ultima's Bane",
+    "cn_name": "究极神兵",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 3005,
+    "quest": 46,
+    "zone_name": "Trials (Unreal)",
+    "cn_zone_name": "幻巧战",
+    "name": "Sephirot",
+    "cn_name": "萨菲洛特",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 3006,
+    "quest": 46,
+    "zone_name": "Trials (Unreal)",
+    "cn_zone_name": "幻巧战",
+    "name": "Sophia",
+    "cn_name": "Sophia",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 2037,
+    "quest": 47,
+    "zone_name": "Aglaia",
+    "cn_zone_name": "灿烂神域阿格莱亚",
+    "name": "Byregot",
+    "cn_name": "比尔格",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2038,
+    "quest": 47,
+    "zone_name": "Aglaia",
+    "cn_zone_name": "灿烂神域阿格莱亚",
+    "name": "Rhalgr",
+    "cn_name": "拉尔戈",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2039,
+    "quest": 47,
+    "zone_name": "Aglaia",
+    "cn_zone_name": "灿烂神域阿格莱亚",
+    "name": "Azeyma",
+    "cn_name": "阿泽玛",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2040,
+    "quest": 47,
+    "zone_name": "Aglaia",
+    "cn_zone_name": "灿烂神域阿格莱亚",
+    "name": "Nald'thal",
+    "cn_name": "纳尔札尔",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2041,
+    "quest": 48,
+    "zone_name": "Delubrum Reginae",
+    "cn_zone_name": "女王古殿贡希尔德神庙",
+    "name": "Trinity Seeker",
+    "cn_name": "求道之三位一体",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2042,
+    "quest": 48,
+    "zone_name": "Delubrum Reginae",
+    "cn_zone_name": "女王古殿贡希尔德神庙",
+    "name": "The Queen's Guard",
+    "cn_name": "女王护卫",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2043,
+    "quest": 48,
+    "zone_name": "Delubrum Reginae",
+    "cn_zone_name": "女王古殿贡希尔德神庙",
+    "name": "Trinity Avowed",
+    "cn_name": "誓约之三位一体",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2044,
+    "quest": 48,
+    "zone_name": "Delubrum Reginae",
+    "cn_zone_name": "女王古殿贡希尔德神庙",
+    "name": "The Queen",
+    "cn_name": "天佑女王",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 83,
+    "quest": 49,
+    "zone_name": "Abyssos",
+    "cn_zone_name": "万魔殿 炼净之狱",
+    "name": "Proto-Carbuncle",
+    "cn_name": "原型宝石兽",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.2)###1",
+      "Standard Comps (6.28)###7",
+      "Standard Comps (6.3)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.2)###3",
+      "标准阵容构成 (6.28)###9",
+      "标准阵容构成 (6.3)###15"
+    ]
+  },
+  {
+    "pk": 84,
+    "quest": 49,
+    "zone_name": "Abyssos",
+    "cn_zone_name": "万魔殿 炼净之狱",
+    "name": "Hegemone",
+    "cn_name": "赫革摩涅",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.2)###1",
+      "Standard Comps (6.28)###7",
+      "Standard Comps (6.3)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.2)###3",
+      "标准阵容构成 (6.28)###9",
+      "标准阵容构成 (6.3)###15"
+    ]
+  },
+  {
+    "pk": 85,
+    "quest": 49,
+    "zone_name": "Abyssos",
+    "cn_zone_name": "万魔殿 炼净之狱",
+    "name": "Agdistis",
+    "cn_name": "阿格狄斯提斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.2)###1",
+      "Standard Comps (6.28)###7",
+      "Standard Comps (6.3)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.2)###3",
+      "标准阵容构成 (6.28)###9",
+      "标准阵容构成 (6.3)###15"
+    ]
+  },
+  {
+    "pk": 86,
+    "quest": 49,
+    "zone_name": "Abyssos",
+    "cn_zone_name": "万魔殿 炼净之狱",
+    "name": "Hephaistos",
+    "cn_name": "赫淮斯托斯",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.2)###1",
+      "Standard Comps (6.28)###7",
+      "Standard Comps (6.3)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.2)###3",
+      "标准阵容构成 (6.28)###9",
+      "标准阵容构成 (6.3)###15"
+    ]
+  },
+  {
+    "pk": 87,
+    "quest": 49,
+    "zone_name": "Abyssos",
+    "cn_zone_name": "万魔殿 炼净之狱",
+    "name": "Hephaistos II",
+    "cn_name": "赫淮斯托斯 II",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.2)###1",
+      "Standard Comps (6.28)###7",
+      "Standard Comps (6.3)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.2)###3",
+      "标准阵容构成 (6.28)###9",
+      "标准阵容构成 (6.3)###15"
+    ]
+  },
+  {
+    "pk": 1066,
+    "quest": 50,
+    "zone_name": "Trials II (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度 II",
+    "name": "Barbariccia",
+    "cn_name": "巴尔巴莉希亚",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.2)###1",
+      "Standard Comps (6.28)###7",
+      "Standard Comps (6.3)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.2)###3",
+      "标准阵容构成 (6.28)###9",
+      "标准阵容构成 (6.3)###15"
+    ]
+  },
+  {
+    "pk": 1067,
+    "quest": 50,
+    "zone_name": "Trials II (Extreme)",
+    "cn_zone_name": "讨伐歼灭战：高难度 II",
+    "name": "Rubicante",
+    "cn_name": "Rubicante",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.2)###1",
+      "Standard Comps (6.28)###7",
+      "Standard Comps (6.3)###13"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.2)###3",
+      "标准阵容构成 (6.28)###9",
+      "标准阵容构成 (6.3)###15"
+    ]
+  }
+]
