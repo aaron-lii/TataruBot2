@@ -46,7 +46,8 @@ def get_headers():
     return headers
 
 
-GARLAND = "https://ffxiv.cyanclay.xyz"
+# GARLAND = "https://ffxiv.cyanclay.xyz"
+GARLAND = "https://garlandtools.cn"
 FF14WIKI_BASE_URL = "https://ff14.huijiwiki.com"
 FF14WIKI_API_URL = "https://cdn.huijiwiki.com/ff14/api.php"
 CAFEMAKER = "https://cafemaker.wakingsands.com"
