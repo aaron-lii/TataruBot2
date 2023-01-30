@@ -8,13 +8,14 @@ sys.path.insert(0, "../../")
 
 def run():
     # url = "https://cafemaker.wakingsands.com/Item/"
-    url = "https://ffxiv.cyanclay.xyz/db/doc/item/chs/3/"
+    url = "https://garlandtools.cn/db/doc/item/chs/3/"
     item2id_dict = {}
     error_list = []
 
     i = 1
     while i < 40000:
-        print(i)
+        if i % 10 == 0:
+            print(i)
         try:
             r = requests.get(url + str(i) + ".json", timeout=60)
             if r.status_code == 404:
@@ -23,9 +24,9 @@ def run():
             # item2id_dict[r.json()["Name_chs"]] = i
             with open("data.json", "a", encoding="utf-8") as f_w:
                 f_w.write(r.json()["item"]["name"] + "!!!" + str(i) + "\n")
-            f_w.flush()
+                f_w.flush()
         except Exception as e:
-            # print(e)
+            print(e)
             error_list.append(i)
 
         i += 1
@@ -35,13 +36,16 @@ def run():
         error_list_now = []
         for j in error_list:
             try:
-                r = requests.get(url + str(i) + ".json", timeout=60)
+                r = requests.get(url + str(j) + ".json", timeout=60)
                 # item2id_dict[r.json()["Name_chs"]] = i
+                if r.status_code == 404:
+                    continue
                 with open("data.json", "a", encoding="utf-8") as f_w:
-                    f_w.write(r.json()["item"]["name"] + "!!!" + str(i) + "\n")
-                f_w.flush()
+                    f_w.write(r.json()["item"]["name"] + "!!!" + str(j) + "\n")
+                    f_w.flush()
             except Exception as e:
-                error_list_now.append(i)
+                print(e)
+                error_list_now.append(j)
 
         error_list = error_list_now
 
@@ -58,7 +62,7 @@ def run2():
             else:
                 item_dict[line[0]] = line[1]
 
-    with open("../data/item_dict.json", "w", encoding="utf-8") as f_w:
+    with open("./item_dict.json", "w", encoding="utf-8") as f_w:
         f_w.write(str(item_dict))
 
 
