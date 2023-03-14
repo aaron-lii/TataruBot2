@@ -16,6 +16,17 @@
 10. 输出 boss名 职业名 (国服) (rdps) (day2): 查询logs上对应boss和职业的dps分段，括号内为可选的参数，默认国际服、adps、截止最后一天。
 例: `输出 海德林 武士`，`输出 海德林 武士 国服 day10`
 
+## chatgpt聊天功能
+
+前提：该电脑或服务器科学上网(才能连接上chatgpt_api)，有chatgpt账号。
+
+指令：`塔塔露问问 你想说的话`，例如`塔塔露问问 武士是ff14里的最强职业吗`
+
+设置：代码见`src/plugins/chat_ai.py`，将`on_chat`改为`True`开启该功能，将`openai.api_key`替换为自己的chatgpt key。`max_tokens`为最长回复字数，
+防止烧钱过快。其他设定见chatgpt_api的官方文档或者网上的调教文章。
+
+chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
+
 ## 依赖
 
 1. python >= 3.7.3
