@@ -8,7 +8,7 @@ from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
-
+import os
 import requests
 import re
 import traceback
@@ -31,9 +31,12 @@ async def logs_dps_help():
 
 
 # 加载职业和boss信息
-with open("src/data/job.json", "r", encoding="utf-8") as j_r:
+this_dir = os.path.split(os.path.realpath(__file__))[0]
+job_path = os.path.join(this_dir, "../data/job.json")
+boss_path = os.path.join(this_dir, "../data/boss.json")
+with open(job_path, "r", encoding="utf-8") as j_r:
     data_job = json.load(j_r)
-with open("src/data/boss.json", "r", encoding="utf-8") as b_r:
+with open(boss_path, "r", encoding="utf-8") as b_r:
     data_boss = json.load(b_r)
 
 

@@ -60,7 +60,7 @@ def get_region(server, text):
 
 
 def run():
-    with open("src/data/boss.json", "r", encoding="utf-8") as f_r:
+    with open("tatarubot2/data/boss.json", "r", encoding="utf-8") as f_r:
         data_boss = json.load(f_r)
 
     url = "https://{}.fflogs.com/zone/statistics/{}"
@@ -133,7 +133,7 @@ def run():
                 new_list.append(boss_dict)
                 print(boss_dict)
 
-    with open("src/tools/new_boss.json", "w", encoding="utf-8") as f_w:
+    with open("tatarubot2/tools/new_boss.json", "w", encoding="utf-8") as f_w:
         json.dump(new_list, f_w, ensure_ascii=False, indent=2)
 
 

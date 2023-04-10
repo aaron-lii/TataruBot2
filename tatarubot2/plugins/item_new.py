@@ -9,6 +9,7 @@ from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
+import os
 import re
 import base64
 import json
@@ -82,7 +83,9 @@ FISH_SHADOW_SPEED = {
 
 # 加载字典
 item_dict = {}
-with open("src/data/item_dict.json", "r", encoding="utf-8") as f_r:
+this_dir = os.path.split(os.path.realpath(__file__))[0]
+json_path = os.path.join(this_dir, "../data/item_dict.json")
+with open(json_path, "r", encoding="utf-8") as f_r:
     for line in f_r.readlines():
         item_dict = eval(line)
 # print(item_dict)

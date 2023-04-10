@@ -5,16 +5,16 @@ from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
-from src.plugins.item import item_help
-from src.plugins.lottery import lottery_help
-from src.plugins.market import market_help
-from src.plugins.nuannuan import nuannuan_help
-from src.plugins.precious import precious_help
-from src.plugins.ff_weibo import ff_weibo_help
-from src.plugins.item_new import item_new_help
-from src.plugins.market_new import market_new_help
-from src.plugins.house import house_help
-from src.plugins.logs_dps import logs_dps_help
+from tatarubot2.plugins.item import item_help
+from tatarubot2.plugins.lottery import lottery_help
+from tatarubot2.plugins.market import market_help
+from tatarubot2.plugins.nuannuan import nuannuan_help
+from tatarubot2.plugins.precious import precious_help
+from tatarubot2.plugins.ff_weibo import ff_weibo_help
+from tatarubot2.plugins.item_new import item_new_help
+from tatarubot2.plugins.market_new import market_new_help
+from tatarubot2.plugins.house import house_help
+from tatarubot2.plugins.logs_dps import logs_dps_help
 
 
 this_command = "帮帮忙"
