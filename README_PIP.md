@@ -2,6 +2,8 @@
 
 基于NoneBot2的FF14机器人塔塔露
 
+这里是塔塔露功能作为nonebot2插件安装的指南
+
 ## 当前功能
 
 0. 塔塔露帮帮忙：显示所有功能
@@ -32,39 +34,43 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
 1. python >= 3.7.3
 2. 如果有NoneBot v1则卸载 `pip uninstall nonebot`
 3. 本代码测试使用的NoneBot版本是 nonebot2==2.0.0b4
-4. 其他依赖安装`pip install -r requirements.txt`
-5. 如果要用chatgpt则多安装一个`pip install openai`
+
+↑↑↑ 既然是作为nonebot2的插件，上面的1.2.3.你应该都已经达到了，姑且放在这里提一下
+
+4. 如果要用chatgpt则多安装一个`pip install openai`
 
 ## 使用
 
-如果想作为插件使用，请看 https://github.com/aaron-lii/TataruBot2/blob/main/README_PIP.md
-
-1. 安装脚手架nb-cli
+1. 安装塔塔露机器人插件包
 
    ```shell
-   pip install nb-cli
+   # 为了防止出啥意外先把旧的删了吧
+   pip uninstall tatarubot2
+   # 安装最新插件
+   pip install -U tatarubot2
+   ```
+
+2. 进入你的机器人文件夹，根据需要修改配置文件`.env.dev`，更多信息见NoneBot2官方文档
+
+   ```shell
+   # 注意配置命令起始字符
+   # 我的习惯是直接纯中文作为命令，所以添加了一个空 ""，如下所示
+   COMMAND_START=["/", ""]  
+   ```
+
+3. 在`bot.py`中加载插件
+
+   ```python
+   nonebot.load_builtin_plugins("tatarubot2")
+   ```
    
-   # 国内速度慢可以用阿里源加速，或者别的源，命令如下
-   pip install nb-cli -i https://mirrors.aliyun.com/pypi/simple/
+5. 首次启动机器人，会自动在机器人文件夹内生成一个插件的配置文件`tatarubot2_conf.json`
+
+   ```shell
+   nb run
    ```
 
-2. 安装适配器
-
-   ```
-   nb adapter install nonebot-adapter-onebot
-   ```
-
-3. 下载本项目代码，并进入文件夹
-
-   ```
-   git clone https://github.com/aaron-lii/TataruBot2.git
-   cd TataruBot2
-   ```
-
-4. 根据需要修改配置文件`.env.dev`，更多信息见NoneBot2官方文档
-
-
-5. 根据需要选择开启哪些插件，修改`tatarubot2_conf.json`，下面是插件对应的配置词条名
+6. 根据需要选择开启哪些插件，修改`tatarubot2_conf.json`，下面是插件对应的配置词条名
 
    ```
    1. 暖暖：nuannuan
@@ -81,7 +87,7 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
 
 7. 启动机器人
 
-   ```
+   ```shell
    nb run
    ```
 
