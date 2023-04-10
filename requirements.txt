@@ -1,3 +1,2 @@
-nonebot2==2.0.0b4
+nonebot2>=2.0.0b4
 requests
-openai

@@ -15,7 +15,7 @@ nb-cli = "^0.6.0"
 
 [tool.nonebot]
 plugins = []
-plugin_dirs = ["tatarubot2/plugins"]
+plugin_dirs = ["tatarubot2"]
 
 [build-system]
 requires = ["poetry_core>=1.0.0"]

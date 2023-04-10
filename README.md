@@ -22,8 +22,7 @@
 
 指令：`塔塔露问问 你想说的话`，例如`塔塔露问问 武士是ff14里的最强职业吗`
 
-设置：代码见`src/plugins/chat_ai.py`，将`on_chat`改为`True`开启该功能，将`openai.api_key`替换为自己的chatgpt key。`max_tokens`为最长回复字数，
-防止烧钱过快。其他设定见chatgpt_api的官方文档或者网上的调教文章。
+设置：配置文件`tatarubot2_conf.json`里开启该插件功能后，`"api_key"`改为自己的chatgpt api key。
 
 chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
 
@@ -32,6 +31,8 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
 1. python >= 3.7.3
 2. 如果有NoneBot v1则卸载 `pip uninstall nonebot`
 3. 本代码测试使用的NoneBot版本是 nonebot2==2.0.0b4
+4. 其他依赖安装`pip install -r requirements.txt`
+5. 如果要用chatgpt则多安装一个`pip install openai`
 
 ## 使用
 
@@ -59,13 +60,29 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
 
 4. 根据需要修改配置文件`.env.dev`，更多信息见NoneBot2官方文档
 
-5. 启动机器人
+
+5. 根据需要选择开启哪些插件，修改`tatarubot2_conf.json`
+
+   ```
+   1. 暖暖：nuannuan
+   2. 选门：precious
+   3. 仙人彩：lottery
+   4. 物品 物品名：item
+   5. 价格 大区 物品名：market
+   6. 看看微博：ff_weibo
+   7. 新物品 物品名：item_new
+   8. 新价格 大区 物品名：market_new
+   9. 房子 服务器名 主城名 房子大小：house
+   10. 输出 boss名 职业名 (国服) (rdps) (day2)：logs_dps
+   ```
+
+7. 启动机器人
 
    ```
    nb run
    ```
 
-6. 使用go-cqhttp连接机器人，该部分参考go-cqhttp官方文档。需要注意的是配置中反向websocket设置参考文档https://adapter-onebot.netlify.app/docs/guide/setup
+8. 使用go-cqhttp连接机器人，该部分参考go-cqhttp官方文档。需要注意的是配置中反向websocket设置参考文档https://adapter-onebot.netlify.app/docs/guide/setup
 
 ## 备注
 

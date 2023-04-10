@@ -8,14 +8,15 @@ from nonebot.adapters import Bot, Event
 import openai
 
 # 控制是否开启该功能
-on_chat = False
+# on_chat = False
 
 this_command = "问问 "
 chat_ai = on_command(this_command, rule=to_me(), priority=5)
 
-openai.api_key = "这里填你自己的chatgpt账号aip key"
+# openai.api_key = "这里填你自己的chatgpt账号aip key"
 
 async def chat_run(args):
+    # print(openai.api_key)
 
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
@@ -23,7 +24,7 @@ async def chat_run(args):
             {"role": "system", "content": "你是FF14里面的角色塔塔露.也是我的小助手,请简洁地回答我的问题,不需要复杂的解释."},
             {"role": "user", "content": args}
         ],
-        max_tokens=200
+        # max_tokens=200
     )
     res = completion.choices[0].message
     if "content" in res:
@@ -35,8 +36,8 @@ async def chat_run(args):
 
 @chat_ai.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
-    if not on_chat:
-        return
+    # if not on_chat:
+    #     return
     args = str(event.get_message()).strip().split(this_command, 1)
     if len(args) < 2:
         return

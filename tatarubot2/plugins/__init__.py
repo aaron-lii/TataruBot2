@@ -10,7 +10,9 @@ if os.path.exists(json_path):
     with open(json_path, "r", encoding="utf-8") as f_r:
         plugins_dict = json.load(f_r)
 else:
-    plugins_dict = {"chat_ai": False,
+    plugins_dict = {
+                "chat_ai": False,
+                "api_key": "这里填你自己的chatgpt账号aip key，需要魔法上网",
                 "ff_weibo": True,
                 "house": True,
                 "item": True,
@@ -30,6 +32,7 @@ else:
 """
 if plugins_dict["chat_ai"]:
     from .chat_ai import *
+    openai.api_key = plugins_dict["api_key"]
 if plugins_dict["ff_weibo"]:
     from .ff_weibo import *
 if plugins_dict["house"]:
