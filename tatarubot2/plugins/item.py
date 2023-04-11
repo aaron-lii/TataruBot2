@@ -5,15 +5,14 @@
 
 from nonebot import on_command
 from nonebot.adapters.onebot.v11 import Message, MessageSegment
-from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
 import re
 import base64
 import json
-import requests
-import urllib
+# import requests
+import aiohttp
 import logging
 import traceback
 import time
@@ -24,9 +23,9 @@ this_command = "物品 "
 item = on_command(this_command, priority=5)
 
 # 超时时间
-time_out = 60
+# time_out = 60
 # 重试次数
-retry_num = 20
+# retry_num = 20
 
 
 async def item_help():
@@ -44,6 +43,9 @@ def get_headers():
 
     headers = {'Connection': 'close', 'User-Agent': agent[random.randint(0, len(agent) - 1)]}
     return headers
+
+timeout = aiohttp.ClientTimeout(total=60)
+session = aiohttp.ClientSession(timeout=timeout, headers=get_headers())
 
 
 # GARLAND = "https://ffxiv.cyanclay.xyz"
@@ -101,15 +103,19 @@ def parse_xiv_html(string):
     return XIV_TAG_REGEX.sub(handle_tag, string)
 
 
-def gt_core(key: str, lang: str):
+async def gt_core(key: str, lang: str):
     global GT_CORE_DATA_CN, GT_CORE_DATA_GLOBAL
     if lang == "chs":
         if GT_CORE_DATA_CN is None:
-            GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=time_out, headers=get_headers()).json()
+            # GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=time_out, headers=get_headers()).json()
+            GT_CORE_DATA_CN = await session.get(craft_garland_url("core", "data", "chs"))
+            GT_CORE_DATA_CN = await GT_CORE_DATA_CN.json()
         GT_CORE_DATA = GT_CORE_DATA_CN
     else:
         if GT_CORE_DATA_GLOBAL is None:
-            GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=time_out, headers=get_headers()).json()
+            # GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=time_out, headers=get_headers()).json()
+            GT_CORE_DATA_GLOBAL = await session.get(craft_garland_url("core", "data", "en"))
+            GT_CORE_DATA_GLOBAL = await GT_CORE_DATA_GLOBAL.json()
         GT_CORE_DATA = GT_CORE_DATA_GLOBAL
     req = GT_CORE_DATA
     for par in key.split('.'):
@@ -117,11 +123,13 @@ def gt_core(key: str, lang: str):
     return req
 
 
-def parse_item_garland(item_id, name_lang):
+async def parse_item_garland(item_id, name_lang):
     if name_lang == "cn":
         name_lang = "chs"
 
-    j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=time_out, headers=get_headers()).json()
+    # j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=time_out, headers=get_headers()).json()
+    j = await session.get(craft_garland_url("item", item_id, name_lang))
+    j = await j.json()
 
     result = []
     # index partials
@@ -133,13 +141,16 @@ def parse_item_garland(item_id, name_lang):
     # start processing
     if "icon" in item.keys():
         image_url = f"{GARLAND}/files/icons/item/{item['icon'] if str(item['icon']).startswith('t/') else 't/' + str(item['icon'])}.png"
-        image = requests.get(image_url, headers=get_headers())
-        base64_str = base64.b64encode(image.content).decode("utf-8")
+        # image = requests.get(image_url, headers=get_headers())
+        # print(image_url)
+        image = await session.get(image_url)
+        image = await image.read()
+        base64_str = base64.b64encode(image).decode("utf-8")
         # result.append(f"[CQ:image,file=base64://{base64_str}]")
         result.append(f"base64://{base64_str}")
 
     result.append(item["name"])
-    result.append(gt_core(f"item.categoryIndex.{item['category']}.name", name_lang))
+    result.append(await gt_core(f"item.categoryIndex.{item['category']}.name", name_lang))
     result.append(f"物品等级 {item['ilvl']}")
     if "equip" in item.keys():
         result.append(f"装备等级 {item['elvl']}")
@@ -166,7 +177,7 @@ def parse_item_garland(item_id, name_lang):
         for nodeIndex in item["nodes"]:
             node = partials[("node", str(nodeIndex))]
             result.append("  -- {} {} {} {}{}".format(
-                gt_core(f"locationIndex.{node['z']}.name", name_lang),
+                await gt_core(f"locationIndex.{node['z']}.name", name_lang),
                 node["n"],
                 "{}{}".format(
                     "" if 'lt' not in node.keys() else node['lt'],
@@ -183,7 +194,7 @@ def parse_item_garland(item_id, name_lang):
         for spotIndex in item['fishingSpots']:
             spot = partials[("fishing", str(spotIndex))]
             result.append("  -- {} {} {} {}".format(
-                gt_core(f"locationIndex.{spot['z']}.name", name_lang),
+                await gt_core(f"locationIndex.{spot['z']}.name", name_lang),
                 spot['n'],
                 f"{spot['c']} {spot['l']}级",
                 "" if 'x' not in spot.keys() else f"({spot['x']}, {spot['y']})"
@@ -236,7 +247,7 @@ def parse_item_garland(item_id, name_lang):
         result.append(f"·制作")
         for craft in item["craft"]:
             result.append("  -- {} {}".format(
-                gt_core(f"jobs", name_lang)[craft["job"]]["name"],
+                await gt_core(f"jobs", name_lang)[craft["job"]]["name"],
                 f"{craft['lvl']}级"
             ))
             result.append("  材料:")
@@ -260,7 +271,7 @@ def parse_item_garland(item_id, name_lang):
             vendor_partial = partials["npc", str(vendor)]
             result.append("  -- {} {} {}".format(
                 vendor_partial["n"],
-                gt_core(f"locationIndex.{vendor_partial['l']}.name", name_lang) if 'l' in vendor_partial.keys() else "",
+                await gt_core(f"locationIndex.{vendor_partial['l']}.name", name_lang) if 'l' in vendor_partial.keys() else "",
                 f"({vendor_partial['c'][0]}, {vendor_partial['c'][1]})" if 'c' in vendor_partial.keys() else ""
             ))
             i += 1
@@ -300,7 +311,7 @@ def parse_item_garland(item_id, name_lang):
                 vendor_partial = partials["npc", str(vendor)]
                 result.append("  -- {} {} {}".format(
                     vendor_partial["n"],
-                    gt_core(f"locationIndex.{vendor_partial['l']}.name", name_lang) if 'l' in vendor_partial.keys() else "",
+                    await gt_core(f"locationIndex.{vendor_partial['l']}.name", name_lang) if 'l' in vendor_partial.keys() else "",
                     f"({vendor_partial['c'][0]}, {vendor_partial['c'][1]})" if 'c' in vendor_partial.keys() else ""
                 ))
                 j += 1
@@ -343,7 +354,7 @@ def parse_item_garland(item_id, name_lang):
             mob = partials[("mob", str(mobIndex))]
             result.append("  -- {} {}".format(
                 mob['n'],
-                gt_core(f"locationIndex.{mob['z']}.name", name_lang)
+                await gt_core(f"locationIndex.{mob['z']}.name", name_lang)
             ))
         result.append("")
 
@@ -406,21 +417,22 @@ def parse_item_garland(item_id, name_lang):
     return result
 
 
-def get_xivapi_item(item_name, name_lang=""):
+async def get_xivapi_item(item_name, name_lang=""):
     api_base = CAFEMAKER if name_lang == "cn" else XIVAPI
     url = api_base + "/search?indexes=Item&string=" + item_name
     if name_lang:
         url = url + "&language=" + name_lang
-    r = requests.get(url, timeout=time_out, headers=get_headers())
-    j = r.json()
+    # r = requests.get(url, timeout=time_out, headers=get_headers())
+    r = await session.get(url)
+    j = await r.json()
     return j, url
 
 
-def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True):
+async def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True):
     try:
         name_lang = None
         for lang in ["cn", "en", "ja", "fr", "de"]:
-            j, search_url = get_xivapi_item(name, lang)
+            j, search_url = await get_xivapi_item(name, lang)
             if j.get("Results"):
                 name_lang = lang
                 break
@@ -430,43 +442,42 @@ def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True):
         res_num = j["Pagination"]["ResultsTotal"]
 
         try:
-            return parse_item_garland(j["Results"][0]["ID"], name_lang)
+            return await parse_item_garland(j["Results"][0]["ID"], name_lang)
         except Exception as e:
             return f"搜索失败！{repr(e)}"
 
-    except requests.exceptions.ReadTimeout:
-        res_data = "%s 的搜索请求超时了" % name
-    except json.decoder.JSONDecodeError:
-        print(j.text)
-
-    print(res_data)
-    return res_data
+    # except requests.exceptions.ReadTimeout:
+    #     res_data = "%s 的搜索请求超时了" % name
+    # except json.decoder.JSONDecodeError:
+    #     print(j.text)
+    except Exception as e:
+        return f"物品名搜索失败！{repr(e)}"
 
 
 async def run(name):
     msg = "发生甚么事了？"
-    for _ in range(retry_num):
-        try:
-            res_data = search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL)
+    # for _ in range(retry_num):
+    try:
+        res_data = await search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL)
 
-            if isinstance(res_data, dict):
-                msg = Message([MessageSegment(type="share", data=res_data)])
+        if isinstance(res_data, dict):
+            msg = Message([MessageSegment(type="share", data=res_data)])
 
-                # msg = str(res_data)
-            elif isinstance(res_data, list):
-                msg = Message([MessageSegment(type="image", data={"file": res_data[0]}),
-                               MessageSegment(type="text", data={"text": "\n".join(res_data[1:])})])
-            elif isinstance(res_data, str):
-                msg = res_data
-            else:
-                msg = '在最终幻想XIV中没有找到"{}"'.format(name)
+            # msg = str(res_data)
+        elif isinstance(res_data, list):
+            msg = Message([MessageSegment(type="image", data={"file": res_data[0]}),
+                           MessageSegment(type="text", data={"text": "\n".join(res_data[1:])})])
+        elif isinstance(res_data, str):
+            msg = res_data
+        else:
+            msg = '在最终幻想XIV中没有找到"{}"'.format(name)
 
-            break
-        except Exception as e:
-            msg = "Error: {}".format(type(e))
-            traceback.print_exc()
-            logging.error(e)
-            time.sleep(0.5)
+        # break
+    except Exception as e:
+        msg = "Error: {}".format(type(e))
+        traceback.print_exc()
+        logging.error(e)
+        time.sleep(0.5)
 
     await item.finish(msg)
 

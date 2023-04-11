@@ -4,21 +4,14 @@ logs上dps分段
 """
 
 from nonebot import on_command
-from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
 import os
-import requests
+# import requests
+import aiohttp
 import re
-import traceback
-import base64
 import json
-import urllib
-import logging
-import traceback
-import time
-import random
 
 
 this_command = "输出 "
@@ -57,7 +50,7 @@ def check_boss(boss):
 
 
 # 获取dps信息页面
-def get_request(cn_source, boss_dict, job_dict, dps_type):
+async def get_request(cn_source, boss_dict, job_dict, dps_type):
     if cn_source:
         region_len = len(boss_dict["cn_region"])
         region_list = boss_dict["cn_region"]
@@ -72,8 +65,11 @@ def get_request(cn_source, boss_dict, job_dict, dps_type):
     else:
         search_range = [-1]
 
-    s = requests.Session()
-    s.headers.update({"referer": "https://{}.fflogs.com".format("cn" if cn_source else "www")})
+    # s = requests.Session()
+    # s.headers.update({"referer": "https://{}.fflogs.com".format("cn" if cn_source else "www")})
+    timeout = aiohttp.ClientTimeout(total=15)
+    session = aiohttp.ClientSession(timeout=timeout,
+                                    headers={"referer": "https://{}.fflogs.com".format("cn" if cn_source else "www")})
 
     for i in search_range:
         region_id = int(region_list[i].split("###", 1)[1])
@@ -91,9 +87,10 @@ def get_request(cn_source, boss_dict, job_dict, dps_type):
         )
         print("fflogs url:{}".format(fflogs_url))
 
-        r = s.get(url=fflogs_url, timeout=5)
+        r = await session.get(fflogs_url)
+        r = await r.text()
 
-        if "data.push" in r.text:
+        if "data.push" in r:
             return r, region_list[i].split("###", 1)[0]
 
     return None
@@ -122,7 +119,7 @@ def normalize_result(res_dict, cn_source, boss_dict, job_dict, dps_type, region_
     return res + res_data
 
 
-def crawl_dps(boss, job, day=-1, CN_source=False, dps_type="adps"):
+async def crawl_dps(boss, job, day=-1, CN_source=False, dps_type="adps"):
     print("boss:{} job:{} day:{}".format(boss, job, day))
     job_dict = check_job(job)
     if not job_dict:
@@ -131,7 +128,7 @@ def crawl_dps(boss, job, day=-1, CN_source=False, dps_type="adps"):
     if not boss_dict:
         return "检查boss名称是否正确"
 
-    r_list = get_request(CN_source, boss_dict, job_dict, dps_type)
+    r_list = await get_request(CN_source, boss_dict, job_dict, dps_type)
     if not r_list:
         return "查不到数据，怎么回事呢？"
     r = r_list[0]
@@ -143,7 +140,7 @@ def crawl_dps(boss, job, day=-1, CN_source=False, dps_type="adps"):
         re_str = "series{}".format(
             "" if percentage == 100 else percentage) + r".data.push\([+-]?(0|(?:[1-9]\d*)(?:\.\d+)?)\)"
         ptn = re.compile(re_str)
-        find_res = ptn.findall(r.text)
+        find_res = ptn.findall(r)
         statistics[str(percentage)] = list(map(lambda x: float(x), find_res))
     total_length = len(statistics['100'])
     for percentage in percentage_list:
@@ -218,7 +215,7 @@ async def run(args):
                     await logs_dps.finish("day格式不对")
                     return
 
-    msg = crawl_dps(boss, job, day=day, CN_source=CN_source, dps_type=dps_type)
+    msg = await crawl_dps(boss, job, day=day, CN_source=CN_source, dps_type=dps_type)
     print(msg)
     msg = str(msg)
     await logs_dps.finish(msg)

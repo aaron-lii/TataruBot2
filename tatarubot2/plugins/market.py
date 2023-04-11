@@ -4,11 +4,11 @@
 """
 
 from nonebot import on_command
-from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
-import requests
+# import requests
+import aiohttp
 from difflib import SequenceMatcher
 import re
 import time
@@ -18,9 +18,9 @@ this_command = "价格 "
 market = on_command(this_command, priority=5)
 
 # 超时时间
-time_out = 60
+# time_out = 60
 # 重试次数
-retry_num = 20
+# retry_num = 20
 
 
 # 减少requests错误
@@ -34,6 +34,9 @@ def get_headers():
 
     headers = {'Connection': 'close', 'User-Agent': agent[random.randint(0, len(agent) - 1)]}
     return headers
+
+timeout = aiohttp.ClientTimeout(total=60)
+session = aiohttp.ClientSession(timeout=timeout, headers=get_headers())
 
 
 async def market_help():
@@ -77,7 +80,7 @@ def localize_world_name(world_name):
     return world_name
 
 
-def get_item_id(item_name, name_lang=""):
+async def get_item_id(item_name, name_lang=""):
     url = "https://xivapi.com/search?indexes=Item&string=" + item_name
     if name_lang:
         url = url + "&language=" + name_lang
@@ -85,16 +88,17 @@ def get_item_id(item_name, name_lang=""):
         url = (
             "https://cafemaker.wakingsands.com/search?indexes=Item&string=" + item_name
         )
-    r = requests.get(url, timeout=time_out, headers=get_headers())
-    j = r.json()
+    # r = requests.get(url, timeout=time_out, headers=get_headers())
+    r = await session.get(url)
+    j = await r.json()
     if len(j["Results"]) > 0:
         result = max(j["Results"], key=lambda x: SequenceMatcher(None, x["Name"], item_name).ratio())
         return result["Name"], result["ID"]
     return "", -1
 
 
-def get_market_data(server_name, item_name, hq=False):
-    new_item_name, item_id = get_item_id(item_name, "cn")
+async def get_market_data(server_name, item_name, hq=False):
+    new_item_name, item_id = await get_item_id(item_name, "cn")
     if item_id < 0:
         item_name = item_name.replace("_", " ")
         name_lang = ""
@@ -103,19 +107,20 @@ def get_market_data(server_name, item_name, hq=False):
                 item_name = item_name.replace("|{}".format(lang), "")
                 name_lang = lang
                 break
-        new_item_name, item_id = get_item_id(item_name, name_lang)
+        new_item_name, item_id = await get_item_id(item_name, name_lang)
         if item_id < 0:
             msg = '所查询物品"{}"不存在'.format(item_name)
             return msg
     url = "https://universalis.app/api/{}/{}".format(server_name, item_id)
     print("market url:{}".format(url))
-    r = requests.get(url, timeout=time_out, headers=get_headers())
-    if r.status_code != 200:
-        if r.status_code == 404:
+    # r = requests.get(url, timeout=time_out, headers=get_headers())
+    r = await session.get(url)
+    if r.status != 200:
+        if r.status == 404:
             msg = "请确认所查询物品可交易且不可在NPC处购买\n"
         msg += "Error of HTTP request (code {}):\n{}".format(r.status_code, r.text)
         return msg
-    j = r.json()
+    j = await r.json()
     msg = "{} 的 {}{} 数据如下：\n".format(server_name, new_item_name, "(HQ)" if hq else "")
     listing_cnt = 0
     for listing in j["listings"]:
@@ -209,14 +214,14 @@ async def handle_item(bot: Bot, event: Event, state: T_State):
     item_name = handle_item_name_abbr(item_name)
 
     msg = "发生甚么事了？"
-    for _ in range(retry_num):
-        try:
-            msg = get_market_data(server_name, item_name, hq)
-            break
-        except Exception as e:
-            # await market.finish(str(e))
-            msg = str(e)
-            time.sleep(0.5)
+    # for _ in range(retry_num):
+    try:
+        msg = await get_market_data(server_name, item_name, hq)
+        # break
+    except Exception as e:
+        # await market.finish(str(e))
+        msg = str(e)
+        time.sleep(0.5)
 
     await market.finish(msg)
 

@@ -4,28 +4,17 @@
 """
 
 from nonebot import on_command
-from nonebot.adapters.onebot.v11 import Message, MessageSegment
-from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
-import re
-import base64
-import json
-import requests
-import urllib
-import logging
-import traceback
+# import requests
+import aiohttp
 import time
 import random
 
 this_command = "房子 "
 house = on_command(this_command, priority=5)
 
-# 超时时间
-time_out = 60
-# 重试次数
-retry_num = 20
 
 
 url = "	https://house.ffxiv.cyou/api/sales?server={}&ts={}"
@@ -79,6 +68,8 @@ def get_headers():
     headers = {'Connection': 'close', 'User-Agent': agent[random.randint(0, len(agent) - 1)]}
     return headers
 
+timeout = aiohttp.ClientTimeout(total=15)
+session = aiohttp.ClientSession(timeout=timeout, headers=get_headers())
 
 async def run(args):
     if args[0] not in server_dict:
@@ -91,7 +82,9 @@ async def run(args):
         await house.finish("检查一下主城名称呀：\n" + str(area_list))
     if args[2].upper() not in size_list:
         await house.finish("检查一下房屋大小呀：\n" + str(size_list))
-    r = requests.get(url.format(str(server_dict[args[0]]), str(int(time.time()))), timeout=time_out, headers=get_headers()).json()
+    # r = requests.get(url.format(str(server_dict[args[0]]), str(int(time.time()))), timeout=time_out, headers=get_headers()).json()
+    r = await session.get(url.format(str(server_dict[args[0]]), str(int(time.time()))))
+    r = await r.json()
 
     result_list = []
     area_i = area_list.index(args[1])
