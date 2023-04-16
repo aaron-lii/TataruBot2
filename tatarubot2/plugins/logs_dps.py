@@ -9,9 +9,11 @@ from nonebot.adapters import Bot, Event
 
 import os
 # import requests
-import aiohttp
+# import aiohttp
 import re
 import json
+
+from tatarubot2.plugins.utils import aiohttp_get
 
 
 this_command = "输出 "
@@ -67,9 +69,9 @@ async def get_request(cn_source, boss_dict, job_dict, dps_type):
 
     # s = requests.Session()
     # s.headers.update({"referer": "https://{}.fflogs.com".format("cn" if cn_source else "www")})
-    timeout = aiohttp.ClientTimeout(total=15)
-    session = aiohttp.ClientSession(timeout=timeout,
-                                    headers={"referer": "https://{}.fflogs.com".format("cn" if cn_source else "www")})
+    # timeout = aiohttp.ClientTimeout(total=15)
+    # session = aiohttp.ClientSession(timeout=timeout,
+    #                                 headers={"referer": "https://{}.fflogs.com".format("cn" if cn_source else "www")})
 
     for i in search_range:
         region_id = int(region_list[i].split("###", 1)[1])
@@ -87,8 +89,10 @@ async def get_request(cn_source, boss_dict, job_dict, dps_type):
         )
         print("fflogs url:{}".format(fflogs_url))
 
-        r = await session.get(fflogs_url)
-        r = await r.text()
+        # r = await session.get(fflogs_url)
+        # r = await r.text()
+        r = await aiohttp_get(fflogs_url, res_type="text",
+                              header_plus={"referer": "https://{}.fflogs.com".format("cn" if cn_source else "www")})
 
         if "data.push" in r:
             return r, region_list[i].split("###", 1)[0]

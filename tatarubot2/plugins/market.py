@@ -8,35 +8,16 @@ from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
 # import requests
-import aiohttp
+# import aiohttp
 from difflib import SequenceMatcher
 import re
 import time
 import random
 
+from tatarubot2.plugins.utils import aiohttp_get
+
 this_command = "价格 "
 market = on_command(this_command, priority=5)
-
-# 超时时间
-# time_out = 60
-# 重试次数
-# retry_num = 20
-
-
-# 减少requests错误
-def get_headers():
-    agent = ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 '
-             'Safari/537.36 QIHU 360SE',
-             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-             'Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063',
-             'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 '
-             'Safari/537.36']
-
-    headers = {'Connection': 'close', 'User-Agent': agent[random.randint(0, len(agent) - 1)]}
-    return headers
-
-timeout = aiohttp.ClientTimeout(total=60)
-session = aiohttp.ClientSession(timeout=timeout, headers=get_headers())
 
 
 async def market_help():
@@ -89,8 +70,8 @@ async def get_item_id(item_name, name_lang=""):
             "https://cafemaker.wakingsands.com/search?indexes=Item&string=" + item_name
         )
     # r = requests.get(url, timeout=time_out, headers=get_headers())
-    r = await session.get(url)
-    j = await r.json()
+    j = await aiohttp_get(url)
+    # j = await r.json()
     if len(j["Results"]) > 0:
         result = max(j["Results"], key=lambda x: SequenceMatcher(None, x["Name"], item_name).ratio())
         return result["Name"], result["ID"]
@@ -114,13 +95,13 @@ async def get_market_data(server_name, item_name, hq=False):
     url = "https://universalis.app/api/{}/{}".format(server_name, item_id)
     print("market url:{}".format(url))
     # r = requests.get(url, timeout=time_out, headers=get_headers())
-    r = await session.get(url)
-    if r.status != 200:
-        if r.status == 404:
-            msg = "请确认所查询物品可交易且不可在NPC处购买\n"
-        msg += "Error of HTTP request (code {}):\n{}".format(r.status_code, r.text)
-        return msg
-    j = await r.json()
+    j = await aiohttp_get(url)
+    # if r.status != 200:
+    #     if r.status == 404:
+    #         msg = "请确认所查询物品可交易且不可在NPC处购买\n"
+    #     msg += "Error of HTTP request (code {}):\n{}".format(r.status_code, r.text)
+    #     return msg
+    # j = await r.json()
     msg = "{} 的 {}{} 数据如下：\n".format(server_name, new_item_name, "(HQ)" if hq else "")
     listing_cnt = 0
     for listing in j["listings"]:

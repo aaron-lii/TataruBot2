@@ -9,14 +9,12 @@ from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
 # import requests
-import aiohttp
+from tatarubot2.plugins.utils import aiohttp_get
 
 this_command = "看看微博"
 ff_weibo = on_command(this_command, priority=5)
 
 url = "https://m.weibo.cn/api/container/getIndex?type=uid&value=1797798792&containerid=1076031797798792"
-timeout = aiohttp.ClientTimeout(total=15)
-session = aiohttp.ClientSession(timeout=timeout)
 
 async def ff_weibo_help():
     return this_command + "：获取FF微博新闻"
@@ -24,8 +22,8 @@ async def ff_weibo_help():
 
 async def run():
     # r = requests.get(url, timeout=15).json()
-    r = await session.get(url)
-    r = await r.json()
+    r = await aiohttp_get(url)
+    # r = await r.json()
 
     return_list = []
 

@@ -8,9 +8,11 @@ from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
 # import requests
-import aiohttp
+# import aiohttp
 import re
 import traceback
+
+from tatarubot2.plugins.utils import aiohttp_get
 
 this_command = "暖暖"
 nuannuan = on_command(this_command, priority=5)
@@ -18,10 +20,6 @@ nuannuan = on_command(this_command, priority=5)
 
 async def nuannuan_help():
     return this_command + "：本周时尚品鉴作业"
-
-
-timeout = aiohttp.ClientTimeout(total=5)
-session = aiohttp.ClientSession(timeout=timeout)
 
 
 # def get_video_id(mid):
@@ -65,8 +63,9 @@ async def get_qq_doc():
     try:
         url = f"https://www.youwanc.com/"
         # r = requests.get(url, timeout=5).text
-        r = await session.get(url)
-        r = await r.text()
+        # r = await session.get(url)
+        # r = await r.text()
+        r = await aiohttp_get(url, res_type="text")
         qq_doc = re.search(r"https://docs.qq.com/[^\"]*", r)
         if qq_doc:
             msg = "暖暖看qq文档： " + qq_doc.group()

@@ -12,40 +12,20 @@ import re
 import base64
 import json
 # import requests
-import aiohttp
+# import aiohttp
 import logging
 import traceback
 import time
-import random
+
+from tatarubot2.plugins.utils import aiohttp_get
 
 
 this_command = "物品 "
 item = on_command(this_command, priority=5)
 
-# 超时时间
-# time_out = 60
-# 重试次数
-# retry_num = 20
-
 
 async def item_help():
     return this_command + "物品名：查询物品信息"
-
-
-# 减少requests错误
-def get_headers():
-    agent = ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 '
-             'Safari/537.36 QIHU 360SE',
-             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-             'Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063',
-             'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 '
-             'Safari/537.36']
-
-    headers = {'Connection': 'close', 'User-Agent': agent[random.randint(0, len(agent) - 1)]}
-    return headers
-
-timeout = aiohttp.ClientTimeout(total=60)
-session = aiohttp.ClientSession(timeout=timeout, headers=get_headers())
 
 
 # GARLAND = "https://ffxiv.cyanclay.xyz"
@@ -108,14 +88,14 @@ async def gt_core(key: str, lang: str):
     if lang == "chs":
         if GT_CORE_DATA_CN is None:
             # GT_CORE_DATA_CN = requests.get(craft_garland_url("core", "data", "chs"), timeout=time_out, headers=get_headers()).json()
-            GT_CORE_DATA_CN = await session.get(craft_garland_url("core", "data", "chs"))
-            GT_CORE_DATA_CN = await GT_CORE_DATA_CN.json()
+            GT_CORE_DATA_CN = await aiohttp_get(craft_garland_url("core", "data", "chs"))
+            # GT_CORE_DATA_CN = await GT_CORE_DATA_CN.json()
         GT_CORE_DATA = GT_CORE_DATA_CN
     else:
         if GT_CORE_DATA_GLOBAL is None:
             # GT_CORE_DATA_GLOBAL = requests.get(craft_garland_url("core", "data", "en"), timeout=time_out, headers=get_headers()).json()
-            GT_CORE_DATA_GLOBAL = await session.get(craft_garland_url("core", "data", "en"))
-            GT_CORE_DATA_GLOBAL = await GT_CORE_DATA_GLOBAL.json()
+            GT_CORE_DATA_GLOBAL = await aiohttp_get(craft_garland_url("core", "data", "en"))
+            # GT_CORE_DATA_GLOBAL = await GT_CORE_DATA_GLOBAL.json()
         GT_CORE_DATA = GT_CORE_DATA_GLOBAL
     req = GT_CORE_DATA
     for par in key.split('.'):
@@ -128,8 +108,8 @@ async def parse_item_garland(item_id, name_lang):
         name_lang = "chs"
 
     # j = requests.get(craft_garland_url("item", item_id, name_lang), timeout=time_out, headers=get_headers()).json()
-    j = await session.get(craft_garland_url("item", item_id, name_lang))
-    j = await j.json()
+    j = await aiohttp_get(craft_garland_url("item", item_id, name_lang))
+    # j = await j.json()
 
     result = []
     # index partials
@@ -143,8 +123,8 @@ async def parse_item_garland(item_id, name_lang):
         image_url = f"{GARLAND}/files/icons/item/{item['icon'] if str(item['icon']).startswith('t/') else 't/' + str(item['icon'])}.png"
         # image = requests.get(image_url, headers=get_headers())
         # print(image_url)
-        image = await session.get(image_url)
-        image = await image.read()
+        image = await aiohttp_get(image_url, res_type="bytes")
+        # image = await image.read()
         base64_str = base64.b64encode(image).decode("utf-8")
         # result.append(f"[CQ:image,file=base64://{base64_str}]")
         result.append(f"base64://{base64_str}")
@@ -247,7 +227,7 @@ async def parse_item_garland(item_id, name_lang):
         result.append(f"·制作")
         for craft in item["craft"]:
             result.append("  -- {} {}".format(
-                await gt_core(f"jobs", name_lang)[craft["job"]]["name"],
+                (await gt_core(f"jobs", name_lang))[craft["job"]]["name"],
                 f"{craft['lvl']}级"
             ))
             result.append("  材料:")
@@ -423,8 +403,8 @@ async def get_xivapi_item(item_name, name_lang=""):
     if name_lang:
         url = url + "&language=" + name_lang
     # r = requests.get(url, timeout=time_out, headers=get_headers())
-    r = await session.get(url)
-    j = await r.json()
+    j = await aiohttp_get(url)
+    # j = await r.json()
     return j, url
 
 
@@ -474,7 +454,7 @@ async def run(name):
 
         # break
     except Exception as e:
-        msg = "Error: {}".format(type(e))
+        msg = "Error: {}".format(str(e))
         traceback.print_exc()
         logging.error(e)
         time.sleep(0.5)
