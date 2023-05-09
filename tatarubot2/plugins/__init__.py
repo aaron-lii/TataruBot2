@@ -23,7 +23,8 @@ else:
                 "market_new": True,
                 "nuannuan": True,
                 "precious": True,
-                "weather": False}
+                "weather": False,
+                "dungeon_note": True}
     with open("./tatarubot2_conf.json", "w", encoding="utf-8") as f_w:
         json.dump(plugins_dict, f_w, ensure_ascii=False, indent=2)
 

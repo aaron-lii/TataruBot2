@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tatarubot2"
-version = "0.1.11"
+version = "0.1.12"
 description = "FF14 bot Tataru"
 authors = ["aaron-li"]
 readme = "README_PIP.md"
