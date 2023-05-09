@@ -15,6 +15,7 @@ from tatarubot2.plugins.item_new import item_new_help
 from tatarubot2.plugins.market_new import market_new_help
 from tatarubot2.plugins.house import house_help
 from tatarubot2.plugins.logs_dps import logs_dps_help
+from tatarubot2.plugins.dungeon_note import dungeon_note_help
 
 
 this_command = "帮帮忙"
@@ -33,6 +34,7 @@ async def create_help():
     return_list.append(await market_new_help())
     return_list.append(await house_help())
     return_list.append(await logs_dps_help())
+    return_list.append(await dungeon_note_help())
     return "【塔塔露现有的功能】\n\n" + "\n\n".join(return_list)
 
 

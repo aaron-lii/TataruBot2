@@ -11,5 +11,6 @@
   "market_new": true,
   "nuannuan": true,
   "precious": true,
-  "weather": false
+  "weather": false,
+  "dungeon_note": true
 }

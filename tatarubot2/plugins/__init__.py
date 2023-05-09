@@ -55,5 +55,7 @@ if plugins_dict["precious"]:
     from .precious import *
 if plugins_dict["weather"]:
     from .weather import *
+if plugins_dict["dungeon_note"]:
+    from .dungeon_note import *
 
 from .bot_help import *
