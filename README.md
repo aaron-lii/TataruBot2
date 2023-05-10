@@ -17,6 +17,7 @@
 10. 输出 boss名 职业名 (国服) (rdps) (day2): 查询logs上对应boss和职业的dps分段，括号内为可选的参数，默认国际服、adps、截止最后一天。
 例: `输出 海德林 武士`，`输出 海德林 武士 国服 day10`
 11. 攻略 (副本等级) 副本名关键字 (文本)：查简单副本攻略，括号内为可选参数，默认输出图片攻略
+12. 日历：获取FF近期活动日历
 
 ## chatgpt聊天功能
 
@@ -79,6 +80,7 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
    9. 房子 服务器名 主城名 房子大小：house
    10. 输出 boss名 职业名 (国服) (rdps) (day2)：logs_dps
    11. 攻略 (副本等级) 副本名关键字 (文本)：dungeon_note
+   12. 日历：calendar
    ```
 
 7. 启动机器人
