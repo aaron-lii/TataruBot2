@@ -12,5 +12,6 @@
   "nuannuan": true,
   "precious": true,
   "weather": false,
-  "dungeon_note": true
+  "dungeon_note": true,
+  "calendar": true
 }

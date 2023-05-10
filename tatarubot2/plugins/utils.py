@@ -31,6 +31,8 @@ async def aiohttp_get(url_input, res_type="json", time_out=15, header_plus=None)
     timeout = aiohttp.ClientTimeout(total=time_out)
     async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
         res = await session.get(url_input)
+        if res.status != 200:
+            return None
         if res_type == "json":
             return await res.json()
         elif res_type == "bytes":

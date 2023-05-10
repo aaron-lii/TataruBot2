@@ -24,7 +24,8 @@ else:
                 "nuannuan": True,
                 "precious": True,
                 "weather": False,
-                "dungeon_note": True}
+                "dungeon_note": True,
+                "calendar": True}
     with open("./tatarubot2_conf.json", "w", encoding="utf-8") as f_w:
         json.dump(plugins_dict, f_w, ensure_ascii=False, indent=2)
 
@@ -58,5 +59,7 @@ if plugins_dict["weather"]:
     from .weather import *
 if plugins_dict["dungeon_note"]:
     from .dungeon_note import *
+if plugins_dict["calendar"]:
+    from .calendar import *
 
 from .bot_help import *

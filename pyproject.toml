@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tatarubot2"
-version = "0.1.12"
+version = "0.1.13"
 description = "FF14 bot Tataru"
 authors = ["aaron-li"]
 readme = "README_PIP.md"
@@ -11,6 +11,7 @@ nonebot2 = "^2.0.0-beta.1"
 nonebot-adapter-onebot = "*"
 aiohttp = "*"
 Pillow = "*"
+icalendar = "*"
 
 [tool.poetry.dev-dependencies]
 nb-cli = "^0.6.0"
