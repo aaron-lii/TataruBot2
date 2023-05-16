@@ -3,7 +3,7 @@
 近期活动日历
 """
 
-
+from nonebot import get_driver
 from nonebot import on_command
 from nonebot.rule import to_me
 from nonebot.typing import T_State
@@ -29,8 +29,6 @@ this_dir = os.path.split(os.path.realpath(__file__))[0]
 ics_path = os.path.join(this_dir, "../data/calendar.ics")
 # 记录上次同步日历时间
 last_download_time = 0
-# 记录开启自动更新
-is_download_calendar = False
 
 async def calendar_help():
     return this_command + "：获取FF近期活动日历"
@@ -39,8 +37,6 @@ async def calendar_help():
 """ 此处添加任务 每一段时间同步一次日历 """
 async def download_calendar():
     logger.info("开启日历自动更新")
-    global is_download_calendar
-    is_download_calendar = True
     while True:
         res = await aiohttp_get(url, "bytes")
         if res is not None:
@@ -52,6 +48,16 @@ async def download_calendar():
         else:
             logger.info("日历更新 失败")
         await asyncio.sleep(60 * 60)
+
+""" nb启动时运行 """
+driver = get_driver()
+@driver.on_startup
+async def auto_download():
+    loop = asyncio.get_event_loop()
+    if loop.is_running():
+        loop.create_task(download_calendar())
+    else:
+        logger.warning("日历自动更新似乎有问题")
 
 
 def res_format(info_item):
@@ -127,12 +133,6 @@ async def run():
 
 @calendar.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
-    # 开启日历自动更新
-    if not is_download_calendar:
-        loop = asyncio.get_event_loop()
-        if loop.is_running():
-            loop.create_task(download_calendar())
-
     args = str(event.get_message()).strip()
     if args != this_command:
         return
