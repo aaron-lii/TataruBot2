@@ -7,10 +7,9 @@ from nonebot import on_command
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
-# import requests
-import aiohttp
 import time
-import random
+
+from tatarubot2.plugins.utils import aiohttp_get
 
 this_command = "房子 "
 house = on_command(this_command, priority=5)
@@ -56,21 +55,6 @@ async def house_help():
     return this_command + "服务器名 主城名 房子大小：查询空房。主城名为：森都、海都、沙都、白银、雪都。房子大小为：S、M、L"
 
 
-# 减少requests错误
-def get_headers():
-    agent = ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 '
-             'Safari/537.36 QIHU 360SE',
-             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-             'Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063',
-             'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 '
-             'Safari/537.36']
-
-    headers = {'Connection': 'close', 'User-Agent': agent[random.randint(0, len(agent) - 1)]}
-    return headers
-
-timeout = aiohttp.ClientTimeout(total=15)
-session = aiohttp.ClientSession(timeout=timeout, headers=get_headers())
-
 async def run(args):
     if args[0] not in server_dict:
         server_list = []
@@ -83,8 +67,7 @@ async def run(args):
     if args[2].upper() not in size_list:
         await house.finish("检查一下房屋大小呀：\n" + str(size_list))
     # r = requests.get(url.format(str(server_dict[args[0]]), str(int(time.time()))), timeout=time_out, headers=get_headers()).json()
-    r = await session.get(url.format(str(server_dict[args[0]]), str(int(time.time()))))
-    r = await r.json()
+    r = await aiohttp_get(url.format(str(server_dict[args[0]]), str(int(time.time()))))
 
     result_list = []
     area_i = area_list.index(args[1])
