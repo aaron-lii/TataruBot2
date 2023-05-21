@@ -2,3 +2,5 @@ nonebot2>=2.0.0b4
 aiohttp
 Pillow
 icalendar
+emoji
+aiohttp_socks

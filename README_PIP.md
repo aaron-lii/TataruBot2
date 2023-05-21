@@ -48,6 +48,9 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
    ```shell
    # 为了防止出啥意外先把旧的删了吧
    pip uninstall tatarubot2
+   # 如果以前装过塔塔露机器人，把配置文件也删了
+   rm tatarubot2_conf.json
+   
    # 安装最新插件
    pip install -U tatarubot2
    ```
@@ -72,22 +75,8 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
    nb run
    ```
 
-6. 根据需要选择开启哪些插件，修改`tatarubot2_conf.json`，下面是插件对应的配置词条名
+6. 根据需要选择开启哪些插件，修改`tatarubot2_conf.json`，将对应"enable"改为true
 
-   ```
-   1. 暖暖：nuannuan
-   2. 选门：precious
-   3. 仙人彩：lottery
-   4. 物品 物品名：item
-   5. 价格 大区 物品名：market
-   6. 看看微博：ff_weibo
-   7. 新物品 物品名：item_new
-   8. 新价格 大区 物品名：market_new
-   9. 房子 服务器名 主城名 房子大小：house
-   10. 输出 boss名 职业名 (国服) (rdps) (day2)：logs_dps
-   11. 攻略 (副本等级) 副本名关键字 (文本)：dungeon_note
-   12. 日历：calendar
-   ```
 
 7. 启动机器人
 

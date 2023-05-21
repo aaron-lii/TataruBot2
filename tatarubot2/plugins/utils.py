@@ -8,14 +8,35 @@ import random
 import os
 from PIL import Image, ImageFont, ImageDraw
 import io
+import emoji
+from aiohttp_socks import ProxyConnector
+import json
 
 
+"""
+读取插件配置文件，没有则创建默认配置
+"""
 # 当前目录
 this_dir = os.path.split(os.path.realpath(__file__))[0]
+json_path = "./tatarubot2_conf.json"
+
+if os.path.exists(json_path):
+    with open(json_path, "r", encoding="utf-8") as f_r:
+        plugins_dict = json.load(f_r)
+else:
+    with open(os.path.join(this_dir, "../data/plugins_conf.json"), "r", encoding="utf-8") as f_r:
+        plugins_dict = json.load(f_r)
+    with open(json_path, "w", encoding="utf-8") as f_w:
+        json.dump(plugins_dict, f_w, ensure_ascii=False, indent=2)
+
+proxy_url = plugins_dict["proxy"]["url"]
+
+def get_conf_dict():
+    return plugins_dict
 
 
-async def aiohttp_get(url_input, res_type="json", time_out=15, header_plus=None):
-    """ aiohttp功能封装 """
+""" aiohttp功能封装 """
+async def aiohttp_get(url_input, res_type="json", time_out=15, header_plus=None, proxy=False):
     agent = ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 '
              'Safari/537.36 QIHU 360SE',
              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -28,8 +49,13 @@ async def aiohttp_get(url_input, res_type="json", time_out=15, header_plus=None)
         for key, val in header_plus.items():
             headers[key] = val
 
+    if proxy:
+        connector = ProxyConnector.from_url(proxy_url)
+    else:
+        connector = None
+
     timeout = aiohttp.ClientTimeout(total=time_out)
-    async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
+    async with aiohttp.ClientSession(timeout=timeout, headers=headers, connector=connector) as session:
         res = await session.get(url_input)
         if res.status != 200:
             return None
@@ -77,3 +103,13 @@ def str2img(text):
     im.save(img_bytes, format='JPEG')
     img_bytes = img_bytes.getvalue()
     return img_bytes
+
+
+""" 获取随机emoji """
+emoji_list = []
+for key, val in emoji.EMOJI_DATA.items():
+    emoji_list.append(key)
+emoji_len = len(emoji_list) - 1
+def get_emoji():
+    emoji_i = random.randint(0, emoji_len)
+    return emoji_list[emoji_i]

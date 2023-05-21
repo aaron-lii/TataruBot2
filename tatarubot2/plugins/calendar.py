@@ -15,10 +15,13 @@ import asyncio
 from datetime import datetime
 from icalendar import Calendar
 
-from tatarubot2.plugins.utils import aiohttp_get
+from tatarubot2.plugins.utils import aiohttp_get, get_conf_dict
 
 this_command = "日历"
 calendar = on_command(this_command, priority=5)
+
+conf_dict = get_conf_dict()
+use_proxy = conf_dict["proxy"]["enable"]
 
 # 订阅地址
 url = "https://p66-caldav.icloud.com/published/2/MTAyMTk3MTMxMjExMDIxOXsjasy" \
@@ -38,7 +41,7 @@ async def calendar_help():
 async def download_calendar():
     logger.info("开启日历自动更新")
     while True:
-        res = await aiohttp_get(url, "bytes")
+        res = await aiohttp_get(url, res_type="bytes", proxy=use_proxy)
         if res is not None:
             with open(ics_path, "wb") as f_w:
                 f_w.write(res)

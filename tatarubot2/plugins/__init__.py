@@ -1,65 +1,38 @@
-import os
-import json
+from .utils import get_conf_dict
 
-"""
-读取各插件是否开启的文件，没有则创建默认配置
-"""
-json_path = "./tatarubot2_conf.json"
-
-if os.path.exists(json_path):
-    with open(json_path, "r", encoding="utf-8") as f_r:
-        plugins_dict = json.load(f_r)
-else:
-    plugins_dict = {
-                "chat_ai": False,
-                "api_key": "这里填你自己的chatgpt账号aip key，需要魔法上网",
-                "ff_weibo": True,
-                "house": True,
-                "item": True,
-                "item_new": True,
-                "logs_dps": True,
-                "lottery": True,
-                "market": True,
-                "market_new": True,
-                "nuannuan": True,
-                "precious": True,
-                "weather": False,
-                "dungeon_note": True,
-                "calendar": True}
-    with open("./tatarubot2_conf.json", "w", encoding="utf-8") as f_w:
-        json.dump(plugins_dict, f_w, ensure_ascii=False, indent=2)
+plugins_dict = get_conf_dict()
 
 """
 加载指定插件
 """
-if plugins_dict["chat_ai"]:
+if plugins_dict["chat_ai"]["enable"]:
     from .chat_ai import *
-    openai.api_key = plugins_dict["api_key"]
-if plugins_dict["ff_weibo"]:
+    openai.api_key = plugins_dict["chat_ai"]["api_key"]
+if plugins_dict["ff_weibo"]["enable"]:
     from .ff_weibo import *
-if plugins_dict["house"]:
+if plugins_dict["house"]["enable"]:
     from .house import *
-if plugins_dict["item"]:
+if plugins_dict["item"]["enable"]:
     from .item import *
-if plugins_dict["item_new"]:
+if plugins_dict["item_new"]["enable"]:
     from .item_new import *
-if plugins_dict["logs_dps"]:
+if plugins_dict["logs_dps"]["enable"]:
     from .logs_dps import *
-if plugins_dict["lottery"]:
+if plugins_dict["lottery"]["enable"]:
     from .lottery import *
-if plugins_dict["market"]:
+if plugins_dict["market"]["enable"]:
     from .market import *
-if plugins_dict["market_new"]:
+if plugins_dict["market_new"]["enable"]:
     from .market_new import *
-if plugins_dict["nuannuan"]:
+if plugins_dict["nuannuan"]["enable"]:
     from .nuannuan import *
-if plugins_dict["precious"]:
+if plugins_dict["precious"]["enable"]:
     from .precious import *
-if plugins_dict["weather"]:
+if plugins_dict["weather"]["enable"]:
     from .weather import *
-if plugins_dict["dungeon_note"]:
+if plugins_dict["dungeon_note"]["enable"]:
     from .dungeon_note import *
-if plugins_dict["calendar"]:
+if plugins_dict["calendar"]["enable"]:
     from .calendar import *
 
 from .bot_help import *

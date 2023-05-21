@@ -1,0 +1,66 @@
+{
+  "proxy": {
+    "info": "对查物价和日志订阅使用代理连接",
+    "enable": false,
+    "url": "socks5://127.0.0.1:1080"
+  },
+  "chat_ai": {
+    "info": "chatgpt聊天",
+    "enable": false,
+    "api_key": "这里填你自己的chatgpt账号aip key，需要魔法上网"
+  },
+  "ff_weibo": {
+    "info": "获取FF微博新闻",
+    "enable": true
+  },
+  "house": {
+    "info": "查询空房信息",
+    "enable": true
+  },
+  "item": {
+    "info": "查询物品信息",
+    "enable": true
+  },
+  "item_new": {
+    "info": "查询物品信息，使用本地物品id信息",
+    "enable": true
+  },
+  "logs_dps": {
+    "info": "查询logs分段",
+    "enable": true
+  },
+  "lottery": {
+    "info": "帮你选每周仙人仙彩数字",
+    "enable": true
+  },
+  "market": {
+    "info": "查物价，如果以图片格式回复则use_pic改为true",
+    "enable": true,
+    "use_pic": false
+  },
+  "market_new": {
+    "info": "查物价，使用本地物品id信息",
+    "enable": true,
+    "use_pic": false
+  },
+  "nuannuan": {
+    "info": "本周时尚品鉴作业",
+    "enable": true
+  },
+  "precious": {
+    "info": "帮你选藏宝洞的门",
+    "enable": true
+  },
+  "weather": {
+    "info": "暂时没啥用的测试功能",
+    "enable": false
+  },
+  "dungeon_note": {
+    "info": "查简单副本攻略",
+    "enable": true
+  },
+  "calendar": {
+    "info": "获取FF近期活动日历",
+    "enable": true
+  }
+}

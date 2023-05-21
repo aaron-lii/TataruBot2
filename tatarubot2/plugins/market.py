@@ -3,9 +3,11 @@
 查物价
 """
 
+from nonebot import logger
 from nonebot import on_command
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
+from nonebot.adapters.onebot.v11 import Message, MessageSegment
 
 # import requests
 # import aiohttp
@@ -14,7 +16,7 @@ import re
 import time
 import random
 
-from tatarubot2.plugins.utils import aiohttp_get
+from tatarubot2.plugins.utils import get_conf_dict, aiohttp_get, get_emoji, str2img
 
 this_command = "价格 "
 market = on_command(this_command, priority=5)
@@ -22,6 +24,10 @@ market = on_command(this_command, priority=5)
 
 async def market_help():
     return this_command + "大区 物品名：查询板子物价，大区不写默认豆豆柴"
+
+conf_dict = get_conf_dict()
+use_proxy = conf_dict["proxy"]["enable"]
+use_pic = conf_dict["market"]["use_pic"]
 
 
 def localize_world_name(world_name):
@@ -95,7 +101,7 @@ async def get_market_data(server_name, item_name, hq=False):
     url = "https://universalis.app/api/{}/{}".format(server_name, item_id)
     print("market url:{}".format(url))
     # r = requests.get(url, timeout=time_out, headers=get_headers())
-    j = await aiohttp_get(url)
+    j = await aiohttp_get(url, proxy=use_proxy)
     # if r.status != 200:
     #     if r.status == 404:
     #         msg = "请确认所查询物品可交易且不可在NPC处购买\n"
@@ -194,14 +200,17 @@ async def handle_item(bot: Bot, event: Event, state: T_State):
         item_name = item_name.replace("HQ", "", 1)
     item_name = handle_item_name_abbr(item_name)
 
-    msg = "发生甚么事了？"
-    # for _ in range(retry_num):
     try:
         msg = await get_market_data(server_name, item_name, hq)
-        # break
+        logger.info(msg)
+        if use_pic:
+            img_bytes = str2img(msg)
+            msg = Message([MessageSegment.image(img_bytes)])
+        else:
+            msg = get_emoji() + msg + get_emoji()
     except Exception as e:
-        # await market.finish(str(e))
-        msg = str(e)
+        print(e)
+        msg = "可能是物价网站暂时访问不了"
         time.sleep(0.5)
 
     await market.finish(msg)

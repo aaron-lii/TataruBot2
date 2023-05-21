@@ -66,28 +66,14 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
 4. 根据需要修改配置文件`.env.dev`，更多信息见NoneBot2官方文档
 
 
-5. 根据需要选择开启哪些插件，修改`tatarubot2_conf.json`，下面是插件对应的配置词条名
-
-   ```
-   1. 暖暖：nuannuan
-   2. 选门：precious
-   3. 仙人彩：lottery
-   4. 物品 物品名：item
-   5. 价格 大区 物品名：market
-   6. 看看微博：ff_weibo
-   7. 新物品 物品名：item_new
-   8. 新价格 大区 物品名：market_new
-   9. 房子 服务器名 主城名 房子大小：house
-   10. 输出 boss名 职业名 (国服) (rdps) (day2)：logs_dps
-   11. 攻略 (副本等级) 副本名关键字 (文本)：dungeon_note
-   12. 日历：calendar
-   ```
-
-7. 启动机器人
+5. 启动一次机器人，自动生成配置文件`tatarubot2_conf.json`，如果旧版配置文件造成了错误，请删除旧版配置文件。根据需要把想开启的功能下面的"enable"改成true
 
    ```
    nb run
    ```
+
+6. 再次启动机器人
+
 
 8. 使用go-cqhttp连接机器人，该部分参考go-cqhttp官方文档。需要注意的是配置中反向websocket设置参考文档https://adapter-onebot.netlify.app/docs/guide/setup
 
