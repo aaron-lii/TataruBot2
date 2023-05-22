@@ -100,14 +100,17 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
 @market_new.got("market_info")
 async def handle_item(bot: Bot, event: Event, state: T_State):
     item_info = state["market_info"].split(" ", 1)
-    # 没有服务器则默认狗区
+    # 命令中没有指定服务器则从配置文件中读取
     if len(item_info) == 1:
-        server_name = "豆豆柴"
+        server_name = default_dc
         item_name = item_info[0]
     else:
         server_name = item_info[0]
         item_name = item_info[1]
 
+    if not server_name.strip():
+        # 命令和配置文件中都没有指定服务器则默认狗区
+        server_name = "豆豆柴"
     if server_name in ("陆行鸟", "莫古力", "猫小胖", "豆豆柴"):
         pass
     elif server_name == "鸟":
