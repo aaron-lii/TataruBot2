@@ -9,12 +9,9 @@ from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 from nonebot.adapters.onebot.v11 import Message, MessageSegment
 
-# import requests
-# import aiohttp
 from difflib import SequenceMatcher
 import re
 import time
-import random
 
 from tatarubot2.plugins.utils import get_conf_dict, aiohttp_get, get_emoji, str2img
 
@@ -23,11 +20,12 @@ market = on_command(this_command, priority=5)
 
 
 async def market_help():
-    return this_command + "大区 物品名：查询板子物价，大区不写默认豆豆柴"
+    return this_command + "大区 物品名：查询板子物价，默认大区在配置文件中指定，不指定默认豆豆柴"
 
 conf_dict = get_conf_dict()
 use_proxy = conf_dict["proxy"]["enable"]
 use_pic = conf_dict["market"]["use_pic"]
+default_dc = conf_dict["market"]["default_dc"]
 
 
 def localize_world_name(world_name):
@@ -169,14 +167,17 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
 @market.got("market_info")
 async def handle_item(bot: Bot, event: Event, state: T_State):
     item_info = state["market_info"].split(" ", 1)
-    # 没有服务器则默认狗区
+    # 命令中没有指定服务器则从配置文件中读取
     if len(item_info) == 1:
-        server_name = "豆豆柴"
+        server_name = default_dc
         item_name = item_info[0]
     else:
         server_name = item_info[0]
         item_name = item_info[1]
 
+    if not server_name.strip():
+        # 命令和配置文件中都没有指定服务器则默认狗区
+        server_name = "豆豆柴"
     if server_name in ("陆行鸟", "莫古力", "猫小胖", "豆豆柴"):
         pass
     elif server_name == "鸟":
