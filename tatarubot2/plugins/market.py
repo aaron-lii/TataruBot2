@@ -28,6 +28,7 @@ use_pic = conf_dict["market"]["use_pic"]
 default_dc = conf_dict["market"]["default_dc"]
 supported_dc = conf_dict["market"]["supported_dc"]
 supported_server = conf_dict["market"]["supported_server"]
+server_alias = conf_dict["market"]["alias"]
 
 
 async def get_item_id(item_name, name_lang=""):
@@ -143,20 +144,13 @@ async def handle_item(bot: Bot, event: Event, state: T_State):
     if not server_name.strip():
         # 命令和配置文件中都没有指定服务器则默认狗区
         server_name = "豆豆柴"
-    if server_name in supported_dc:
+    if server_name in supported_dc or server_name in supported_server:
         pass
-    elif server_name == "鸟":
-        server_name = "陆行鸟"
-    elif server_name == "猪":
-        server_name = "莫古力"
-    elif server_name == "猫":
-        server_name = "猫小胖"
-    elif server_name == "狗":
-        server_name = "豆豆柴"
-    elif server_name in supported_server:
-        pass
+    elif server_name in server_alias:
+        # 别名, 如 "狗"->"豆豆柴"
+        server_name = server_alias[server_name]
     else:
-        await market.finish('大区/服务器:"{}"不存在'.format(server_name))
+        await market.finish('未知的大区/服务器:"{}"'.format(server_name))
 
     hq = "hq" in item_name or "HQ" in item_name
     if hq:
