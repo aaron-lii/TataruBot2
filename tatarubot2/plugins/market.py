@@ -10,7 +10,6 @@ from nonebot.adapters import Bot, Event
 from nonebot.adapters.onebot.v11 import Message, MessageSegment
 
 from difflib import SequenceMatcher
-import re
 import time
 
 from tatarubot2.plugins.utils import get_conf_dict, aiohttp_get, get_emoji, str2img
@@ -20,49 +19,16 @@ market = on_command(this_command, priority=5)
 
 
 async def market_help():
-    return this_command + "大区 物品名：查询板子物价，默认大区在配置文件中指定，不指定默认豆豆柴"
+    return this_command + "大区/服务器 物品名：查询板子物价，默认大区/服务器在配置文件中指定，不指定默认豆豆柴"
+
 
 conf_dict = get_conf_dict()
 use_proxy = conf_dict["proxy"]["enable"]
 use_pic = conf_dict["market"]["use_pic"]
 default_dc = conf_dict["market"]["default_dc"]
-
-
-def localize_world_name(world_name):
-    world_dict = {
-        "HongYuHai": "红玉海",
-        "ShenYiZhiDi": "神意之地",
-        "LaNuoXiYa": "拉诺西亚",
-        "HuanYingQunDao": "幻影群岛",
-        "MengYaChi": "萌芽池",
-        "YuZhouHeYin": "宇宙和音",
-        "WoXianXiRan": "沃仙曦染",
-        "ChenXiWangZuo": "晨曦王座",
-        "BaiYinXiang": "白银乡",
-        "BaiJinHuanXiang": "白金幻象",
-        "ShenQuanHen": "神拳痕",
-        "ChaoFengTing": "潮风亭",
-        "LvRenZhanQiao": "旅人栈桥",
-        "FuXiaoZhiJian": "拂晓之间",
-        "Longchaoshendian": "龙巢神殿",
-        "MengYuBaoJing": "梦羽宝境",
-        "ZiShuiZhanQiao": "紫水栈桥",
-        "YanXia": "延夏",
-        "JingYuZhuangYuan": "静语庄园",
-        "MoDuNa": "摩杜纳",
-        "HaiMaoChaWu": "海猫茶屋",
-        "RouFengHaiWan": "柔风海湾",
-        "HuPoYuan": "琥珀原",
-        "ShuiJingTa2": "水晶塔",
-        "YinLeiHu2": "银泪湖",
-        "TaiYangHaiAn2": "太阳海岸",
-        "YiXiuJiaDe2": "伊修加德",
-        "HongChaChuan2": "红茶川",
-    }
-    for (k, v) in world_dict.items():
-        pattern = re.compile(k, re.IGNORECASE)
-        world_name = pattern.sub(v, world_name)
-    return world_name
+supported_dc = conf_dict["market"]["supported_dc"]
+supported_server = conf_dict["market"]["supported_server"]
+server_alias = conf_dict["market"]["alias"]
 
 
 async def get_item_id(item_name, name_lang=""):
@@ -71,7 +37,7 @@ async def get_item_id(item_name, name_lang=""):
         url = url + "&language=" + name_lang
     if name_lang == "cn":
         url = (
-            "https://cafemaker.wakingsands.com/search?indexes=Item&string=" + item_name
+                "https://cafemaker.wakingsands.com/search?indexes=Item&string=" + item_name
         )
     # r = requests.get(url, timeout=time_out, headers=get_headers())
     j = await aiohttp_get(url)
@@ -113,7 +79,7 @@ async def get_market_data(server_name, item_name, hq=False):
             continue
         retainer_name = listing["retainerName"]
         if "dcName" in j:
-            retainer_name += "({})".format(localize_world_name(listing["worldName"]))
+            retainer_name += "({})".format(listing["worldName"])
         msg += "{:,}x{} = {:,} {} {}\n".format(
             listing["pricePerUnit"],
             listing["quantity"],
@@ -178,22 +144,13 @@ async def handle_item(bot: Bot, event: Event, state: T_State):
     if not server_name.strip():
         # 命令和配置文件中都没有指定服务器则默认狗区
         server_name = "豆豆柴"
-    if server_name in ("陆行鸟", "莫古力", "猫小胖", "豆豆柴"):
+    if server_name in supported_dc or server_name in supported_server:
         pass
-    elif server_name == "鸟":
-        server_name = "陆行鸟"
-    elif server_name == "猪":
-        server_name = "莫古力"
-    elif server_name == "猫":
-        server_name = "猫小胖"
-    elif server_name == "狗":
-        server_name = "豆豆柴"
+    elif server_name in server_alias:
+        # 别名, 如 "狗"->"豆豆柴"
+        server_name = server_alias[server_name]
     else:
-        pass
-        # server = Server.objects.filter(name=server_name)
-        # if not server.exists():
-        #     msg = '找不到服务器"{}"'.format(server_name)
-        #     return msg
+        await market.finish('未知的大区/服务器:"{}"'.format(server_name))
 
     hq = "hq" in item_name or "HQ" in item_name
     if hq:
@@ -215,5 +172,3 @@ async def handle_item(bot: Bot, event: Event, state: T_State):
         time.sleep(0.5)
 
     await market.finish(msg)
-
-

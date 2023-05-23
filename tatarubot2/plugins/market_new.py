@@ -66,7 +66,7 @@ async def get_market_data(server_name, item_name, hq=False):
             continue
         retainer_name = listing["retainerName"]
         if "dcName" in j:
-            retainer_name += "({})".format(localize_world_name(listing["worldName"]))
+            retainer_name += "({})".format(listing["worldName"])
         msg += "{:,}x{} = {:,} {} {}\n".format(
             listing["pricePerUnit"],
             listing["quantity"],
@@ -111,22 +111,13 @@ async def handle_item(bot: Bot, event: Event, state: T_State):
     if not server_name.strip():
         # 命令和配置文件中都没有指定服务器则默认狗区
         server_name = "豆豆柴"
-    if server_name in ("陆行鸟", "莫古力", "猫小胖", "豆豆柴"):
+    if server_name in supported_dc or server_name in supported_server:
         pass
-    elif server_name == "鸟":
-        server_name = "陆行鸟"
-    elif server_name == "猪":
-        server_name = "莫古力"
-    elif server_name == "猫":
-        server_name = "猫小胖"
-    elif server_name == "狗":
-        server_name = "豆豆柴"
+    elif server_name in server_alias:
+        # 别名, 如 "狗"->"豆豆柴"
+        server_name = server_alias[server_name]
     else:
-        pass
-        # server = Server.objects.filter(name=server_name)
-        # if not server.exists():
-        #     msg = '找不到服务器"{}"'.format(server_name)
-        #     return msg
+        await market.finish('未知的大区/服务器:"{}"'.format(server_name))
 
     hq = "hq" in item_name or "HQ" in item_name
     if hq:

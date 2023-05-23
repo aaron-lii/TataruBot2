@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import nonebot
-from nonebot.adapters.onebot.v11 import Adapter as ONEBOT_V11Adapter
-
 # Custom your logger
 # 
 # from nonebot.log import logger, default_format
@@ -18,7 +16,16 @@ nonebot.init()
 app = nonebot.get_asgi()
 
 driver = nonebot.get_driver()
-driver.register_adapter(ONEBOT_V11Adapter)
+config = driver.config
+if config.debug:
+    from nonebot.adapters.console import Adapter as ConsoleAdapter
+    # 调试模式使用ConsoleAdapter
+    nonebot.log.logger.warning("Debug mode enabled, using console adapter.")
+    driver.register_adapter(ConsoleAdapter)
+else:
+    from nonebot.adapters.onebot.v11 import Adapter as ONEBOT_V11Adapter
+    # 非调试模式使用OneBot V11 Adapter
+    driver.register_adapter(ONEBOT_V11Adapter)
 
 nonebot.load_builtin_plugins("echo")
 nonebot.load_builtin_plugins("single_session")
