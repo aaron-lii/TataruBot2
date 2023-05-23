@@ -55,6 +55,17 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
    ```
    nb adapter install nonebot-adapter-onebot
    ```
+   
+   若要使用debug模式（供开发者使用，普通用户可以跳过这步）
+   ```
+   nb adapter install nonebot-adapter-console
+   ```
+   nonebot-adapter-console是基于终端的交互式适配器，可以在本地命令行界面测试插件功能。
+   
+   可以使用以下命令查看可用适配器：
+   ```
+   nb adapter list
+   ```
 
 3. 下载本项目代码，并进入文件夹
 
@@ -63,7 +74,8 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
    cd TataruBot2
    ```
 
-4. 根据需要修改配置文件`.env.dev`，更多信息见NoneBot2官方文档
+4. 根据需要修改配置文件`.env.prod`，（开发/调试环境则使用`.env.dev`，使用的配置在`.env`文件中指定）。
+    更多信息见[NoneBot2官方文档](https://v2.nonebot.dev/docs/appendices/config)
 
 
 5. 启动一次机器人，自动生成配置文件`tatarubot2_conf.json`，如果旧版配置文件造成了错误，请删除旧版配置文件。根据需要把想开启的功能下面的"enable"改成true
