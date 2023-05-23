@@ -61,7 +61,8 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
    nb adapter install nonebot-adapter-console
    ```
    nonebot-adapter-console是基于终端的交互式适配器，可以在本地命令行界面测试插件功能。
-   
+   注意：仅用于调试，若代码中使用了其他平台适配器（如onebot）的特定消息类型，使用该适配器时可能会出现异常。
+
    可以使用以下命令查看可用适配器：
    ```
    nb adapter list
