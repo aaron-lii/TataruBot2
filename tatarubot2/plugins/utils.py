@@ -20,12 +20,20 @@ import json
 this_dir = os.path.split(os.path.realpath(__file__))[0]
 json_path = "./tatarubot2_conf.json"
 
+# 读取最新默认配置文件
+with open(os.path.join(this_dir, "../data/plugins_conf.json"), "r", encoding="utf-8") as f_r:
+    plugins_new_dict = json.load(f_r)
+
 if os.path.exists(json_path):
     with open(json_path, "r", encoding="utf-8") as f_r:
         plugins_dict = json.load(f_r)
+    if ("conf_ver" not in plugins_dict) or \
+       (plugins_new_dict["conf_ver"]["ver"] != plugins_dict["conf_ver"]["ver"]):
+        print("【ERROR】配置文件有大改动，请删除机器人目录下 tatarubot2_conf.json 文件，再重启机器人。"
+              "最新配置版本号为：" + plugins_new_dict["conf_ver"]["ver"])
+        plugins_dict = None
 else:
-    with open(os.path.join(this_dir, "../data/plugins_conf.json"), "r", encoding="utf-8") as f_r:
-        plugins_dict = json.load(f_r)
+    plugins_dict = plugins_new_dict
     with open(json_path, "w", encoding="utf-8") as f_w:
         json.dump(plugins_dict, f_w, ensure_ascii=False, indent=2)
 
