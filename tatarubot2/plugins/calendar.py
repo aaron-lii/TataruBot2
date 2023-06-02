@@ -94,6 +94,8 @@ async def run():
             else:
                 end_date = end_data_info.date()
                 start_date = start_date_info.date()
+                start_date_info = start_date_info.date()
+                end_data_info = end_data_info.date()
 
             # 只记录今后的日历
             if end_date < time_info.date():
