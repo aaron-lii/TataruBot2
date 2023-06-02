@@ -3,6 +3,7 @@
 一些通用功能
 """
 
+from nonebot import logger
 import aiohttp
 import random
 import os
@@ -29,7 +30,7 @@ if os.path.exists(json_path):
         plugins_dict = json.load(f_r)
     if ("conf_ver" not in plugins_dict) or \
        (plugins_new_dict["conf_ver"]["ver"] != plugins_dict["conf_ver"]["ver"]):
-        print("【ERROR】配置文件有大改动，请删除机器人目录下 tatarubot2_conf.json 文件，再重启机器人。"
+        logger.error("配置文件有大改动，请删除机器人目录下 tatarubot2_conf.json 文件，再重启机器人。"
               "最新配置版本号为：" + plugins_new_dict["conf_ver"]["ver"])
         plugins_dict = None
 else:
@@ -37,7 +38,10 @@ else:
     with open(json_path, "w", encoding="utf-8") as f_w:
         json.dump(plugins_dict, f_w, ensure_ascii=False, indent=2)
 
-proxy_url = plugins_dict["proxy"]["url"]
+if plugins_dict:
+    proxy_url = plugins_dict["proxy"]["url"]
+else:
+    proxy_url = None
 
 def get_conf_dict():
     return plugins_dict
