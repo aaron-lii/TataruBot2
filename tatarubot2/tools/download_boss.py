@@ -67,7 +67,7 @@ def run():
 
     new_list = []
 
-    for i in range(1, 51):
+    for i in range(1, 100):
         time.sleep(1)
         savage = 100
         patch = 0

@@ -21,9 +21,7 @@ item_dict = {}
 this_dir = os.path.split(os.path.realpath(__file__))[0]
 json_path = os.path.join(this_dir, "../data/item_dict.json")
 with open(json_path, "r", encoding="utf-8") as f_r:
-    for line in f_r.readlines():
-        item_dict = eval(line)
-# print(item_dict)
+    item_dict = json.load(f_r)
 
 
 async def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True):
@@ -43,7 +41,7 @@ async def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True)
             return False
 
         try:
-            return parse_item_garland(item_dict[name], "cn")
+            return await parse_item_garland(item_dict[name], "cn")
         except Exception as e:
             return f"搜索失败！{repr(e)}"
 
