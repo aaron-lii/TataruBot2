@@ -41,15 +41,18 @@ async def calendar_help():
 async def download_calendar():
     logger.info("开启日历自动更新")
     while True:
-        res = await aiohttp_get(url, res_type="bytes", proxy=use_proxy)
-        if res is not None:
-            with open(ics_path, "wb") as f_w:
-                f_w.write(res)
-            global last_download_time
-            last_download_time = datetime.now()
-            logger.info("日历更新 成功")
-        else:
-            logger.info("日历更新 失败")
+        try:
+            res = await aiohttp_get(url, res_type="bytes", proxy=use_proxy)
+            if res is not None:
+                with open(ics_path, "wb") as f_w:
+                    f_w.write(res)
+                global last_download_time
+                last_download_time = datetime.now()
+                logger.info("日历更新 成功")
+            else:
+                logger.info("日历更新 失败")
+        except Exception as e:
+            logger.error("日历更新连接错误" + str(e))
         await asyncio.sleep(60 * 60)
 
 """ nb启动时运行 """
