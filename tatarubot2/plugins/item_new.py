@@ -26,7 +26,7 @@ with open(json_path, "r", encoding="utf-8") as f_r:
 # print(item_dict)
 
 
-def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True):
+async def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True):
     try:
         # name_lang = None
         # for lang in ["cn", "en", "ja", "fr", "de"]:
