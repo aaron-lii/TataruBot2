@@ -9,6 +9,10 @@
     "enable": false,
     "api_key": "这里填你自己的chatgpt账号aip key，需要魔法上网"
   },
+  "bing_ai": {
+    "info": "bingai聊天",
+    "enable": false
+  },
   "ff_weibo": {
     "info": "获取FF微博新闻",
     "enable": true
