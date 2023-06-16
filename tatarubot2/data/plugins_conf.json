@@ -1,4 +1,8 @@
 {
+  "conf_ver": {
+    "info": "配置文件版本，用于判断插件代码是否有大更新",
+    "ver": "0.1.16"
+  },
   "proxy": {
     "info": "对查物价、日志订阅和bing聊天使用代理连接",
     "enable": false,
@@ -91,8 +95,7 @@
   },
   "market_new": {
     "info": "查物价，使用本地物品id信息",
-    "enable": true,
-    "use_pic": false
+    "enable": true
   },
   "nuannuan": {
     "info": "本周时尚品鉴作业",

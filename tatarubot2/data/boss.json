@@ -3275,7 +3275,24 @@
     "zone_name": "Dungeons (Endgame)",
     "cn_zone_name": "迷宫挑战 (90级)",
     "name": "Lapis Manalis",
-    "cn_name": "Lapis Manalis",
+    "cn_name": "雪山冥窟月石洞",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 4535,
+    "quest": 41,
+    "zone_name": "Dungeons (Endgame)",
+    "cn_zone_name": "迷宫挑战 (90级)",
+    "name": "The Aetherfont",
+    "cn_name": "乙太泉",
     "nickname": [],
     "patch": 0,
     "savage": 100,
@@ -3301,14 +3318,16 @@
       "Standard Comps (6.1)###7",
       "Standard Comps (6.2)###13",
       "Standard Comps (6.28)###19",
-      "Standard Comps (6.3)###25"
+      "Standard Comps (6.3)###25",
+      "Standard Comps (6.4)###31"
     ],
     "cn_region": [
       "标准阵容构成 (6.0)###3",
       "标准阵容构成 (6.1)###9",
       "标准阵容构成 (6.2)###15",
       "标准阵容构成 (6.28)###21",
-      "标准阵容构成 (6.3)###27"
+      "标准阵容构成 (6.3)###27",
+      "标准阵容构成 (6.4)###33"
     ]
   },
   {
@@ -3328,14 +3347,16 @@
       "Standard Comps (6.1)###7",
       "Standard Comps (6.2)###13",
       "Standard Comps (6.28)###19",
-      "Standard Comps (6.3)###25"
+      "Standard Comps (6.3)###25",
+      "Standard Comps (6.4)###31"
     ],
     "cn_region": [
       "标准阵容构成 (6.0)###3",
       "标准阵容构成 (6.1)###9",
       "标准阵容构成 (6.2)###15",
       "标准阵容构成 (6.28)###21",
-      "标准阵容构成 (6.3)###27"
+      "标准阵容构成 (6.3)###27",
+      "标准阵容构成 (6.4)###33"
     ]
   },
   {
@@ -3353,14 +3374,16 @@
       "Standard Comps (6.1)###7",
       "Standard Comps (6.2)###13",
       "Standard Comps (6.28)###19",
-      "Standard Comps (6.3)###25"
+      "Standard Comps (6.3)###25",
+      "Standard Comps (6.4)###31"
     ],
     "cn_region": [
       "标准阵容构成 (6.0)###3",
       "标准阵容构成 (6.1)###9",
       "标准阵容构成 (6.2)###15",
       "标准阵容构成 (6.28)###21",
-      "标准阵容构成 (6.3)###27"
+      "标准阵容构成 (6.3)###27",
+      "标准阵容构成 (6.4)###33"
     ]
   },
   {
@@ -3378,14 +3401,16 @@
       "Standard Comps (6.1)###7",
       "Standard Comps (6.2)###13",
       "Standard Comps (6.28)###19",
-      "Standard Comps (6.3)###25"
+      "Standard Comps (6.3)###25",
+      "Standard Comps (6.4)###31"
     ],
     "cn_region": [
       "标准阵容构成 (6.0)###3",
       "标准阵容构成 (6.1)###9",
       "标准阵容构成 (6.2)###15",
       "标准阵容构成 (6.28)###21",
-      "标准阵容构成 (6.3)###27"
+      "标准阵容构成 (6.3)###27",
+      "标准阵容构成 (6.4)###33"
     ]
   },
   {
@@ -3403,14 +3428,16 @@
       "Standard Comps (6.1)###7",
       "Standard Comps (6.2)###13",
       "Standard Comps (6.28)###19",
-      "Standard Comps (6.3)###25"
+      "Standard Comps (6.3)###25",
+      "Standard Comps (6.4)###31"
     ],
     "cn_region": [
       "标准阵容构成 (6.0)###3",
       "标准阵容构成 (6.1)###9",
       "标准阵容构成 (6.2)###15",
       "标准阵容构成 (6.28)###21",
-      "标准阵容构成 (6.3)###27"
+      "标准阵容构成 (6.3)###27",
+      "标准阵容构成 (6.4)###33"
     ]
   },
   {
@@ -3428,14 +3455,16 @@
       "Standard Comps (6.1)###7",
       "Standard Comps (6.2)###13",
       "Standard Comps (6.28)###19",
-      "Standard Comps (6.3)###25"
+      "Standard Comps (6.3)###25",
+      "Standard Comps (6.4)###31"
     ],
     "cn_region": [
       "标准阵容构成 (6.0)###3",
       "标准阵容构成 (6.1)###9",
       "标准阵容构成 (6.2)###15",
       "标准阵容构成 (6.28)###21",
-      "标准阵容构成 (6.3)###27"
+      "标准阵容构成 (6.3)###27",
+      "标准阵容构成 (6.4)###33"
     ]
   },
   {
@@ -3565,13 +3594,15 @@
       "Standard Comps (6.1)###1",
       "Standard Comps (6.2)###7",
       "Standard Comps (6.28)###13",
-      "Standard Comps (6.3)###19"
+      "Standard Comps (6.3)###19",
+      "Standard Comps (6.4)###25"
     ],
     "cn_region": [
       "标准阵容构成 (6.1)###3",
       "标准阵容构成 (6.2)###9",
       "标准阵容构成 (6.28)###15",
-      "标准阵容构成 (6.3)###21"
+      "标准阵容构成 (6.3)###21",
+      "标准阵容构成 (6.4)###27"
     ]
   },
   {
@@ -3614,7 +3645,24 @@
     "zone_name": "Trials (Unreal)",
     "cn_zone_name": "幻巧战",
     "name": "Sophia",
-    "cn_name": "Sophia",
+    "cn_name": "索菲娅",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps###1"
+    ],
+    "cn_region": [
+      "标准阵容构成###3"
+    ]
+  },
+  {
+    "pk": 3007,
+    "quest": 46,
+    "zone_name": "Trials (Unreal)",
+    "cn_zone_name": "幻巧战",
+    "name": "Zurvan",
+    "cn_name": "祖尔宛",
     "nickname": [],
     "patch": 0,
     "savage": 100,
@@ -3879,12 +3927,14 @@
     "region": [
       "Standard Comps (6.2)###1",
       "Standard Comps (6.28)###7",
-      "Standard Comps (6.3)###13"
+      "Standard Comps (6.3)###13",
+      "Standard Comps (6.4)###19"
     ],
     "cn_region": [
       "标准阵容构成 (6.2)###3",
       "标准阵容构成 (6.28)###9",
-      "标准阵容构成 (6.3)###15"
+      "标准阵容构成 (6.3)###15",
+      "标准阵容构成 (6.4)###21"
     ]
   },
   {
@@ -3893,19 +3943,227 @@
     "zone_name": "Trials II (Extreme)",
     "cn_zone_name": "讨伐歼灭战：高难度 II",
     "name": "Rubicante",
-    "cn_name": "Rubicante",
+    "cn_name": "卢比坎特",
     "nickname": [],
     "patch": 0,
     "savage": 100,
     "region": [
       "Standard Comps (6.2)###1",
       "Standard Comps (6.28)###7",
-      "Standard Comps (6.3)###13"
+      "Standard Comps (6.3)###13",
+      "Standard Comps (6.4)###19"
     ],
     "cn_region": [
       "标准阵容构成 (6.2)###3",
       "标准阵容构成 (6.28)###9",
-      "标准阵容构成 (6.3)###15"
+      "标准阵容构成 (6.3)###15",
+      "标准阵容构成 (6.4)###21"
+    ]
+  },
+  {
+    "pk": 4533,
+    "quest": 51,
+    "zone_name": "Dungeons (Criterion)",
+    "cn_zone_name": "迷宫挑战（异闻）",
+    "name": "Another Sil'dihn Subterrane",
+    "cn_name": "异闻希拉狄哈水道",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2045,
+    "quest": 52,
+    "zone_name": "Euphrosyne",
+    "cn_zone_name": "喜悦神域欧佛洛绪涅",
+    "name": "Nophica",
+    "cn_name": "诺菲卡",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2046,
+    "quest": 52,
+    "zone_name": "Euphrosyne",
+    "cn_zone_name": "喜悦神域欧佛洛绪涅",
+    "name": "Althyk and Nymeia",
+    "cn_name": "阿尔基克&妮美雅",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2047,
+    "quest": 52,
+    "zone_name": "Euphrosyne",
+    "cn_zone_name": "喜悦神域欧佛洛绪涅",
+    "name": "Halone",
+    "cn_name": "哈罗妮",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 2048,
+    "quest": 52,
+    "zone_name": "Euphrosyne",
+    "cn_zone_name": "喜悦神域欧佛洛绪涅",
+    "name": "Menphina",
+    "cn_name": "梅茵菲娜",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "-1###1"
+    ],
+    "cn_region": [
+      "-1###1"
+    ]
+  },
+  {
+    "pk": 1068,
+    "quest": 53,
+    "zone_name": "The Omega Protocol",
+    "cn_zone_name": "欧米茄绝境战",
+    "name": "The Omega Protocol",
+    "cn_name": "欧米茄绝境战",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.3)###1",
+      "Standard Comps (6.4)###7"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.3)###3",
+      "标准阵容构成 (6.4)###9"
+    ]
+  },
+  {
+    "pk": 88,
+    "quest": 54,
+    "zone_name": "Anabaseios",
+    "cn_zone_name": "万魔殿 天境之狱",
+    "name": "Kokytos",
+    "cn_name": "Kokytos",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.4)###1"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.4)###3"
+    ]
+  },
+  {
+    "pk": 89,
+    "quest": 54,
+    "zone_name": "Anabaseios",
+    "cn_zone_name": "万魔殿 天境之狱",
+    "name": "Pandaemonium",
+    "cn_name": "Pandaemonium",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.4)###1"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.4)###3"
+    ]
+  },
+  {
+    "pk": 90,
+    "quest": 54,
+    "zone_name": "Anabaseios",
+    "cn_zone_name": "万魔殿 天境之狱",
+    "name": "Themis",
+    "cn_name": "Themis",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.4)###1"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.4)###3"
+    ]
+  },
+  {
+    "pk": 91,
+    "quest": 54,
+    "zone_name": "Anabaseios",
+    "cn_zone_name": "万魔殿 天境之狱",
+    "name": "Athena",
+    "cn_name": "Athena",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.4)###1"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.4)###3"
+    ]
+  },
+  {
+    "pk": 92,
+    "quest": 54,
+    "zone_name": "Anabaseios",
+    "cn_zone_name": "万魔殿 天境之狱",
+    "name": "Pallas Athena",
+    "cn_name": "Pallas Athena",
+    "nickname": [],
+    "patch": 0,
+    "savage": 101,
+    "region": [
+      "Standard Comps (6.4)###1"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.4)###3"
+    ]
+  },
+  {
+    "pk": 1069,
+    "quest": 55,
+    "zone_name": "Trials III (Extreme)",
+    "cn_zone_name": "讨伐歼灭战 III：高难度",
+    "name": "Golbez",
+    "cn_name": "戈尔贝兹",
+    "nickname": [],
+    "patch": 0,
+    "savage": 100,
+    "region": [
+      "Standard Comps (6.4)###1"
+    ],
+    "cn_region": [
+      "标准阵容构成 (6.4)###3"
     ]
   }
 ]

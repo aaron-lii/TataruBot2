@@ -16,7 +16,7 @@ house = on_command(this_command, priority=5)
 
 
 
-url = "	https://house.ffxiv.cyou/api/sales?server={}&ts={}"
+url = "https://house.ffxiv.cyou/api/sales?server={}&ts={}"
 
 server_dict = {"红玉海": 1167,
                "神意之地": 1081,

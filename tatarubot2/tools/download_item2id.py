@@ -62,8 +62,11 @@ def run2():
             else:
                 item_dict[line[0]] = line[1]
 
+    # with open("./item_dict.json", "w", encoding="utf-8") as f_w:
+    #     f_w.write(str(item_dict))
+
     with open("./item_dict.json", "w", encoding="utf-8") as f_w:
-        f_w.write(str(item_dict))
+        json.dump(item_dict, f_w, ensure_ascii=False, indent=2)
 
 
 if __name__ == "__main__":
