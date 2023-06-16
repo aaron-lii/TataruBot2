@@ -40,7 +40,7 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
 
 设置：依赖 [EdgeGPT](https://github.com/acheong08/EdgeGPT)
 1. 安装依赖 `pip install EdgeGPT --upgrade`
-2. 配置文件`tatarubot2_conf.json`里开启该插件功能
+2. 配置文件`tatarubot2_conf.json`里配置 proxy（socks5报错的话可以用http）并开启该插件功能
 
 ## 依赖
 
