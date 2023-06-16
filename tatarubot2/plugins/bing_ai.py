@@ -3,15 +3,19 @@ import asyncio
 import re
 
 from EdgeGPT.EdgeGPT import Chatbot, ConversationStyle
-from nonebot import on_command
+from nonebot import on_command, logger
 from nonebot.adapters import Message, Event
 from nonebot.params import CommandArg
-from nonebot.rule import to_me
 
 from tatarubot2.plugins.utils import get_conf_dict
 
 this_command = "bing"
-bing_ai = on_command(this_command, rule=to_me(), priority=5)
+bing_ai = on_command(this_command, priority=5)
+
+
+async def bing_help():
+    return this_command + " 聊天内容：和我聊天吧，会记忆聊天上下文\n" + \
+        this_command + " 重置/reset：重置聊天内容，忘记之前的聊天"
 
 
 conf_dict = get_conf_dict()
@@ -22,33 +26,41 @@ locked = False
 bot = asyncio.run(Chatbot.create(proxy=proxy_url if use_proxy else None))
 
 
-async def chat_run(msg: str):
+async def chat(msg: str):
     # nonebot在一个响应器未执行完时会ignore重复的消息，这个锁是为了保险
-    global locked
+    global locked, bot
     if locked:
         return "我正在忙，请稍后再试"
     locked = True
     try:
-        # bot = await Chatbot.create(proxy=proxy_url if use_proxy else None)
         response = await bot.ask(prompt=msg, conversation_style=ConversationStyle.precise, locale="zh-cn",
-                                 simplify_response=False)
+                                 simplify_response=True)
         # print(json.dumps(response, indent=2))
-        res = msg
-        for s in response['item']['messages']:
-            if 'messageType' not in s:
-                res = s['text']
+        res = response["text"]
         # await bot.close()
         return re.sub(r'\[[^]]*]', "", res)
     finally:
         locked = False
 
 
+async def reset_bot():
+    global bot
+    await bot.reset()
+    return "我已经忘记了所有的事情"
+
+
 @bing_ai.handle()
 async def handle_first_receive(event: Event, args: Message = CommandArg()):
     chat_msg = args.extract_plain_text().strip()
-    # print(chat_msg)
+
     if not chat_msg:
         await bing_ai.finish("你想和我聊天吗？")
-
-    return_str = await chat_run(chat_msg)
+    try:
+        if chat_msg == "重置" or chat_msg == "reset":
+            return_str = await reset_bot()
+        else:
+            return_str = await chat(chat_msg)
+    except Exception as e:
+        logger.error(e)
+        return_str = "我好像出了点问题，等我修好再聊吧"
     await bing_ai.finish(return_str)
