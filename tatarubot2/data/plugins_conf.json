@@ -4,7 +4,7 @@
     "ver": "0.1.16"
   },
   "proxy": {
-    "info": "对查物价和日志订阅使用代理连接",
+    "info": "对查物价、日志订阅和bing聊天使用代理连接",
     "enable": false,
     "url": "socks5://127.0.0.1:1080"
   },
@@ -12,6 +12,10 @@
     "info": "chatgpt聊天",
     "enable": false,
     "api_key": "这里填你自己的chatgpt账号aip key，需要魔法上网"
+  },
+  "bing_ai": {
+    "info": "bingai聊天",
+    "enable": false
   },
   "ff_weibo": {
     "info": "获取FF微博新闻",

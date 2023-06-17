@@ -29,6 +29,19 @@
 
 chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
 
+## Bing聊天功能
+
+前提：该电脑或服务器科学上网(打开[必应聊天主页](https://bing.com/chat)，能够使用聊天功能)。
+好处是不需要Bing账号，但因为Bing是通过搜索网页来生成回答，响应速度较慢。
+
+指令：`bing 你想说的话`，例如`bing 今天天气怎么样？`
+
+会记忆聊天上下文，使用指令：`bing 重置/reset`，可以重置聊天上下文。
+
+设置：依赖 [EdgeGPT](https://github.com/acheong08/EdgeGPT)
+1. 安装依赖 `pip install EdgeGPT --upgrade`
+2. 配置文件`tatarubot2_conf.json`里配置 proxy（socks5报错的话可以用http）并开启该插件功能
+
 ## 依赖
 
 1. python >= 3.7.3
