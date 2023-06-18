@@ -3,16 +3,19 @@
 一些通用功能
 """
 
-from nonebot import logger
-import aiohttp
-import random
-import os
-from PIL import Image, ImageFont, ImageDraw
 import io
-import emoji
-from aiohttp_socks import ProxyConnector
 import json
+import os
+import random
 
+import aiohttp
+import emoji
+from PIL import Image, ImageFont, ImageDraw
+from aiohttp_socks import ProxyConnector
+from nonebot import logger
+from nonebot.internal.matcher import Matcher
+from nonebot.internal.params import Depends
+from nonebot.params import CommandArg
 
 """
 读取插件配置文件，没有则创建默认配置
@@ -29,9 +32,9 @@ if os.path.exists(json_path):
     with open(json_path, "r", encoding="utf-8") as f_r:
         plugins_dict = json.load(f_r)
     if ("conf_ver" not in plugins_dict) or \
-       (plugins_new_dict["conf_ver"]["ver"] != plugins_dict["conf_ver"]["ver"]):
+            (plugins_new_dict["conf_ver"]["ver"] != plugins_dict["conf_ver"]["ver"]):
         logger.error("配置文件有大改动，请删除机器人目录下 tatarubot2_conf.json 文件，再重启机器人。"
-              "最新配置版本号为：" + plugins_new_dict["conf_ver"]["ver"])
+                     "最新配置版本号为：" + plugins_new_dict["conf_ver"]["ver"])
         plugins_dict = None
 else:
     plugins_dict = plugins_new_dict
@@ -43,11 +46,14 @@ if plugins_dict:
 else:
     proxy_url = None
 
+
 def get_conf_dict():
     return plugins_dict
 
 
 """ aiohttp功能封装 """
+
+
 async def aiohttp_get(url_input, res_type="json", time_out=15, header_plus=None, proxy=False):
     agent = ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 '
              'Safari/537.36 QIHU 360SE',
@@ -81,11 +87,13 @@ async def aiohttp_get(url_input, res_type="json", time_out=15, header_plus=None,
 
 """ 文字转图片 """
 fontSize = 20  # 文字大小
-max_width = 25 # 行宽
+max_width = 25  # 行宽
 ttf_path = os.path.join(this_dir, "../data/songti.ttf")
 font = ImageFont.truetype(ttf_path, size=fontSize)
+
+
 def str2img(text):
-    #匹配图片宽度，特殊字符、字母、数字占位会比中文少一半
+    # 匹配图片宽度，特殊字符、字母、数字占位会比中文少一半
     k = 0
     text_new = ""
     for char_one in text:
@@ -106,10 +114,10 @@ def str2img(text):
     lines = text_new.split('\n')
 
     # 背景颜色
-    im = Image.new("RGB", ((int(max_width * 21.5)), len(lines) * (fontSize + 5)), (255,255,255))
+    im = Image.new("RGB", ((int(max_width * 21.5)), len(lines) * (fontSize + 5)), (255, 255, 255))
     dr = ImageDraw.Draw(im)
     # 文字颜色
-    dr.text((0, 0), text_new, font=font, fill=(0,0,0))
+    dr.text((0, 0), text_new, font=font, fill=(0, 0, 0))
     # 保存
     img_bytes = io.BytesIO()
     im.save(img_bytes, format='JPEG')
@@ -122,6 +130,18 @@ emoji_list = []
 for key, val in emoji.EMOJI_DATA.items():
     emoji_list.append(key)
 emoji_len = len(emoji_list) - 1
+
+
 def get_emoji():
     emoji_i = random.randint(0, emoji_len)
     return emoji_list[emoji_i]
+
+
+def NoArg():
+    """ 防止命令前缀为空时误触发 """
+
+    async def dep(matcher: Matcher, args=CommandArg()):
+        if len(args) != 0:
+            await matcher.finish()
+
+    return Depends(dep)
