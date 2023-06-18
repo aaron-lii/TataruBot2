@@ -10,14 +10,14 @@ from nonebot.adapters import Bot, Event
 
 import random
 
-from tatarubot2.plugins import NoArg
+from tatarubot2.plugins.utils import NoArg, default_command_start
 
 this_command = "仙人彩"
 lottery = on_command(this_command, priority=5)
 
 
 async def lottery_help():
-    return this_command + "：帮你选每周仙人仙彩数字"
+    return default_command_start + this_command + "：帮你选每周仙人仙彩数字"
 
 
 async def random_lottery():

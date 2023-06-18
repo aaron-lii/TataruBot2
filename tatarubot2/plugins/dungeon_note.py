@@ -11,7 +11,7 @@ from nonebot.adapters.onebot.v11 import Message, MessageSegment
 
 import re
 
-from tatarubot2.plugins.utils import aiohttp_get, str2img
+from tatarubot2.plugins.utils import aiohttp_get, str2img, default_command_start
 
 this_command = "攻略 "
 dungeon_note = on_command(this_command, priority=5)
@@ -19,7 +19,7 @@ dungeon_note = on_command(this_command, priority=5)
 url = "https://ff14.org/duty"
 
 async def dungeon_note_help():
-    return this_command + "(副本等级) 副本名关键字 (文本)：查简单副本攻略，括号内为可选参数，默认输出图片攻略"
+    return default_command_start + this_command + "(副本等级) 副本名关键字 (文本)：查简单副本攻略，括号内为可选参数，默认输出图片攻略"
 
 async def run(dungeon_info):
     # 获取所有攻略页面列表

@@ -15,7 +15,7 @@ import asyncio
 from datetime import datetime
 from icalendar import Calendar
 
-from tatarubot2.plugins.utils import aiohttp_get, get_conf_dict, NoArg
+from tatarubot2.plugins.utils import aiohttp_get, get_conf_dict, NoArg, default_command_start
 
 this_command = "日历"
 calendar = on_command(this_command, priority=5)
@@ -34,7 +34,7 @@ ics_path = os.path.join(this_dir, "../data/calendar.ics")
 last_download_time = 0
 
 async def calendar_help():
-    return this_command + "：获取FF近期活动日历"
+    return default_command_start + this_command + "：获取FF近期活动日历"
 
 
 """ 此处添加任务 每一段时间同步一次日历 """

@@ -11,7 +11,7 @@ from nonebot.adapters.onebot.v11 import Message, MessageSegment
 import re
 import traceback
 
-from tatarubot2.plugins.utils import aiohttp_get, str2img, NoArg
+from tatarubot2.plugins.utils import aiohttp_get, str2img, NoArg, default_command_start
 
 this_command = "暖暖"
 nuannuan = on_command(this_command, priority=5)
@@ -21,7 +21,7 @@ qq_doc = "https://docs.qq.com/sheet/DY2lCeEpwemZESm5q?tab=dewveu&c=A1A0A0"
 
 
 async def nuannuan_help():
-    return this_command + "：本周时尚品鉴作业"
+    return default_command_start + this_command + "：本周时尚品鉴作业"
 
 
 async def get_bili_url():

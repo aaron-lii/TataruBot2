@@ -22,7 +22,7 @@ with open(json_path, "r", encoding="utf-8") as f_r:
 
 
 async def market_new_help():
-    return this_command + "大区 物品名：查物价异常时可以尝试这个版本"
+    return default_command_start + this_command + "大区 物品名：查物价异常时可以尝试这个版本"
 
 
 async def get_market_data(server_name, item_name, hq=False):
@@ -91,7 +91,7 @@ async def get_market_data(server_name, item_name, hq=False):
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     args = str(event.get_message()).strip().split(" ", 1)
     if len(args) < 2:
-        await market.finish("查物价格式： " + this_command + " 大区 物品名\n不写大区默认豆豆柴")
+        await market.finish("查物价格式： " + default_command_start + this_command + " 大区 物品名\n不写大区默认豆豆柴")
     args = args[1]
     if args:
         state["market_info"] = args  # 如果用户发送了参数则直接赋值

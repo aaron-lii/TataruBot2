@@ -12,7 +12,7 @@ import aiohttp
 import emoji
 from PIL import Image, ImageFont, ImageDraw
 from aiohttp_socks import ProxyConnector
-from nonebot import logger
+from nonebot import logger, get_driver
 from nonebot.internal.matcher import Matcher
 from nonebot.internal.params import Depends
 from nonebot.params import CommandArg
@@ -135,6 +135,9 @@ emoji_len = len(emoji_list) - 1
 def get_emoji():
     emoji_i = random.randint(0, emoji_len)
     return emoji_list[emoji_i]
+
+
+default_command_start = next(iter(get_driver().config.command_start))
 
 
 def NoArg():

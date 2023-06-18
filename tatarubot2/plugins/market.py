@@ -14,14 +14,14 @@ import time
 import os
 import json
 
-from tatarubot2.plugins.utils import get_conf_dict, aiohttp_get, get_emoji, str2img
+from tatarubot2.plugins.utils import get_conf_dict, aiohttp_get, get_emoji, str2img, default_command_start
 
 this_command = "价格 "
 market = on_command(this_command, priority=5)
 
 
 async def market_help():
-    return this_command + "大区/服务器 物品名：查询板子物价，默认大区/服务器在配置文件中指定，不指定默认豆豆柴"
+    return default_command_start + this_command + "大区/服务器 物品名：查询板子物价，默认大区/服务器在配置文件中指定，不指定默认豆豆柴"
 
 
 # 加载字典 用于本地获取物品id
@@ -141,7 +141,7 @@ def handle_item_name_abbr(item_name):
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     args = str(event.get_message()).strip().split(" ", 1)
     if len(args) < 2:
-        await market.finish("查物价格式： " + this_command + " 大区 物品名\n不写大区默认豆豆柴")
+        await market.finish("查物价格式： " + default_command_start + this_command + " 大区 物品名\n不写大区默认豆豆柴")
     args = args[1]
     if args:
         state["market_info"] = args  # 如果用户发送了参数则直接赋值

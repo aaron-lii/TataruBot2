@@ -10,14 +10,14 @@ from nonebot.adapters import Bot, Event
 
 import random
 
-from tatarubot2.plugins import NoArg
+from tatarubot2.plugins.utils import default_command_start, NoArg
 
 this_command = "选门"
 precious = on_command(this_command, priority=5)
 
 
 async def precious_help():
-    return this_command + "：帮你选藏宝洞的门"
+    return default_command_start + this_command + "：帮你选藏宝洞的门"
 
 
 async def random_left_right():
