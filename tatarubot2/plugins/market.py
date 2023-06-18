@@ -11,6 +11,8 @@ from nonebot.adapters.onebot.v11 import Message, MessageSegment
 
 from difflib import SequenceMatcher
 import time
+import os
+import json
 
 from tatarubot2.plugins.utils import get_conf_dict, aiohttp_get, get_emoji, str2img
 
@@ -20,6 +22,13 @@ market = on_command(this_command, priority=5)
 
 async def market_help():
     return this_command + "大区/服务器 物品名：查询板子物价，默认大区/服务器在配置文件中指定，不指定默认豆豆柴"
+
+
+# 加载字典 用于本地获取物品id
+this_dir = os.path.split(os.path.realpath(__file__))[0]
+json_path = os.path.join(this_dir, "../data/item_dict.json")
+with open(json_path, "r", encoding="utf-8") as f_r:
+    item_dict = json.load(f_r)
 
 
 conf_dict = get_conf_dict()
@@ -49,7 +58,15 @@ async def get_item_id(item_name, name_lang=""):
 
 
 async def get_market_data(server_name, item_name, hq=False):
-    new_item_name, item_id = await get_item_id(item_name, "cn")
+    # 优先查询本地物品id
+    # todo 本地物品id暂时不支持模糊查询
+    if item_name in item_dict:
+        logger.info("使用本地物品id搜索 " + item_name)
+        new_item_name, item_id = item_name, int(item_dict[item_name])
+    else:
+        logger.info("使用网络搜索 " + item_name)
+        new_item_name, item_id = await get_item_id(item_name, "cn")
+
     if item_id < 0:
         item_name = item_name.replace("_", " ")
         name_lang = ""
@@ -63,7 +80,7 @@ async def get_market_data(server_name, item_name, hq=False):
             msg = '所查询物品"{}"不存在'.format(item_name)
             return msg
     url = "https://universalis.app/api/{}/{}".format(server_name, item_id)
-    print("market url:{}".format(url))
+    logger.info("market url:{}".format(url))
     # r = requests.get(url, timeout=time_out, headers=get_headers())
     j = await aiohttp_get(url, proxy=use_proxy)
     # if r.status != 200:
@@ -167,7 +184,7 @@ async def handle_item(bot: Bot, event: Event, state: T_State):
         else:
             msg = get_emoji() + msg + get_emoji()
     except Exception as e:
-        print(e)
+        logger.warning(e)
         msg = "可能是物价网站暂时访问不了"
         time.sleep(0.5)
 

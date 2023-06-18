@@ -11,13 +11,12 @@ from nonebot.adapters import Bot, Event
 import re
 import base64
 import json
-# import requests
-# import aiohttp
 import logging
 import traceback
 import time
+import os
 
-from tatarubot2.plugins.utils import aiohttp_get
+from tatarubot2.plugins.utils import aiohttp_get, logger
 
 
 this_command = "物品 "
@@ -26,6 +25,13 @@ item = on_command(this_command, priority=5)
 
 async def item_help():
     return this_command + "物品名：查询物品信息"
+
+
+# 加载字典 用于本地获取物品id
+this_dir = os.path.split(os.path.realpath(__file__))[0]
+json_path = os.path.join(this_dir, "../data/item_dict.json")
+with open(json_path, "r", encoding="utf-8") as f_r:
+    item_dict = json.load(f_r)
 
 
 # GARLAND = "https://ffxiv.cyanclay.xyz"
@@ -410,6 +416,16 @@ async def get_xivapi_item(item_name, name_lang=""):
 
 async def search_item(name, FF14WIKI_BASE_URL, FF14WIKI_API_URL, url_quote=True):
     try:
+        # 优先搜索本地物品id
+        # todo 本地搜索暂时没有支持模糊匹配
+        if name in item_dict:
+            logger.info("使用本地物品id搜索 " + name)
+            try:
+                return await parse_item_garland(item_dict[name], "cn")
+            except Exception as e:
+                return f"搜索失败！{repr(e)}"
+
+        logger.info("使用网络id搜索 " + name)
         name_lang = None
         for lang in ["cn", "en", "ja", "fr", "de"]:
             j, search_url = await get_xivapi_item(name, lang)
