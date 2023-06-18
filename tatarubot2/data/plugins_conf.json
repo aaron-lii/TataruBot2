@@ -25,10 +25,6 @@
     "info": "查询物品信息",
     "enable": true
   },
-  "item_new": {
-    "info": "查询物品信息，使用本地物品id信息",
-    "enable": true
-  },
   "logs_dps": {
     "info": "查询logs分段",
     "enable": true
@@ -88,10 +84,6 @@
       "狗": "豆豆柴",
       "柔风": "柔风海湾"
     }
-  },
-  "market_new": {
-    "info": "查物价，使用本地物品id信息",
-    "enable": true
   },
   "nuannuan": {
     "info": "本周时尚品鉴作业",
