@@ -17,16 +17,12 @@ if plugins_dict:
         from .house import *
     if plugins_dict["item"]["enable"]:
         from .item import *
-    if plugins_dict["item_new"]["enable"]:
-        from .item_new import *
     if plugins_dict["logs_dps"]["enable"]:
         from .logs_dps import *
     if plugins_dict["lottery"]["enable"]:
         from .lottery import *
     if plugins_dict["market"]["enable"]:
         from .market import *
-    if plugins_dict["market_new"]["enable"]:
-        from .market_new import *
     if plugins_dict["nuannuan"]["enable"]:
         from .nuannuan import *
     if plugins_dict["precious"]["enable"]:
@@ -37,5 +33,5 @@ if plugins_dict:
         from .dungeon_note import *
     if plugins_dict["calendar"]["enable"]:
         from .calendar import *
-
-    from .bot_help import *
+    if plugins_dict["bot_help"]["enable"]:
+        from .bot_help import *
