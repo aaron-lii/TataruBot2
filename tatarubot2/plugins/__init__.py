@@ -31,5 +31,5 @@ if plugins_dict:
         from .dungeon_note import *
     if plugins_dict["calendar"]["enable"]:
         from .calendar import *
-
-    from .bot_help import *
+    if plugins_dict["bot_help"]["enable"]:
+        from .bot_help import *
