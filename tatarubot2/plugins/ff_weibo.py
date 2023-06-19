@@ -9,7 +9,7 @@ from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 
 # import requests
-from tatarubot2.plugins.utils import aiohttp_get
+from tatarubot2.plugins.utils import aiohttp_get, NoArg, default_command_start
 
 this_command = "看看微博"
 ff_weibo = on_command(this_command, priority=5)
@@ -17,7 +17,7 @@ ff_weibo = on_command(this_command, priority=5)
 url = "https://m.weibo.cn/api/container/getIndex?type=uid&value=1797798792&containerid=1076031797798792"
 
 async def ff_weibo_help():
-    return this_command + "：获取FF微博新闻"
+    return default_command_start + this_command + "：获取FF微博新闻"
 
 
 async def run():
@@ -73,9 +73,5 @@ async def run():
 
 
 @ff_weibo.handle()
-async def handle_first_receive(bot: Bot, event: Event, state: T_State):
-    args = str(event.get_message()).strip()
-    if args != this_command:
-        return
-
+async def handle_first_receive(bot: Bot, event: Event, state: T_State, _=NoArg()):
     await run()

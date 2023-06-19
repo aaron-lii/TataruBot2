@@ -1,12 +1,16 @@
 {
   "conf_ver": {
     "info": "配置文件版本，用于判断插件代码是否有大更新",
-    "ver": "0.1.16"
+    "ver": "0.1.17"
   },
   "proxy": {
     "info": "对查物价、日志订阅和bing聊天使用代理连接",
     "enable": false,
     "url": "socks5://127.0.0.1:1080"
+  },
+  "bot_help": {
+    "info": "机器人帮助文档",
+    "enable": true
   },
   "chat_ai": {
     "info": "chatgpt聊天",
@@ -27,10 +31,6 @@
   },
   "item": {
     "info": "查询物品信息",
-    "enable": true
-  },
-  "item_new": {
-    "info": "查询物品信息，使用本地物品id信息",
     "enable": true
   },
   "logs_dps": {
@@ -92,10 +92,6 @@
       "狗": "豆豆柴",
       "柔风": "柔风海湾"
     }
-  },
-  "market_new": {
-    "info": "查物价，使用本地物品id信息",
-    "enable": true
   },
   "nuannuan": {
     "info": "本周时尚品鉴作业",

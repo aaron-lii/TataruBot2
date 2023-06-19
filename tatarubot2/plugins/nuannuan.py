@@ -6,107 +6,70 @@
 from nonebot import on_command
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
+from nonebot.adapters.onebot.v11 import Message, MessageSegment
 
-# import requests
-# import aiohttp
 import re
 import traceback
 
-from tatarubot2.plugins.utils import aiohttp_get
+from tatarubot2.plugins.utils import aiohttp_get, str2img, NoArg, default_command_start
 
 this_command = "暖暖"
 nuannuan = on_command(this_command, priority=5)
 
+# 腾讯文档地址
+qq_doc = "https://docs.qq.com/sheet/DY2lCeEpwemZESm5q?tab=dewveu&c=A1A0A0"
+
 
 async def nuannuan_help():
-    return this_command + "：本周时尚品鉴作业"
+    return default_command_start + this_command + "：本周时尚品鉴作业"
 
 
-# def get_video_id(mid):
-#     try:
-#         # 获取用户信息最新视频的前五个，避免第一个视频不是攻略ps=5处修改
-#         url = f"https://api.bilibili.com/x/space/arc/search?mid={mid}&order=pubdate&pn=1&ps=5"
-#         r = requests.get(url, timeout=3).json()
-#         video_list = r["data"]["list"]["vlist"]
-#         for i in video_list:
-#             if re.match(r"【FF14\/时尚品鉴】第\d+期 满分攻略", i["title"]):
-#                 return i["bvid"]
-#     except:
-#         traceback.print_exc()
-#     return None
-#
-#
-# def extract_nn(bvid):
-#     try:
-#         url = f"https://api.bilibili.com/x/web-interface/view?bvid={bvid}"
-#         r = requests.get(url, timeout=3).json()
-#         if r["code"] == 0:
-#             url = f"https://www.bilibili.com/video/{bvid}"
-#             title = r["data"]["title"]
-#             desc = r["data"]["desc"]
-#             text = desc.replace("个人攻略网站", "游玩C攻略站")
-#             image = r["data"]["pic"]
-#             res_data = {
-#                 "url": url,
-#                 "title": title,
-#                 "content": text,
-#                 "image": image,
-#             }
-#             # return res_data
-#             return text + "\n" + url
-#     except:
-#         traceback.print_exc()
-#     return None
+async def get_bili_url():
+    """ 从腾讯文档获取当期b站地址 """
+    table_id = "DY2lCeEpwemZESm5q"
+    sheet_id = "dewveu"
+    headers = {'referer': "https://docs.qq.com/sheet/{}?tab={}".format(table_id, sheet_id),
+               'authority': "docs.qq.com",
+               'accept': "*/*"}
+
+    r = await aiohttp_get('https://docs.qq.com/dop-api/opendoc?tab={}&id={}&outformat=1&normal=1'.format(sheet_id, table_id),
+                          res_type="json",
+                          header_plus=headers)
+    r = str(r)
+
+    bili_url = re.search(r"https://www.bilibili.com/video/[^\']*", r).group()
+
+    return bili_url
 
 
-async def get_qq_doc():
+async def get_bili_detail(bili_url):
+    """ 获取bilibili详细页 """
+    r = await aiohttp_get(bili_url, res_type="text")
+
+    res = re.search(r"<span class=\"desc-info-text\">.*?</span>", r, flags=re.S).group()
+
+    res = res.replace("<span class=\"desc-info-text\">", "")
+    res = res.replace("</span>", "")
+
+    return res
+
+
+async def get_nuannuan():
     try:
-        url = f"https://www.youwanc.com/"
-        # r = requests.get(url, timeout=5).text
-        # r = await session.get(url)
-        # r = await r.text()
-        r = await aiohttp_get(url, res_type="text")
-        qq_doc = re.search(r"https://docs.qq.com/[^\"]*", r)
-        if qq_doc:
-            msg = "暖暖看qq文档： " + qq_doc.group()
-        else:
-            msg = "查看qq文档出了点问题？"
+        bili_url = await get_bili_url()
+        msg = await get_bili_detail(bili_url)
+
+        img_bytes = str2img(msg)
+        msg = Message([MessageSegment.image(img_bytes)])
     except Exception as e:
-        msg = "Error: {}".format(type(e))
+        # msg = "Error: {}".format(type(e))
+        msg = "暖暖获取失败，请看qq文档： " + qq_doc
         traceback.print_exc()
 
     await nuannuan.finish(msg)
 
 
-# async def run():
-#     try:
-#         # 获取视频av号(aid)
-#         bvid = get_video_id(15503317)
-#         # 获取数据
-#         res_data = extract_nn(bvid)
-#         if not res_data:
-#             msg = "无法查询到有效数据，请稍后再试"
-#         else:
-#             # msg = [{"type": "text", "data": res_data}]
-#             # msg = [{"type": "text", "data": {"text": res_data}}]
-#             msg = res_data
-#             # if receive.get("message", "").endswith("image"):
-#             #     res_str = "\n".join([res_data["title"], res_data["content"]])
-#             # msg = text2img(res_str)
-#             # msg += res_data["url"]
-#             # print(msg)
-#     except Exception as e:
-#         msg = "Error: {}".format(type(e))
-#         traceback.print_exc()
-#
-#     await nuannuan.finish(msg)
-
 
 @nuannuan.handle()
-async def handle_first_receive(bot: Bot, event: Event, state: T_State):
-    args = str(event.get_message()).strip()
-    if args != this_command:
-        return
-
-    # await run()
-    await get_qq_doc()
+async def handle_first_receive(bot: Bot, event: Event, state: T_State, _=NoArg()):
+    await get_nuannuan()

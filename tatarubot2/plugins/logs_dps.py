@@ -13,15 +13,14 @@ import os
 import re
 import json
 
-from tatarubot2.plugins.utils import aiohttp_get
-
+from tatarubot2.plugins.utils import aiohttp_get, default_command_start
 
 this_command = "输出 "
 logs_dps = on_command(this_command, priority=5)
 
 
 async def logs_dps_help():
-    return this_command + "boss名 职业名 (国服) (rdps) (day2):\n" \
+    return default_command_start + this_command + "boss名 职业名 (国服) (rdps) (day2):\n" \
            "查询logs上对应boss和职业的dps分段，括号内为可选的参数，默认国际服、adps、截止最后一天"
 
 
@@ -229,7 +228,8 @@ async def run(args):
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     args = str(event.get_message()).strip().split(" ")
     if len(args) < 3:
-        await logs_dps.finish("查logs格式： " + this_command + "boss名 职业名 (国服) (rdps) (day2)，括号内为可选参数")
+        await logs_dps.finish("查logs格式： " + default_command_start + this_command +
+                              "boss名 职业名 (国服) (rdps) (day2)，括号内为可选参数")
     args = args[1: ]
     if args:
         state["item_info"] = args  # 如果用户发送了参数则直接赋值
