@@ -13,7 +13,7 @@ item_new = on_command(this_command, priority=5)
 
 
 async def item_new_help():
-    return this_command + "物品名：查物品异常时可以尝试这个版本"
+    return default_command_start + this_command + "物品名：查物品异常时可以尝试这个版本"
 
 
 # 加载字典
@@ -81,7 +81,7 @@ async def run(name):
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     args = str(event.get_message()).strip().split(" ", 1)
     if len(args) < 2:
-        await item.finish("查物品格式： " + this_command + " 物品名")
+        await item.finish("查物品格式： " + default_command_start + this_command + " 物品名")
     args = args[1]
     if args:
         state["item_info"] = args  # 如果用户发送了参数则直接赋值

@@ -9,7 +9,7 @@ from nonebot.adapters import Bot, Event
 
 import time
 
-from tatarubot2.plugins.utils import aiohttp_get
+from tatarubot2.plugins.utils import aiohttp_get, default_command_start
 
 this_command = "房子 "
 house = on_command(this_command, priority=5)
@@ -52,7 +52,7 @@ size_list = ["S", "M", "L"]
 
 
 async def house_help():
-    return this_command + "服务器名 主城名 房子大小：查询空房。主城名为：森都、海都、沙都、白银、雪都。房子大小为：S、M、L"
+    return default_command_start + this_command + "服务器名 主城名 房子大小：查询空房。主城名为：森都、海都、沙都、白银、雪都。房子大小为：S、M、L"
 
 
 async def run(args):
@@ -95,7 +95,8 @@ async def run(args):
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
     args = str(event.get_message()).strip().split(" ")
     if len(args) < 4:
-        await house.finish("看空房格式： " + this_command + "服务器名 主城名 房子大小。主城名为：森都、海都、沙都、白银、雪都。房子大小为：S、M、L")
+        await house.finish("看空房格式： " + default_command_start + this_command +
+                           "服务器名 主城名 房子大小。主城名为：森都、海都、沙都、白银、雪都。房子大小为：S、M、L")
     args = args[1:]
     if args:
         state["item_info"] = args  # 如果用户发送了参数则直接赋值
