@@ -1,6 +1,10 @@
 # TataruBot2
 
-基于NoneBot2的FF14机器人塔塔露
+基于NoneBot2的最终幻想14机器人塔塔露
+
+* 此主分支为FF14相关的基础版功能
+* 如果想作为插件使用，请看 [插件版文档](README_PIP.md)
+* 如果想使用更多扩展功能，请看 [plus分支](https://github.com/aaron-lii/TataruBot2/tree/plus)
 
 ## 当前功能
 
@@ -11,23 +15,11 @@
 4. 物品 物品名：查询物品信息，例：`物品 铁矿`
 5. 价格 大区 物品名：查询板子物价，大区不写默认豆豆柴，例：`价格 陆行鸟 铁矿`、`价格 叶小妖`
 6. 看看微博：获取FF微博新闻
-7. 新物品 物品名：查物品异常时可以尝试这个版本
-8. 新价格 大区 物品名：查物价异常时可以尝试这个版本
-9. 房子 服务器名 主城名 房子大小：查询空房。主城名为：森都、海都、沙都、白银、雪都。房子大小为：S、M、L。例: `房子 银泪湖 森都 S`
-10. 输出 boss名 职业名 (国服) (rdps) (day2): 查询logs上对应boss和职业的dps分段，括号内为可选的参数，默认国际服、adps、截止最后一天。
+7. 房子 服务器名 主城名 房子大小：查询空房。主城名为：森都、海都、沙都、白银、雪都。房子大小为：S、M、L。例: `房子 银泪湖 森都 S`
+8. 输出 boss名 职业名 (国服) (rdps) (day2): 查询logs上对应boss和职业的dps分段，括号内为可选的参数，默认国际服、adps、截止最后一天。
 例: `输出 海德林 武士`，`输出 海德林 武士 国服 day10`
-11. 攻略 (副本等级) 副本名关键字 (文本)：查简单副本攻略，括号内为可选参数，默认输出图片攻略
-12. 日历：获取FF近期活动日历
-
-## chatgpt聊天功能
-
-前提：该电脑或服务器科学上网(才能连接上chatgpt_api)，有chatgpt账号。
-
-指令：`塔塔露问问 你想说的话`，例如`塔塔露问问 武士是ff14里的最强职业吗`
-
-设置：配置文件`tatarubot2_conf.json`里开启该插件功能后，`"api_key"`改为自己的chatgpt api key。
-
-chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
+9. 攻略 (副本等级) 副本名关键字 (文本)：查简单副本攻略，括号内为可选参数，默认输出图片攻略
+10. 日历：获取FF近期活动日历
 
 ## 依赖
 
@@ -35,11 +27,8 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
 2. 如果有NoneBot v1则卸载 `pip uninstall nonebot`
 3. 本代码测试使用的NoneBot版本是 nonebot2==2.0.0b4
 4. 其他依赖安装`pip install -r requirements.txt`
-5. 如果要用chatgpt则多安装一个`pip install openai`
 
 ## 使用
-
-如果想作为插件使用，请看 https://github.com/aaron-lii/TataruBot2/blob/main/README_PIP.md
 
 1. 安装脚手架nb-cli
 
@@ -76,7 +65,7 @@ chatgpt_api官方文档：https://platform.openai.com/docs/api-reference/chat
    ```
 
 4. 根据需要修改配置文件`.env.prod`，（开发/调试环境则使用`.env.dev`，使用的配置在`.env`文件中指定）。
-    更多信息见[NoneBot2官方文档](https://v2.nonebot.dev/docs/appendices/config)
+    更多信息见 [NoneBot2官方文档](https://v2.nonebot.dev/docs/appendices/config)
 
 
 5. 启动一次机器人，自动生成配置文件`tatarubot2_conf.json`，如果旧版配置文件造成了错误，请删除旧版配置文件。根据需要把想开启的功能下面的"enable"改成true
