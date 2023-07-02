@@ -11,7 +11,7 @@ from nonebot.adapters.onebot.v11 import Message, MessageSegment
 import re
 import traceback
 
-from tatarubot2.plugins.utils import aiohttp_get, str2img, NoArg, default_command_start
+from tatarubot2.plugins.utils import aiohttp_get, str2img, logger, NoArg, default_command_start
 
 this_command = "暖暖"
 nuannuan = on_command(this_command, priority=5)
@@ -39,6 +39,8 @@ async def get_bili_url():
 
     bili_url = re.search(r"https://www.bilibili.com/video/[^\']*", r).group()
 
+    logger.info(bili_url)
+
     return bili_url
 
 
@@ -46,9 +48,10 @@ async def get_bili_detail(bili_url):
     """ 获取bilibili详细页 """
     r = await aiohttp_get(bili_url, res_type="text")
 
-    res = re.search(r"<span class=\"desc-info-text\">.*?</span>", r, flags=re.S).group()
+    res = re.search(r"<span class=\"desc-info-text\".*?</span>", r, flags=re.S).group()
 
-    res = res.replace("<span class=\"desc-info-text\">", "")
+    # res = res.replace("<span class=\"desc-info-text\">", "")
+    res = res.split("\n", 1)[1]
     res = res.replace("</span>", "")
 
     return res
