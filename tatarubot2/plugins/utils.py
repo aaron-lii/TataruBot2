@@ -88,7 +88,8 @@ async def aiohttp_get(url_input, res_type="json", time_out=15, header_plus=None,
 """ 文字转图片 """
 fontSize = 20  # 文字大小
 max_width = 25  # 行宽
-ttf_path = os.path.join(this_dir, "../data/songti.ttf")
+# ttf_path = os.path.join(this_dir, "../data/songti.ttf")
+ttf_path = os.path.join(this_dir, "../data/simhei.ttf")
 font = ImageFont.truetype(ttf_path, size=fontSize)
 
 
@@ -98,7 +99,8 @@ def str2img(text):
     text_new = ""
     for char_one in text:
         if char_one == "\n":
-            if len(text_new) > 1 and text_new[-1] != "\n":
+            # if len(text_new) > 1 and text_new[-1] != "\n":
+            if len(text_new) > 1:
                 text_new += char_one
             k = 0
             continue
@@ -114,10 +116,10 @@ def str2img(text):
     lines = text_new.split('\n')
 
     # 背景颜色
-    im = Image.new("RGB", ((int(max_width * 21.5)), len(lines) * (fontSize + 5)), (255, 255, 255))
+    im = Image.new("RGB", ((int(max_width * 22)), (len(lines) + 1) * (fontSize + 2)), (255, 255, 255))
     dr = ImageDraw.Draw(im)
     # 文字颜色
-    dr.text((0, 0), text_new, font=font, fill=(0, 0, 0))
+    dr.text((10, 10), text_new, font=font, fill=(0, 0, 0))
     # 保存
     img_bytes = io.BytesIO()
     im.save(img_bytes, format='JPEG')
