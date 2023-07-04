@@ -18,8 +18,7 @@ else:
     bot_name = next(iter(bot_name))
 
 async def create_help():
-    help_text = """
-()括号表示可选的参数
+    help_text = """()括号表示可选的参数
 [暖暖] 本周时尚品鉴作业
 [选门] 帮你选藏宝洞的门
 [仙人彩] 帮你选每周仙人仙彩数字
@@ -30,9 +29,10 @@ async def create_help():
 [输出 boss名 职业名 (国服) (rdps) (day2)] 查询logs上对应boss和职业的dps分段，默认国际服、adps、截止最后一天
 [攻略 (副本等级) 副本名关键字 (文本)] 查简单副本攻略，默认输出图片攻略
 [日历] 获取FF近期活动日历
+[招募 大区名] 获取指定大区招募板信息
 """
 
-    return "【{}现有指令】\n".format(bot_name) + help_text
+    return "  【{}现有指令】\n".format(bot_name) + help_text
 
 
 @bot_help.handle()
