@@ -35,3 +35,5 @@ if plugins_dict:
         from .calendar import *
     if plugins_dict["bot_help"]["enable"]:
         from .bot_help import *
+    if plugins_dict["party_finder"]["enable"]:
+        from .party_finder import *
