@@ -37,5 +37,3 @@ if plugins_dict:
         from .bot_help import *
     if plugins_dict["party_finder"]["enable"]:
         from .party_finder import *
-    if plugins_dict["tarot"]["enable"]:
-        from .tarot import *

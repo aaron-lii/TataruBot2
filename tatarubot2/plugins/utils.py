@@ -93,7 +93,7 @@ ttf_path = os.path.join(this_dir, "../data/simhei.ttf")
 font = ImageFont.truetype(ttf_path, size=fontSize)
 
 
-def str2img(text, width_now=max_width):
+def str2img(text):
     # 匹配图片宽度，特殊字符、字母、数字占位会比中文少一半
     k = 0
     text_new = ""
@@ -109,14 +109,14 @@ def str2img(text, width_now=max_width):
         else:
             k = k + 1
         text_new += char_one
-        if k >= 2 * width_now:
+        if k >= 2 * max_width:
             text_new += "\n"
             k = 0
 
     lines = text_new.split('\n')
 
     # 背景颜色
-    im = Image.new("RGB", ((int(width_now * 22)), (len(lines) + 1) * (fontSize + 2)), (255, 255, 255))
+    im = Image.new("RGB", ((int(max_width * 22)), (len(lines) + 1) * (fontSize + 2)), (255, 255, 255))
     dr = ImageDraw.Draw(im)
     # 文字颜色
     dr.text((10, 10), text_new, font=font, fill=(0, 0, 0))
