@@ -1,7 +1,7 @@
 {
   "conf_ver": {
     "info": "配置文件版本，用于判断插件代码是否有大更新",
-    "ver": "0.1.18"
+    "ver": "0.1.19"
   },
   "proxy": {
     "info": "对查物价和日志订阅使用代理连接",
@@ -111,6 +111,10 @@
   },
   "party_finder": {
     "info": "获取招募版信息",
+    "enable": true
+  },
+  "tarot": {
+    "info": "抽塔罗牌",
     "enable": true
   }
 }
