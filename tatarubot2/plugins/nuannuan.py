@@ -93,9 +93,10 @@ async def get_nuannuan():
 
     if os.path.exists(cache_path):
         with open(cache_path, mode="r") as fp:
-            cache = json.load(fp)
-        if msg := cache.get(str(period)) is not None:
+            cache = json.loads(fp.read())
+        if (msg := cache.get(str(period))) is not None:
             img_bytes = str2img(msg)
+            msg = Message([MessageSegment.image(img_bytes)])
             await nuannuan.finish(msg)
 
     try:
