@@ -4,3 +4,4 @@ Pillow
 icalendar
 emoji
 aiohttp_socks
+bilibili-api-python
