@@ -3,10 +3,14 @@
 暖暖
 """
 
+from bilibili_api import user
+
 from nonebot import on_command
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
 from nonebot.adapters.onebot.v11 import Message, MessageSegment
+
+from datetime import datetime
 
 import re
 import traceback
@@ -19,10 +23,21 @@ nuannuan = on_command(this_command, priority=5)
 # 腾讯文档地址
 qq_doc = "https://docs.qq.com/sheet/DY2lCeEpwemZESm5q?tab=dewveu&c=A1A0A0"
 
+# 游玩C哩酱 bilibili 用户id
+bil_id = 15503317
+
 
 async def nuannuan_help():
     return default_command_start + this_command + "：本周时尚品鉴作业"
 
+def get_current_period() -> int:
+    base = datetime(2018, 5, 15, 16, 0, 0)
+    curr = datetime.now()
+    if curr < base:
+        raise ValueError("当前系统时间早于2018年5月15日，请修正系统时间")
+    dt = datetime.now() - base
+    period = dt.days // 7 + 1
+    return period
 
 async def get_bili_url():
     """ 从腾讯文档获取当期b站地址 """
@@ -37,7 +52,19 @@ async def get_bili_url():
                           header_plus=headers)
     r = str(r)
 
-    bili_url = re.search(r"https://www.bilibili.com/video/[^\']*", r).group()
+    try:
+        bili_url = re.search(r"https://www.bilibili.com/video/[^\']*", r).group()
+    except AttributeError:
+        period = get_current_period()
+        prefix = f"【FF14/时尚品鉴】第{period}期"
+        u = user.User(bil_id)
+        videos = await u.get_videos(ps=5, pn=1)
+        for v in videos["list"]["vlist"]:
+            if v["title"].startswith(prefix):
+                bili_url = f"https://www.bilibili.com/video/{v["bvid"]}"
+                break
+        else:
+            raise ValueError("找不到最新一期bilibili视频链接")
 
     logger.info(bili_url)
 
