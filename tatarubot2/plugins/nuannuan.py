@@ -38,7 +38,7 @@ def get_current_period() -> int:
     if curr < base:
         raise ValueError("当前系统时间早于2018年10月16日，请修正系统时间")
     dt = datetime.now() - base
-    period = dt.days // 7 + 38
+    period = dt.days // 7 + 37
     return period
 
 async def get_bili_url():
