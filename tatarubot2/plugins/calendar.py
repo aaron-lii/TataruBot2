@@ -27,6 +27,11 @@ use_proxy = conf_dict["proxy"]["enable"]
 url = "https://p66-caldav.icloud.com/published/2/MTAyMTk3MTMxMjExMDIxOXsjasy" \
       "7WUO0EcKVz7qGEuVjjTlRkgd6WOZM171uxP_u-QM51M24lHzRlAQir-oodDRRTzZeusSLbw0snkZoqI4"
 
+# google calendar url for backup
+# credit: https://ngabbs.com/read.php?tid=26422993
+google_url = "https://calendar.google.com/calendar/ical/up88drvlnnh2t77hbpqq8v33i2cngfh7%40" \
+    "import.calendar.google.com/public/basic.ics"
+
 # 当前目录
 this_dir = os.path.split(os.path.realpath(__file__))[0]
 ics_path = os.path.join(this_dir, "../data/calendar.ics")
@@ -43,6 +48,9 @@ async def download_calendar():
     while True:
         try:
             res = await aiohttp_get(url, res_type="bytes", proxy=use_proxy)
+            if res is None:
+                logger.info("日历更新失败，尝试更换日历链接")
+                res = await aiohttp_get(google_url, res_type="bytes", proxy=use_proxy)
             if res is not None:
                 with open(ics_path, "wb") as f_w:
                     f_w.write(res)
