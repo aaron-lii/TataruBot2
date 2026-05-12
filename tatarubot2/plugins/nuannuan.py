@@ -33,7 +33,7 @@ async def nuannuan_help():
     return default_command_start + this_command + "：本周时尚品鉴作业"
 
 def get_current_period() -> int:
-    base = datetime(2018, 5, 16, 16, 0, 0)
+    base = datetime(2018, 10, 16, 16, 0, 0)
     curr = datetime.now()
     if curr < base:
         raise ValueError("当前系统时间早于2018年10月16日，请修正系统时间")
