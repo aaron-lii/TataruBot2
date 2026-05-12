@@ -12,6 +12,8 @@ from nonebot.adapters.onebot.v11 import Message, MessageSegment
 
 from datetime import datetime
 
+import json
+import os
 import re
 import traceback
 
@@ -85,9 +87,23 @@ async def get_bili_detail(bili_url):
 
 
 async def get_nuannuan():
+    this_dir = os.path.split(os.path.realpath(__file__))[0]
+    cache_path = os.path.join(this_dir, "../cache/nuannaun.json")
+    period = get_current_period()
+
+    if os.path.exists(cache_path):
+        with open(cache_path, mode="r") as fp:
+            cache = json.load(fp)
+        if msg := cache.get(str(period)) is not None:
+            img_bytes = str2img(msg)
+            await nuannuan.finish(msg)
+
     try:
         bili_url = await get_bili_url()
         msg = await get_bili_detail(bili_url)
+
+        with open(cache_path, mode="w") as fp:
+            json.dump({str(period): msg}, fp)
 
         img_bytes = str2img(msg)
         msg = Message([MessageSegment.image(img_bytes)])

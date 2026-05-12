@@ -142,3 +142,6 @@ dmypy.json
 .pytype/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+
+tatarubot2/cache/*
+!/tatarubot2/cache/.gitkeep
